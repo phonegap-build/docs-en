@@ -133,17 +133,6 @@ PhoneGap Build API. It is aliased to
                     ],
                     "link":"/api/v1/keys/ios"
                 },
-                "blackberry": {
-                    "all":[
-                        {
-                            "id": 12,
-                            "default":false,
-                            "title": "My BlackBerry Key",
-                            "link": "/api/v1/keys/blackberry/12"
-                        }
-                    ],
-                    "link":"/api/v1/keys/blackberry"
-                },
                 "android": {
                     "all":[
                         {
@@ -187,18 +176,13 @@ collaborators:
                     "hydrates":false,
                     "status":{
                         "android":"complete",
-                        "blackberry":"error",
                         "ios":null,
-                        "symbian":"complete",
-                        "webos":"pending",
                         "winphone":"pending"
                     },
                     "download":{
                         "android":"/api/v1/apps/1/android",
-                        "symbian":"/api/v1/apps/1/symbian"
                     },
                     "error":{
-                        "blackberry":"invalid widget archive"
                     },
                     "icon":{
                         "filename":"icon.png",
@@ -220,18 +204,12 @@ collaborators:
                     "build_count":12,
                     "status": {
                         "android":"complete",
-                        "blackberry":"complete",
                         "ios":"complete",
-                        "symbian":"complete",
-                        "webos":"complete",
                         "winphone":"complete"
                     },
                     "download":{
                         "android":"/api/v1/apps/1/android",
-                        "blackberry":"/api/v1/apps/1/blackberry",
                         "ios":"/api/v1/apps/1/ios",
-                        "symbian":"/api/v1/apps/1/symbian",
-                        "webos":"/api/v1/apps/1/webos",
                         "winphone":"/api/v1/apps/1/winphone"
                     },
                     "error":{},
@@ -279,18 +257,12 @@ detail view includes:
             "build_count":12,
             "status": {
                 "android":"complete",
-                "blackberry":"complete",
                 "ios":"complete",
-                "symbian":"complete",
-                "webos":"complete",
                 "winphone":"complete"
             },
             "download":{
                 "android":"/api/v1/apps/1/android",
-                "blackberry":"/api/v1/apps/1/blackberry",
                 "ios":"/api/v1/apps/1/ios",
-                "symbian":"/api/v1/apps/1/symbian",
-                "webos":"/api/v1/apps/1/webos",
                 "winphone":"/api/v1/apps/1/winphone"
             },
             "error":{},
@@ -364,7 +336,7 @@ If no icon ais vailable, an error message returns with status code
 ## GET https://build.phonegap.com/api/v1/apps/:id/:platform
 
 Download the app package for the given platform. Available platforms
-are `android`, `blackberry`, `ios`, `symbian`, `webos` and `winphone`.
+are `android`, `ios`, and `winphone`.
 
 If successful, this API method returns a `302` redirect to the
 application binary, and the body of the response references the file's
@@ -384,9 +356,6 @@ When downloading, be sure you have the right file extension:
 
 * `apk` for Android
 * `ipa` for iOS
-* `ipk` for webOS
-* `jad` for unsigned BlackBerry builds; `zip` if you've uploaded your BlackBerry signing keys
-* `wgz` for Symbian
 * `xap` for Windows Phone
 
 If the app package is unavailable for the specified platform, an error
@@ -423,18 +392,6 @@ to the list you see when requesting `/api/v1/me`:
                     ],
                     "link":"/api/v1/keys/ios"
                 },
-                "blackberry":{
-                    "all":[
-                        {
-                            "id":6,
-                            "title":"I make bb apps too",
-                            "default":false,
-                            "link":"/api/v1/keys/blackberry/1",
-                            "locked":true
-                        }
-                    ],
-                    "link":"/api/v1/keys/blackberry"
-                },
                 "android":{
                     "all":[
                         {
@@ -455,8 +412,8 @@ to the list you see when requesting `/api/v1/me`:
 ## GET https://build.phonegap.com/api/v1/keys/:platform
 
 Get a JSON-encoded list of all the signing keys associated with your
-account, for a specific platform. That platform can be one of `ios`,
-`android`, or `blackberry`:
+account, for a specific platform. That platform can be either `ios` or
+`android`:
 
         $ curl -u andrew.lunny@nitobi.com https://build.phonegap.com/api/v1/keys/ios
         {
@@ -490,20 +447,6 @@ account, for a specific platform. That platform can be one of `ios`,
             "link":"/api/v1/keys/android"
         }
 
-        $ curl -u andrew.lunny@nitobi.com https://build.phonegap.com/api/v1/keys/blackberry
-        {
-            "keys":[
-                {
-                    "id":1,
-                    "title":"I make bb apps too",
-                    "default":false,
-                    "link":"/api/v1/keys/blackberry/1",
-                    "locked":true
-                }
-            ],
-            "link":"/api/v1/keys/blackberry"
-        }
-
 ## GET https://build.phonegap.com/api/v1/keys/:platform/:id
 
 Get a JSON-encoded representation of a single signing key:
@@ -527,15 +470,6 @@ Get a JSON-encoded representation of a single signing key:
             "default":false,
             "alias":"releasing",
             "link":"/api/v1/keys/android/1",
-            "locked":true
-        }
-
-        $ curl -u andrew.lunny@nitobi.com https://build.phonegap.com/api/v1/keys/blackberry/1
-        {
-            "id":1,
-            "title":"I make bb apps too",
-            "default":false,
-            "link":"/api/v1/keys/blackberry/1",
             "locked":true
         }
 

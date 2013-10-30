@@ -188,7 +188,6 @@ in the multipart body of your post, using `file` as a parameter name:
                     "id":2,
                     "link":"/api/v1/keys/ios/2"
                  },
-                 "blackberry":null,
                  "android":{
                     "title":"release-key",
                     "default":true,
@@ -218,11 +217,8 @@ in the multipart body of your post, using `file` as a parameter name:
             "private":true,
             "link":"/api/v1/apps/26486",
             "status":{
-                "webos":"pending",
                 "ios":"pending",
-                "blackberry":"pending",
                 "android":"pending",
-                "symbian":"pending",
                 "winphone":"pending"
             },
             "error":{},
@@ -250,7 +246,6 @@ private, use one of the other `create_method` options:
                     "id":2,
                     "link":"/api/v1/keys/ios/2"
                  },
-                 "blackberry":null,
                  "android":{
                     "title":"release-key",
                     "default":true,
@@ -280,11 +275,9 @@ private, use one of the other `create_method` options:
             "private":true,
             "link":"/api/v1/apps/26488,
             "status":{
-                "webos":"pending",
                 "ios":"pending",
-                "blackberry":"pending",
                 "android":"pending",
-                "symbian":"pending"
+                "winphone":"pending"
             },
             "error":{},
             "phonegap_version":"2.9.0",
@@ -337,7 +330,6 @@ Here is a sample post, using the first form:
                     "id":123,
                     "link":"/api/v1/keys/ios/123"
                  },
-                 "blackberry":null,
                  "android":{
                     "title":"some android key",
                     "default":false,
@@ -367,11 +359,8 @@ Here is a sample post, using the first form:
             "private":true,
             "link":"/api/v1/apps/36500,
             "status":{
-                "webos":"pending",
                 "ios":"pending",
-                "blackberry":"pending",
                 "android":"pending",
-                "symbian":"pending",
                 "winphone":"pending"
             },
             "error":{},
@@ -413,7 +402,6 @@ Here is a simple example that update an app's version number:
             "version":"0.2.0",
             "keys":{
                 "ios":null,
-                "blackberry":null,
                 "android":null
             },
             "repo":null,
@@ -436,11 +424,9 @@ Here is a simple example that update an app's version number:
             "private":true,
             "description":null,
             "status":{
-                "webos":"pending",
+                "winphone":"pending",
                 "ios":null,
-                "blackberry":"pending",
                 "android":"pending",
-                "symbian":"pending"
             },
             "error":{},
             "phonegap_version":"2.9.0",
@@ -469,7 +455,6 @@ This sample post selects a new Android key for an app, and unlocks it:
                     "id":123,
                     "link":"/api/v1/keys/ios/123"
                  },
-                 "blackberry":null,
                  "android":{
                     "title":"changed android key",
                     "default":false,
@@ -499,11 +484,8 @@ This sample post selects a new Android key for an app, and unlocks it:
             "private":true,
             "link":"/api/v1/apps/36500,
             "status":{
-                "webos":"pending",
                 "ios":"pending",
-                "blackberry":"pending",
                 "android":"pending",
-                "symbian":"pending",
                 "winphone":"pending"
             },
             "error":{},
@@ -558,7 +540,7 @@ selected signing keys. The response have a `202` (accepted) status:
 To choose which platforms to build, include them as a JSON encoded
 parameter:
 
-        $ curl -u andrew.lunny@nitobi.com -X POST -d 'data={"platforms":["android","webos"]}' https://build.phonegap.com/api/v1/apps/12/build
+        $ curl -u andrew.lunny@nitobi.com -X POST -d 'data={"platforms":["android"]}' https://build.phonegap.com/api/v1/apps/12/build
 
 Once the builds are queued, you will want to watch the results of `GET
 /api/v1/apps/:id` to check when each platform's status changes from
@@ -655,10 +637,7 @@ so return a `400` status:
                 "link":"/api/v1/apps/12",
                 "status":{
                   "ios":"pending",
-                  "webos":"pending",
-                  "blackberry":"pending",
                   "android":"pending",
-                  "symbian":"pending",
                   "winphone":"pending"
                 },
                 "phonegap_version":"2.9.0",
@@ -735,39 +714,12 @@ If you omit one or both of the `key_pw` and `keystore_pw` parameters,
 your key is _locked_ after the upload. You won't be able to build with
 it until you unlock the key.
 
-### BlackBerry Keys
-
-The following are required for BlackBerry builds:
-
-* a `sigtool.csk` file
-* a `sigtool.db` file
-* the password to your key (optional)
-* a title for your key
-
-How to obtain the `sigtool` files is outlined in our [BlackBerry
-Keys](/docs/blackberry-keys) documentation.
-
-Here is a sample post:
-
-        $ curl -u andrew.lunny@nitobi.com -F db=@sigtool.db -F csk=@sigtool.csk -F 'data={"title":"My BB Key","password":"78901234"}' https://build.phonegap.com/api/v1/keys/blackberry
-        {
-            "title":"My BB Key",
-            "default":false,
-            "id":2,
-            "link":"/api/v1/keys/blackberry/2",
-            "locked":false
-        }
-
-If you omit the `password` parameter, your key is _locked_ after the
-upload completes. You won't be able to build with it until you unlock
-the key.
-
 ## PUT https://build.phonegap.com/api/v1/keys/:platform/:id
 
 Updates an existing signing key on PhoneGap Build, used to unlock a
 signing key so it can be used for future builds. To unlock a key, you
 need to provide the appropriate credentials: a single password for iOS
-or BlackBerry, or two passwords for Android, one for the key, and one
+or two passwords for Android, one for the key, and one
 for the keystore.
 
 __NOTE:__ PhoneGap Build _does not_ verify your key's password.  If
@@ -796,17 +748,6 @@ incorrect, an error results when you try to build with that key.
             "id":2,
             "alias":"release",
             "link":"/api/v1/keys/android/2",
-            "locked":false
-        }
-
-* BlackBerry example:
-
-        $ curl -u andrew.lunny@nitobi.com -d 'data={"password":"password1"}' -X PUT https://build.phonegap.com/api/v1/keys/blackberry/2
-        {
-            "title":"My BB Key",
-            "default":false,
-            "id":2,
-            "link":"/api/v1/keys/blackberry/2",
             "locked":false
         }
 

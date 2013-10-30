@@ -77,26 +77,12 @@ We support ldpi, mdpi, hdpi, and xhdpi displays; the following will define icons
     <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
-### BlackBerry
-
-BlackBerry icons __must be smaller__ then 16kb. BlackBerry also defines an optional hover state; this state allows for a separate icon to be displayed when a user uses the trackpad to roll over your icon image. By default the non-hover icon will be used as the hover state.
-
-    <icon src="icons/bb/icon.png" gap:platform="blackberry" />
-    <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
-
 ### Windows Phone
 
 We support two icons for Windows Phone, a regular icon and a tile image.
 
     <icon src="icons/winphone/icon.png" gap:platform="winphone" />
     <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
-
-### WebOS 
-
-WebOs supports a default icon and a mini icon which can be used for notifications.
-
-    <icon src="icons/webos/icon.png" gap:platform="webos" />
-    <icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
 
 <a name="splashes"></a>
 ## Splash Screens
@@ -142,12 +128,6 @@ We support ldpi, mdpi, hdpi and xhdpi displays; the following will define splash
     <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
     <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-
-### BlackBerry 
-
-BlackBerry supports a single splash image and can be defined as below.
-
-    <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
 
 ### Windows Phone
 

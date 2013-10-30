@@ -63,20 +63,12 @@ We're continually adding features to cour `config.xml` support, to give PhoneGap
     <td><code>&lt;name&gt;</td>
     <td>
       <p>The name of the application.</p>
-      <p>
-        BlackBerry only supports latin characters in the <code>&lt;name&gt;</code>
-        attribute.
-      </p>
     </td>
   </tr>
   <tr>
     <td><code>&lt;description&gt;</code></td>
     <td>
       <p>A description for your application.</p>
-      <p>
-        BlackBerry should keep the <code>&lt;description&gt;</code> element at a reasonable
-        length
-      </p>
     </td>
   </tr>
 </table>
@@ -118,8 +110,7 @@ By default PhoneGap Build builds your application for every platform. If you onl
       <code>config.xml</code>. If you specify none, all platforms will be built.
       </p>
       <p>
-      <code>name</code>: platform to build - one of <code>android, ios, winphone,
-      blackberry, webos, symbian</code>
+      <code>name</code>: platform to build - one of <code>android, ios, winphone</code>
       </p>
     </td>
   </tr>
@@ -129,8 +120,5 @@ By default PhoneGap Build builds your application for every platform. If you onl
     
     <gap:platform name="ios" />
     <gap:platform name="android" />
-    <gap:platform name="webos" />
-    <gap:platform name="symbian" />
-    <gap:platform name="blackberry" />
     <gap:platform name="winphone" />
 

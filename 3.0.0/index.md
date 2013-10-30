@@ -32,12 +32,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>
             See the platforms we support for this version of PhoneGap.
             </span>
+         </li>
          <li>
             <h2>[Upgrading from 2.9.0 to 3.0.0]</h2>
             <span>
             Information related to updating your app from 2.9.0 to 3.0.0 on Build.
             </span>
-        </li></li>
+        </li>
     </ul>
     <h1>Configuring</h1>
     <ul>

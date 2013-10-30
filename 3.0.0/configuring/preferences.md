@@ -34,7 +34,7 @@ The
     <td><code>phonegap-version</code></td>
     <td>  
       Currently supported versions are <b>2.5.0</b>, <b>2.7.0</b>, <b>2.9.0</b>,
-      and <b>3.0.0</b> (default) -- all versions prior to 2.5.0 have been
+      and <b>3.1.0</b> (default) -- all versions prior to 2.5.0 have been
       deprecated. If you don't specify a version in your config, it will be set
       to the current default version. Your app will not build if you specify
       an unsupported version number.
@@ -244,22 +244,3 @@ The
   </tr>
 
 </table>
-
-## Blackberry Only
-
-<table class="table">
-  <tr>
-    <td><code>disable-cursor</code><br/>(blackberry only)</td>
-    <td>
-      Prevents a mouse-icon/cursor from being displayed on the app - desugars to
-      <code>&lt;rim:navigation /&gt;</code>. See
-      <a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/rim_navigation_element_1582456_11.html">the BlackBerry documentation</a> for
-      more details. Defaults to false.
-      <br/><br/>
-      Example:
-      <br/>
-      <code>&lt;preference name="disable-cursor" value="true" /&gt;</code>
-    </td>
-  </tr>
-</table>
-

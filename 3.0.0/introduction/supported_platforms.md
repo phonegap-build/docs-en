@@ -80,7 +80,7 @@ PhoneGap Build Supports the following platforms, for version `3.0.0` of Cordova/
     </td>
   </tr>
   <tr>
-    <td>Windows Phone</td>
+    <td>Windows Phone 8</td>
     <td>
       <p>
         <a href="http://developer.windowsphone.com/en-us/develop" target="_blank">
@@ -103,56 +103,6 @@ PhoneGap Build Supports the following platforms, for version `3.0.0` of Cordova/
     </td>
   </tr>
   <tr>
-    <td>BlackBerry OS WebWorks (7)</td>
-    <td>
-      <p>
-        <a href="https://developer.blackberry.com/bbos/html5/documentation/what_is_a_webworks_app_1845471_11.html" target="_blank">
-          Learn more about BlackBerry OS WebWorks
-        </a>
-      </p>
-      <p>
-      <strong>Additional Resources</strong>
-      </p>
-      <p>
-        <a href="https://developer.blackberry.com/bbos/html5/documentation/signing_setup.html" target="_blank">
-          Certificates Guide
-        </a>
-      </p>
-      <p>
-        <a href="https://developer.blackberry.com/bbos/html5/documentation/distributing_your_app_1866990.html" target="_blank">
-          BlackBerry OS WebWorks Submission Guide
-        </a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Symbian WRT</td>
-    <td>
-      <p>
-        <a href="http://developer.nokia.com/Develop/Web/Web_runtime.xhtml" target="_blank">
-          Learn More about Symbian WRT
-        </a>
-      </p>
-      <p>
-      <strong>Additional Resources</strong>
-      </p>
-      <p>
-        <a href="http://developer.nokia.com/Distribute/Nokia_Store_guidelines.xhtml#article1" target="_blank">
-          App Submission
-        </a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>webOS</td>
-    <td>
-      <p>
-        <a href="http://www.hpwebos.com/us/" target="_blank">
-          Learn more about webOS.
-        </a>
-      </p>
-    </td>
-  </tr>
 </table>
 
 
