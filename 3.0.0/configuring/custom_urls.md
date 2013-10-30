@@ -22,26 +22,26 @@ license: licensed to the apache software foundation (asf) under one
 
 iOS allows registration of [custom URL schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50).
 
-  <table class="table">
-    <tr>
-      <td>`<gap:url-scheme>`</td>
-      <td>
-        <p>
-          Your app can have many `url-scheme` elements present.
-        </p>
-        <hr>
-        <p>
-          `name` (optional): defaults to the application bundle id. This has to be unique. If a duplicate is found the build will fail.
-        </p>
-        <p>
-          `role`: must be `Editor`, `Viewer`, `Shell` or `None`, optional, defaults to `None`.
-        </p>
-        <p>
-          <i class="glyphicon glyphicon-check"></i> At least one `scheme` must be present.
-        </p>
-      </td>
-    </tr>
-  </table>
+<table class="table">
+  <tr>
+    <td><code>&lt;gap:url-scheme&gt;</code></td>
+    <td>
+      <p>
+        Your app can have many <code>url-scheme</code> elements present.
+      </p>
+      <hr>
+      <p>
+        <code>name</code> (optional): defaults to the application bundle id. This has to be unique. If a duplicate is found the build will fail.
+      </p>
+      <p>
+        <code>role</code>: must be <code>Editor</code>, <code>Viewer</code>, <code>Shell</code> or <code>None</code>, optional, defaults to <code>None</code>.
+      </p>
+      <p>
+        <i class="glyphicon glyphicon-check"></i> At least one <code>scheme</code> must be present.
+      </p>
+    </td>
+  </tr>
+</table>
 
 
 ## Example Usage

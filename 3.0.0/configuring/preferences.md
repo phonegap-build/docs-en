@@ -22,9 +22,7 @@ license: licensed to the apache software foundation (asf) under one
 
 The following is a list of custom preferences supported by PhoneGap Build.
 
-You can have zero or more `<preference>` elements in your `config.xml`. If you
-specify none, default properties maybe applied. Supported attributes are name`
-(required) and `value` (required).
+You can have zero or more `<preference>` elements in your `config.xml`. If you specify none, default properties maybe applied. Supported attributes are `name` (required) and `value` (required).
 
 The 
 
@@ -113,7 +111,7 @@ The
     <td>
       Set the iOS status bar style with values <code>default, black-opaque or
       black-translucent</code>. The default is a grey status bar, black-opaque
-      will appear black. Although `black-translucent` is supported, the PhoneGap
+      will appear black. Although <code>black-translucent</code> is supported, the PhoneGap
       webview does not extend beneath the status bar, so it will appear identical
       to black-opaque once your app is running.
       <br/><br/>
@@ -160,8 +158,8 @@ The
   <tr>
     <td><code>android-minSdkVersion</code><br/>(android only)</td>
     <td>
-       Minimum Android SDK version. Corresponds to the `usesSdk` attributes in
-       the `AndroidManifest.xml` file - more details are in
+       Minimum Android SDK version. Corresponds to the <code>usesSdk</code> attributes in
+       the <code>AndroidManifest.xml</code> file - more details are in
        [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Defaults to 7 (Android 2.1).
       <br/><br/>
       Example:
@@ -173,8 +171,8 @@ The
   <tr>
     <td><code>android-maxSdkVersion</code><br/>(android only)</td>
     <td>
-       Maximum Android SDK version. Corresponds to the `usesSdk` attributes
-       in the `AndroidManifest.xml` file - more details are in
+       Maximum Android SDK version. Corresponds to the <code>usesSdk</code> attributes
+       in the <code>AndroidManifest.xml</code> file - more details are in
        [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Unset by default.
       <br/><br/>
       Example:
@@ -186,7 +184,7 @@ The
   <tr>
     <td><code>android-targetSdkVersion</code><br/>(android only)</td>
     <td>
-      Corresponds to the `usesSdk` attributes in the `AndroidManifest.xml`
+      Corresponds to the <code>usesSdk</code> attributes in the <code>AndroidManifest.xml</code>
       file -- an integer designating the API Level that the application
       targets. If not set, the default value equals that given to
       minSdkVersion. More details are in

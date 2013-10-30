@@ -20,87 +20,81 @@ license: licensed to the apache software foundation (asf) under one
 
 # Features
 
-The `<feature>` element can be used to specify which features your
-application is using. If you specify features of the PhoneGap API, those will
-be expanded to the appropriate permissions for you application. 
+The `<feature>` element can be used to specify which features your application is using. If you specify features of the PhoneGap API, those will be expanded to the appropriate permissions for you application. 
 
-<i class="glyphicon glyphicon-check"></i> PhoneGap Build uses feature tags
-slightly differently then local Cordova/PhoneGap apps. Here is what we support:
+<i class="glyphicon glyphicon-check"></i> PhoneGap Build uses feature tags slightly differently then local Cordova/PhoneGap apps. Here is what we support:
 
 <a name="debug"></a>
 ## Custom Debug Server
 
-The `debug-server` feature allows you to use a custom Weinre instance for your
-application. By default PhoneGap Build uses `http://debug.build.phonegap.com`
-however this can be changed by adding the following to your `config.xml`.
+The `debug-server` feature allows you to use a custom Weinre instance for your application. By default PhoneGap Build uses `http://debug.build.phonegap.com` however this can be changed by adding the following to your `config.xml`.
 
     <feature name="debug-server" required="true">
        <param name="domain" value="http://debug.custom.com"/>
        <param name="key" value="some_unique_key"/>
     </feature>
 
-<i class="glyphicon glyphicon-check"></i> Don't forget to change the domain and
-key to the appropriate values.
+<i class="glyphicon glyphicon-check"></i> Don't forget to change the domain and key to the appropriate values.
       
 ## API Features
 
 Currently supported through this interface are the following feature names:
 
-  <table class="table">
-    <tr>
-    <td>`http://api.phonegap.com/1.0/battery`</td>
-    <td>maps to `android:BROADCAST_STICKY` permission</td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/camera`</td>
-      <td>
-        maps to `android:CAMERA`, `winphone:ID_CAP_ISV_CAMERA`,
-        and `winphone:ID_HW_FRONTCAMERA` permissions
-      </td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/contacts`</td>
-      <td>
-        maps to `android:READ_CONTACTS`, `android:WRITE_CONTACTS`,
-        `android:GET_ACCOUNTS`, and `winphone:ID_CAP_CONTACTS` permissions
-      </td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/file`</td>
-      <td>maps to `WRITE_EXTERNAL_STORAGE` permission</td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/geolocation`</td>
-      <td>
-        maps to `android:ACCESS_COARSE_LOCATION`, `android:ACCESS_FINE_LOCATION`, 
-        `android:ACCESS_LOCATION_EXTRA_COMMANDS`, and `winphone:ID_CAP_LOCATION`
-        permissions
-      </td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/media`</td>
-      <td>
-        maps to `android:RECORD_AUDIO`, `android:RECORD_VIDEO`,
-        `android:MODIFY_AUDIO_SETTINGS`, and `winphone:ID_CAP_MICROPHONE`
-        permissions
-      </td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/network`</td>
-      <td>
-        maps to `android:ACCESS_NETWORK_STATE`, and `winphone:ID_CAP_NETWORKING`
-        permissions
-      </td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/notification`</td>
-      <td>maps to `VIBRATE` permission</td>
-    </tr>
-    <tr>
-      <td>`http://api.phonegap.com/1.0/device`</td>
-      <td>maps to `winphone:ID_CAP_IDENTITY_DEVICE` permission</td>
-    </tr>
-  </table>
+<table class="table">
+  <tr>
+  <td><code>http://api.phonegap.com/1.0/battery</code></td>
+  <td>maps to <code>android:BROADCAST_STICKY</code> permission</td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/camera</code></td>
+    <td>
+      maps to <code>android:CAMERA</code>, <code>winphone:ID_CAP_ISV_CAMERA</code>,
+      and <code>winphone:ID_HW_FRONTCAMERA</code> permissions
+    </td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/contacts</code></td>
+    <td>
+      maps to <code>android:READ_CONTACTS</code>, <code>android:WRITE_CONTACTS</code>,
+      <code>android:GET_ACCOUNTS</code>, and <code>winphone:ID_CAP_CONTACTS</code> permissions
+    </td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/file</code></td>
+    <td>maps to <code>WRITE_EXTERNAL_STORAGE</code> permission</td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/geolocation</code></td>
+    <td>
+      maps to <code>android:ACCESS_COARSE_LOCATION</code>, <code>android:ACCESS_FINE_LOCATION</code>, 
+      <code>android:ACCESS_LOCATION_EXTRA_COMMANDS</code>, and <code>winphone:ID_CAP_LOCATION</code>
+      permissions
+    </td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/media</code></td>
+    <td>
+      maps to <code>android:RECORD_AUDIO</code>, <code>android:RECORD_VIDEO</code>,
+      <code>android:MODIFY_AUDIO_SETTINGS</code>, and <code>winphone:ID_CAP_MICROPHONE</code>
+      permissions
+    </td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/network</code></td>
+    <td>
+      maps to <code>android:ACCESS_NETWORK_STATE</code>, and <code>winphone:ID_CAP_NETWORKING</code>
+      permissions
+    </td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/notification</code></td>
+    <td>maps to <code>VIBRATE</code> permission</td>
+  </tr>
+  <tr>
+    <td><code>http://api.phonegap.com/1.0/device</code></td>
+    <td>maps to <code>winphone:ID_CAP_IDENTITY_DEVICE</code> permission</td>
+  </tr>
+</table>
 
 ### Example Usage
     

@@ -20,31 +20,27 @@ license: licensed to the apache software foundation (asf) under one
 
 # Access Elements
 
-The access element provides your app with access to resources
-on other domains - in particular, it allows your app to load pages from
-external domains that can take over your entire webview.
+The access element provides your app with access to resources on other domains - in particular, it allows your app to load pages from external domains that can take over your entire webview.
 
-  <table class="table">
-    <tr>
-      <td>`<access>`</td>
-      <td>
-        <p>
-          Your application can contain zero or many access elements.
-        </p>
-        <p>
-          `origin`: The domain of where the resource lives.
-        </p>
-        <p>
-          `subdomains` (optional): Whether to allow subdomains on the host
-          specified in the origin paramter.
-        </p>
-      </td>
-    </tr>
-  </table>
+<table class="table">
+  <tr>
+    <td><code>&lt;access&gt;</code></td>
+    <td>
+      <p>
+        Your application can contain zero or many access elements.
+      </p>
+      <p>
+        <code>origin</code>: The domain of where the resource lives.
+      </p>
+      <p>
+        <code>subdomains</code> (optional): Whether to allow subdomains on the host
+        specified in the origin paramter.
+      </p>
+    </td>
+  </tr>
+</table>
 
-<i class="glyphicon glyphicon-check"></i> A blank access tag - `<access />` -
-denies access to any external resources. A wildcard - `<access origin="*" />` -
-allows access to any external resource.
+<i class="glyphicon glyphicon-check"></i> A blank access tag - `<access />` - denies access to any external resources. A wildcard - `<access origin="*" />` - allows access to any external resource.
 
 ## Example Usage:
 
@@ -73,8 +69,4 @@ allows access to any external resource.
         <access origin="http://phonegap.com" subdomains="true" />
     </widget>
 
-<i class="glyphicon glyphicon-check"></i> The behaviour of the access element is
-heavily dependent on the platform you're deploying to - we have a
-[blog post](/blog/access-tags) with more information. It is also likely to vary
-between different releases of PhoneGap - we'll work to maintain sane defaults
-and configurability for PhoneGap Build users.
+<i class="glyphicon glyphicon-check"></i> The behaviour of the access element is heavily dependent on the platform you're deploying to - we have a [blog post](/blog/access-tags) with more information. It is also likely to vary between different releases of PhoneGap - we'll work to maintain sane defaults and configurability for PhoneGap Build users.
