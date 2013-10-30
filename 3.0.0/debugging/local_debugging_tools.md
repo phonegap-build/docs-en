@@ -26,9 +26,7 @@ Build uses a tool called Weinre to enable remote debugging of mobile apps.
 
 This guide provides information on setting up your own local server.
 
-The pre-requisites for running Weinre are that you need to have `npm` installed.
-
-Once you've installed Weinre you will only be able to use the local server within your own network unless you plan to host it on a publicly accessible location. This will require additional setup that is outside the scope of this guide.
+The pre-requisites for running Weinre are that you need to have `npm` installed. Once you've installed Weinre you will only be able to use the local server within your own network unless you plan to host it on a publicly accessible location. This will require additional setup that is outside the scope of this guide.
 
 ## Setting up Weinre
 
