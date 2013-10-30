@@ -20,143 +20,140 @@ license: licensed to the apache software foundation (asf) under one
 
 # Supported Platforms
 
-PhoneGap Build Supports the following platforms, for version `3.0.0` of
-Cordova/PhoneGap.
+PhoneGap Build Supports the following platforms, for version `3.0.0` of Cordova/PhoneGap.
 
-  <table class="table">
-    <tr>
-      <td>iOs</td>
-      <td>
-        <p>
-          <a href="https://developer.apple.com/devcenter/ios/index.action" target="_blank">
-            Learn more about iOS
-          </a>
-        </p>
-        <p>
-        __Additional Resources__
-        </p>
-        <p>
-          <a href="https://developer.apple.com/appstore/guidelines.html" target="_blank">
-            App Store Review Guidelines
-          </a>
-        </p>
-        <p>
-          <a href="https://developer.apple.com/appstore/index.html" target="_blank">
-            App Store Resource Guide
-          </a>
-        </p>
-        <p>
-          <a href="https://developer.apple.com/support/technical/certificates/" target="_blank">
-            Certificates Guide
-          </a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Android</td>
-      <td>
-        <p>
-          <a href="http://developer.android.com/about/index.html" target="_blank">
-            Learn more about Android
-          </a>
-        </p>
-        <p>
-        __Additional Resources__
-        </p>
-        <p>
-          <a href="http://developer.android.com/distribute/googleplay/policies/index.html" target="_blank">
-            Google Play Submission Guidelines
-          </a>
-        </p>
-        <p>
-          <a href="http://developer.android.com/distribute/googleplay/publish/preparing.html" target="_blank">
-            Google Play Launch Checklist
-          </a>
-        </p>
-        <p>
-          <a href="http://developer.android.com/tools/publishing/app-signing.html" target="_blank">
-            Certificates Guide
-          </a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Windows Phone</td>
-      <td>
-        <p>
-          <a href="http://developer.windowsphone.com/en-us/develop" target="_blank">
-            Learn more about Windows Phone
-          </a>
-        </p>
-        <p>
-        __Additional Resources__
-        </p>
-        <p>
-          <a href="http://msdn.microsoft.com/library/windowsphone/help/jj206724%28v=vs.105%29.aspx" target="_blank">
-            Windows Phone Submission Guide
-          </a>
-        </p>
-        <p>
-          <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184843%28v=vs.105%29.aspx" target="_blank">
-            App Certification (Signing)
-          </a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>BlackBerry OS WebWorks (7)</td>
-      <td>
-        <p>
-          <a href="https://developer.blackberry.com/bbos/html5/documentation/what_is_a_webworks_app_1845471_11.html" target="_blank">
-            Learn more about BlackBerry OS WebWorks
-          </a>
-        </p>
-        <p>
-        __Additional Resources__
-        </p>
-        <p>
-          <a href="https://developer.blackberry.com/bbos/html5/documentation/signing_setup.html" target="_blank">
-            Certificates Guide
-          </a>
-        </p>
-        <p>
-          <a href="https://developer.blackberry.com/bbos/html5/documentation/distributing_your_app_1866990.html" target="_blank">
-            BlackBerry OS WebWorks Submission Guide
-          </a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Symbian WRT</td>
-      <td>
-        <p>
-          <a href="http://developer.nokia.com/Develop/Web/Web_runtime.xhtml" target="_blank">
-            Learn More about Symbian WRT
-          </a>
-        </p>
-        <p>
-        __Additional Resources__
-        </p>
-        <p>
-          <a href="http://developer.nokia.com/Distribute/Nokia_Store_guidelines.xhtml#article1" target="_blank">
-            App Submission
-          </a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>webOS</td>
-      <td>
-        <p>
-          <a href="http://www.hpwebos.com/us/" target="_blank">
-            Learn more about webOS.
-          </a>
-        </p>
-      </td>
-    </tr>
-  </table>
+<table class="table">
+  <tr>
+    <td>iOS</td>
+    <td>
+      <p>
+        <a href="https://developer.apple.com/devcenter/ios/index.action" target="_blank">
+          Learn more about iOS
+        </a>
+      </p>
+      <p>
+      <strong>Additional Resources</strong>
+      </p>
+      <p>
+        <a href="https://developer.apple.com/appstore/guidelines.html" target="_blank">
+          App Store Review Guidelines
+        </a>
+      </p>
+      <p>
+        <a href="https://developer.apple.com/appstore/index.html" target="_blank">
+          App Store Resource Guide
+        </a>
+      </p>
+      <p>
+        <a href="https://developer.apple.com/support/technical/certificates/" target="_blank">
+          Certificates Guide
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>
+      <p>
+        <a href="http://developer.android.com/about/index.html" target="_blank">
+          Learn more about Android
+        </a>
+      </p>
+      <p>
+      <strong>Additional Resources</strong>
+      </p>
+      <p>
+        <a href="http://developer.android.com/distribute/googleplay/policies/index.html" target="_blank">
+          Google Play Submission Guidelines
+        </a>
+      </p>
+      <p>
+        <a href="http://developer.android.com/distribute/googleplay/publish/preparing.html" target="_blank">
+          Google Play Launch Checklist
+        </a>
+      </p>
+      <p>
+        <a href="http://developer.android.com/tools/publishing/app-signing.html" target="_blank">
+          Certificates Guide
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows Phone</td>
+    <td>
+      <p>
+        <a href="http://developer.windowsphone.com/en-us/develop" target="_blank">
+          Learn more about Windows Phone
+        </a>
+      </p>
+      <p>
+      <strong>Additional Resources</strong>
+      </p>
+      <p>
+        <a href="http://msdn.microsoft.com/library/windowsphone/help/jj206724%28v=vs.105%29.aspx" target="_blank">
+          Windows Phone Submission Guide
+        </a>
+      </p>
+      <p>
+        <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184843%28v=vs.105%29.aspx" target="_blank">
+          App Certification (Signing)
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>BlackBerry OS WebWorks (7)</td>
+    <td>
+      <p>
+        <a href="https://developer.blackberry.com/bbos/html5/documentation/what_is_a_webworks_app_1845471_11.html" target="_blank">
+          Learn more about BlackBerry OS WebWorks
+        </a>
+      </p>
+      <p>
+      <strong>Additional Resources</strong>
+      </p>
+      <p>
+        <a href="https://developer.blackberry.com/bbos/html5/documentation/signing_setup.html" target="_blank">
+          Certificates Guide
+        </a>
+      </p>
+      <p>
+        <a href="https://developer.blackberry.com/bbos/html5/documentation/distributing_your_app_1866990.html" target="_blank">
+          BlackBerry OS WebWorks Submission Guide
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Symbian WRT</td>
+    <td>
+      <p>
+        <a href="http://developer.nokia.com/Develop/Web/Web_runtime.xhtml" target="_blank">
+          Learn More about Symbian WRT
+        </a>
+      </p>
+      <p>
+      <strong>Additional Resources</strong>
+      </p>
+      <p>
+        <a href="http://developer.nokia.com/Distribute/Nokia_Store_guidelines.xhtml#article1" target="_blank">
+          App Submission
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>webOS</td>
+    <td>
+      <p>
+        <a href="http://www.hpwebos.com/us/" target="_blank">
+          Learn more about webOS.
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 
-<i class="glyphicon glyphicon-check"></i> If you would like to see supported
-platforms for versions prior to, or if available, after this release,
-please use the drop down in the top-right hand corner.
+<i class="glyphicon glyphicon-check"></i> If you would like to see supported platforms for versions prior to, or if available, after this release, please use the drop down in the top-right hand corner.
