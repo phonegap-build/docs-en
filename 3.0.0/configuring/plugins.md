@@ -22,7 +22,8 @@ license: licensed to the apache software foundation (asf) under one
 
 To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins,
 
-The list of all supported plugins is located on our [plugins repository.](https://build.phonegap.com/plugins)
+The list of all supported plugins is located on our
+  <a href="https://build.phonegap.com/plugins" target="_blank">plugins repository.</a>
 
 Plugins need to implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, be sure that the experience degrades gracefully for users who do not have the plugin available.
 
@@ -32,10 +33,10 @@ If you would like to contribute a plugin to PhoneGap Build, please see the relev
 
 There are two steps to including a plugin in your project: 
 
-  - <a href="#importing-config">Importing the native code using the `config.xml`</a>
+  - <a href="#importing-config">Importing the native code using the config.xml</a>
   - <a href="#importing-native">Referencing the JavaScript code for the plugin</a>
 
-<a id="importing"></a>
+<a id="importing-config"></a>
 ### Importing the native code
 
 To import the native code into your PhoneGap Build project, you will need to add the correct `<gap:plugin>` tag to your config.xml file.
@@ -58,7 +59,7 @@ To import the native code into your PhoneGap Build project, you will need to add
         <hr>
         <p>
           <code>params</code>: Plugins may require parameters for configuration
-          properties. <a href="plugin-params">Here is a detailed explanation.</a>
+          properties. <a href="#plugin-params">Here is a detailed explanation.</a>
         </p>
     </td>
   </tr>
