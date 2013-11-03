@@ -94,7 +94,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
     </ul>
-    <h1>debugging</h1>
+    <h1>Debugging</h1>
     <ul>
         <li>
             <h2>[Remote Debugging Tools]</h2>
@@ -133,6 +133,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
               Integrate Build with your tool chain and workflow by using our
               restful API implementation.
             </span>
+        </li>
+    </ul>
+    <h1>Support</h1>
+    <ul>
+        <li>
+          <h2>[Getting Help]</h2>
         </li>
     </ul>
 </div>
