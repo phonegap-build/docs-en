@@ -91,5 +91,5 @@ The Web Inspector offers several other useful features:
 Despite slight differences in how Web Inspector features appear in different WebKit-based browser environments, the documentation for
   <a href="https://developers.google.com/chrome-developer-tools/" target="_blank">Google Chrome</a>
 and
-  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/DebuggingYourWebsite/DebuggingYourWebsite.html" target="_blank">Apple Safari</a>
+  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html" target="_blank">Apple Safari</a>
 provides a good overview.
