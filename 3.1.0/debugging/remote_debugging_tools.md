@@ -20,7 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Remote Debugging Tools
 
-This section shows how to use standard Web Inspector tools available from the [https://build.phonegap.com](PhoneGap&nbsp;Build site) to debug PhoneGap apps while they are running on your device.  See the PhoneGap Build section for details on how to provide the site with project code, and how to get the resulting compiled apps onto your device.
+This section shows how to use standard Web Inspector tools available from the
+  <a href="https://build.phonegap.com" target="_blank">PhoneGap Build site</a>
+to debug PhoneGap apps while they are running on your device.  See the PhoneGap Build section for details on how to provide the site with project code, and how to get the resulting compiled apps onto your device.
 
 To enable debugging from within the list of existing __Apps__, click on the name of the application to view its details. Click on the __Settings__ tab, then select the __Enable debugging__ check box:
 
@@ -86,5 +88,8 @@ The Web Inspector offers several other useful features:
   feature is less appropriate for PhoneGap apps, which are already
   delivered to the device as part of an installed native package.
 
-Despite slight differences in how Web Inspector features appear in different WebKit-based browser environments, the documentation for [Google Chrome](https://developers.google.com/chrome-developer-tools/) and [Apple Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/DebuggingYourWebsite/DebuggingYourWebsite.html)
+Despite slight differences in how Web Inspector features appear in different WebKit-based browser environments, the documentation for
+  <a href="https://developers.google.com/chrome-developer-tools/" target="_blank">Google Chrome</a>
+and
+  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/DebuggingYourWebsite/DebuggingYourWebsite.html" target="_blank">Apple Safari</a>
 provides a good overview.
