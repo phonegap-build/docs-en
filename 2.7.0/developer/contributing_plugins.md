@@ -39,15 +39,21 @@ A PhoneGap Plugin consists of:
   * a native class for each supported platform, implementing the PhoneGap Plugin interface
   * associated dependencies and assets. There may, for instance, need to be multiple native classes to implement the full plugin logic, or UI assets on the native or www side.
 
-Plugins developed for PhoneGap Build should always be developed and tested against the latest release of PhoneGap (2.9 at the time of writing).
+Plugins developed for PhoneGap Build should always be developed and tested against the latest release of PhoneGap.
 
-Up to date information about plugin development is available at [docs.phonegap.com][pgdocs]
+Up to date information about plugin development is available at
+  <a href="http://docs.phonegap.com/en/2.9.0/guide_plugin-development_index.md.html" target="_blank">docs.phonegap.com</a>
 
 ## Packaging the plugin
 
-PhoneGap Build uses the [plugman][pins] tool to install plugins into the native projects we generate for our users.
+PhoneGap Build uses the
+  <a href="https://github.com/phonegap-build/cordova-plugman" target="_blank">plugman</a>
+tool to install plugins into the native projects we generate for our users.
 
-The correct format for plugins used by plugman is documented in [a separate spec][spec]. For an example of a plugin built according to that spec, please see [the Facebook Connect plugin][child], which is currently active on PhoneGap Build.
+The correct format for plugins used by plugman is documented in
+  <a href="https://github.com/alunny/cordova-plugin-spec" target="_blank">a separate spec</a>
+For an example of a plugin built according to that spec, please see
+  <a href="https://github.com/phonegap-build/FacebookConnect" target="_blank">the Facebook Connect plugin</a>, which is currently active on PhoneGap Build.
 
 To check whether your plugin is packaged correctly for each supported platform:
 
@@ -62,7 +68,9 @@ All of the above tools and specifications are in active development. If you find
 
 ## Submitting Your Plugin
 
-Once your plugin is in a state that you're happy with, [submit the plugin][padd] to PhoneGap Build.
+Once your plugin is in a state that you're happy with,
+  <a href="http://build.phonegap.com/plugins#add" target="_blank">submit the plugin</a>
+to PhoneGap Build.
 
 Our criteria for including the plugin on PhoneGap Build, broadly speaking, are:
 
@@ -72,9 +80,3 @@ Our criteria for including the plugin on PhoneGap Build, broadly speaking, are:
   us (security risks, compiler warnings, that sort of thing).
 
 If we're not satisfied with any of the above, we'll get back to you with our concerns, and hopefully we can reach a resolution. If you're worried that your plugin will not meet our standards, please get in contact while you're developing so we can help you out.
-
-[padd]:/plugins#add
-[pgdocs]:http://docs.phonegap.com/en/2.9.0/guide_plugin-development_index.md.html
-[pins]:https://github.com/phonegap-build/cordova-plugman
-[spec]:https://github.com/alunny/cordova-plugin-spec
-[child]:https://github.com/phonegap-build/FacebookConnect
