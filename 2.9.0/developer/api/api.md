@@ -43,7 +43,9 @@ When using the API, check each returned status code; if it's not 200, check the 
     if (res.status != 200)
         console.log(JSON.parse(res.body).error)
 
-As is standard in HTTP, a _4xx_ status indicates an error with the request, while a _5xx_ status indicates an server error. Contact [PhoneGap's support forums](http://community.phonegap.com) if you get a 500 error, or an unexpected 400 error.
+As is standard in HTTP, a _4xx_ status indicates an error with the request, while a _5xx_ status indicates an server error. Contact
+  <a href="http://community.phonegap.com" target="_blank">PhoneGap's support forums</a>
+if you get a 500 error, or an unexpected 400 error.
 
 ## JSONP
 
@@ -59,6 +61,8 @@ This allows you to access the PhoneGap Build API using `<script>` tags.
 
 ## HATEOAS
 
-Wherever possible, the PhoneGap Build API v1 uses _Hypermedia as the Engine of Application State_ ([HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)).  This means you can access the source of the api (`/api/v1`), then follow nested resources' `link` attributes to navigate the application, with no knowledge of the other routes within your application.
+Wherever possible, the PhoneGap Build API v1 uses _Hypermedia as the Engine of Application State_ (
+  <a href="http://en.wikipedia.org/wiki/HATEOAS" target="_blank">HATEOAS</a>
+).  This means you can access the source of the api (`/api/v1`), then follow nested resources' `link` attributes to navigate the application, with no knowledge of the other routes within your application.
 
 The home resource for the API v1 is the same as the `/me` resource, which represents the current user.
