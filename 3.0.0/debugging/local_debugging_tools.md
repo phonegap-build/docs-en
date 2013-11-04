@@ -55,7 +55,7 @@ Weinre is now up and running! If you are running this behind a router that uses 
 
 Obtain the ip address of your machine running Weinre. This can be done on Windows by running `ipconfig` or on OSX/Linux by running `ifconfig`.
 
-Now you're ready to use your local server with Build. Using the [config.xml](/docs/config-xml) specify the following. Change the domain param value to the ip address you found earlier, and the key param value to a unique identifier.
+Now you're ready to use your local server with Build. Using the <a href="https://build.phonegap.com/docs/config-xml" target="_blank">config.xml</a> specify the following. Change the domain param value to the ip address you found earlier, and the key param value to a unique identifier.
 
       <feature name="debug-server" required="true">
         <param name="domain" value="http://localhost:8080"/>
