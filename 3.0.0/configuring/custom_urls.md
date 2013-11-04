@@ -20,7 +20,8 @@ license: licensed to the apache software foundation (asf) under one
 
 # Custom URL Schemes
 
-iOS allows registration of [custom URL schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50).
+iOS allows registration of
+  <a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50" target="_blank">custom URL Schemes</a>.
 
 <table class="table">
   <tr>
@@ -29,7 +30,6 @@ iOS allows registration of [custom URL schemes](https://developer.apple.com/libr
       <p>
         Your app can have many <code>url-scheme</code> elements present.
       </p>
-      <hr>
       <p>
         <code>name</code> (optional): defaults to the application bundle id. This has to be unique. If a duplicate is found the build will fail.
       </p>
