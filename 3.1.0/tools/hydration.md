@@ -5,11 +5,11 @@ PhoneGap Build is excited to offer Hydration to its users. Hydration is a tool t
 1. Compilation times are improved significantly.
 2. Updates are pushed directly to the application installed on a device.
 
-PhoneGap accomplishes this by compiling a native binary that acts as a container for your mobile application. Once a developer uploads a new build the end user (eg. tester) of the application will be notified upon restart of the application. If the end user decides to run the new code base the Hydrated app will automatically fetch and run the latest code base.
+PhoneGap accomplishes this by compiling a native binary that acts as a container for your mobile application. Once a developer uploads a new build the end user (eg. tester) of the application will be notified upon restart of the application. If the end user decides to run the new code base, the Hydrated app will automatically fetch and run the latest code base.
 
 If you have any questions or you would like to provide some feedback to our team we use our
   <a href="http://community.phonegap.com" target="_blank">community support channel</a>
-for most of our communication. Don't hesitate to drop us a line!
+for most of our communication. Drop us a line!
 
 ## Sections
 
