@@ -26,7 +26,7 @@ The `config.xml` file, as specified in the [W3C widget specification](http://www
 
 <i class="glyphicon glyphicon-check"></i> Please ensure that your `config.xml` file is at the top level of your application (the same level as your `index.html` file). Otherwise it will not be loaded correctly.
 
-We're continually adding features to cour `config.xml` support, to give PhoneGap Build developers more power to customize their apps. If there are any specific features you'd like to see support for, [please let us know](http://getsatisfaction.com/nitobi/products/nitobi_phonegap_build).
+We're continually adding features to our `config.xml` support to give PhoneGap Build developers more power to customize their apps. If there are any specific features you'd like to see support for, [please let us know](http://getsatisfaction.com/nitobi/products/nitobi_phonegap_build).
 
 ## Essential Properties
 
