@@ -106,4 +106,4 @@ PhoneGap Build Supports the following platforms, for version `3.1.0` of Cordova/
 </table>
 
 
-<i class="glyphicon glyphicon-check"></i> If you would like to see supported platforms for versions prior to, or if available, after this release, please use the drop down in the top-right hand corner.
+<i class="glyphicon glyphicon-check"></i> To view supported platforms for versions prior to, or if available, after this release please use the drop down menu in the top-right hand corner.
