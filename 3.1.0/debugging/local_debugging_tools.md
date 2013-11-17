@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Local Debugging Tools
 
-Adobe&reg; PhoneGap&trade; Build allows users to use their own debug server with the Build service.
+PhoneGap Build allows users to use their own debug server with the Build service.
 
 Build uses a tool called Weinre to enable remote debugging of mobile apps.
 
