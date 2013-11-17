@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS Signing
 
-We're now able to offer support for building to iOS devices through Adobe® PhoneGap™ Build. The process for completing iOS builds is slightly different than that for other platforms: all iOS builds need to be signed by a developer certificate and a provisioning profile, that is tied to your Apple developer account and the device you wish to test on. This document covers how to set this up.
+We're now able to offer support for building to iOS devices through PhoneGap Build. The process for completing iOS builds is slightly different than for other platforms: all iOS builds need to be signed by a developer certificate and a provisioning profile, that is tied to your Apple developer account and the device you wish to test on. This document covers how to set this up.
 
 > Note: Since PhoneGap Build uses Apple's standard development process to build applications, you will need to sign up for their developer program to build iOS applications on PhoneGap Build. You will also need a Mac to configure your certificate and provisioning profile.
 
