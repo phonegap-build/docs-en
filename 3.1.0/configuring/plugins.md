@@ -20,12 +20,12 @@ license: licensed to the apache software foundation (asf) under one
 
 # Plugins
 
-To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins,
+To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
 
 The list of all supported plugins is located on our
   <a href="https://build.phonegap.com/plugins" target="_blank">plugins repository.</a>
 
-Plugins need to implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, be sure that the experience degrades gracefully for users who do not have the plugin available.
+Plugins need to implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
 If you would like to contribute a plugin to PhoneGap Build, please see the relevant documentation.
 
