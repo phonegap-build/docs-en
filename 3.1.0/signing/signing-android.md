@@ -20,12 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Signing
 
-Adobe® PhoneGap Build™ allows you to sign your Android builds, so they are suitable for submission to the
+PhoneGap Build allows you to sign your Android builds, so they are suitable for submission to the
   <a href="http://market.android.com/" target="_blank">Google Play Store</a>.
 
 To get a release build ready, you first need to generate a signing keystore file. Full details are available in the
-  <a href="http://developer.android.com/guide/publishing/app-signing.html" target="_blank">Android documentation</a>
-: please ensure that you record the **alias**, as well as the **keystore password** and **key password** that you set for your keystore.
+  <a href="http://developer.android.com/guide/publishing/app-signing.html" target="_blank">Android documentation</a>. Please ensure that you record the **alias**, as well as the **keystore password** and **key password** that you set for your keystore.
 
 The next step is to go to
   <a href="https://build.phonegap.com/people/edit" target="_blank">edit your account</a>
@@ -33,7 +32,7 @@ and add the key. Scroll down and you should see a new panel present, for signing
 
 ![Signing Keys Panel](img/phonegap-build/android-signing/signing-keys-panel.png)
 
-Hit add a key and fill in all of your details - ensure that the **alias, key password and keystore password** fields match those entered when you created your key. The **title** field can be anything you want - something to help youidentify your key.
+Hit add a key and fill in all of your details - ensure that the **alias, key password and keystore password** fields match those entered when you created your key. The **title** field can be anything you want - something to help you identify your key.
 
 ![Android Key Modal Form](img/phonegap-build/android-signing/android-key-modal.png)
 
