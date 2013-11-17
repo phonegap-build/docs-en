@@ -42,9 +42,8 @@ If our service is having issues keep an eye out on our
   <a href="https://twitter.com/phonegapbuild" target="_blank">twitter account</a>
 , we will announce any updates related to our service outage there.
 
-If our service status page displays no visible issues head over to our
-  <a href="http://community.phonegap.com" target="_blank">community support page</a>
-make a post and we'll answer shortly.
+If our service status page displays no visible issues, head over to our
+  <a href="http://community.phonegap.com" target="_blank">community support page</a>, make a post and we'll answer shortly.
 
 ## Are You Having Issues With Writing the App?
 
@@ -59,9 +58,9 @@ You may also want to try and file an issue on the plugin's issue tracker.
 
 ### Having Issues With a Core-Plugin?
 
-Core plugins are maintained by the Cordova team, head over to the
+Core plugins are maintained by the <a href="http://cordova.io">Apache Cordova</a> team. Please contact them by heading over to the
   <a href="https://groups.google.com/forum/#!forum/phonegap" target="_blank">Cordova/PhoneGap Google Group</a>
-and post a question.
+and posting a question.
 
 Quite a few maintainers monitor the group and you should be able to get a solution to your issue or question in a relatively quick manner.
 
@@ -74,7 +73,7 @@ and post your question.
 
 Quite a few maintainers monitor the group and you should be able to get a solution to your issue or question in a relatively quick manner.
 
-Have Feedback For Us?
+### Have Feedback For Us?
 
 Great! We'd love to hear it! Head over to our,
   <a href="http://community.phonegap.com/nitobi/topics/new" target="_blank">community support page</a>
