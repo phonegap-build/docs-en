@@ -18,13 +18,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# Upgrading from 2.9.0 to 3.0.0
+# Upgrading from 2.9.0 to 3.1.0
 
-This guide provides a gentle upgrade path for PhoneGap Build users who would like to upgrade from `2.9.0` to `3.0.0`.
+This guide provides a gentle upgrade path for PhoneGap Build users who would like to upgrade from `2.9.0` to `3.1.0`.
 
 ## Architecture Changes
 
-Many things have changed from `2.9.0` to `3.0.0`. There have been significant changes made to Cordova's architecture, these changes also apply to PhoneGap Build.
+Many things have changed from `2.9.0` to `3.1.0`. There have been significant changes made to Cordova's architecture, these changes also apply to PhoneGap Build.
 
 The core api's that were once bundled with every release (ex: contacts, camera, etc.) are now self contained plugins.
 
@@ -59,7 +59,7 @@ If you're unfamiliar with using a `config.xml` here is a simple template you can
 
             <!-- versionCode is optional and Android only -->
 
-            <preference name="phonegap-version" value="3.0.0" />
+            <preference name="phonegap-version" value="3.1.0" />
 
             <name>Sample Config.xml</name>
 

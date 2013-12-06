@@ -135,4 +135,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
     </ul>
+    <h1>Support</h1>
+    <ul>
+        <li>
+          <h2>[Getting Help]</h2>
+        </li>
+    </ul>
 </div>
