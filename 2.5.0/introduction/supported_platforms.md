@@ -155,5 +155,6 @@ PhoneGap Build Supports the following platforms, for version `2.5.0` of Cordova/
   </tr>
 </table>
 
+PhoneGap Build supports a maximum project size of `15mb`. If you have a paid Creative Cloud account or a monthly paid subscription then the maximum project size is `40mb`.
 
 <i class="glyphicon glyphicon-check"></i> If you would like to see supported platforms for versions prior to, or if available, after this release, please use the drop down in the top-right hand corner.
