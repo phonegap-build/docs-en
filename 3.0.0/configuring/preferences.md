@@ -58,7 +58,7 @@ The
       <br/><br/>
       Example:
       <br/>
-      <code>&lt;preference name="orienation" value="landscape" /&gt;</code>
+      <code>&lt;preference name="orientation" value="landscape" /&gt;</code>
   </tr>
 
   <tr>
