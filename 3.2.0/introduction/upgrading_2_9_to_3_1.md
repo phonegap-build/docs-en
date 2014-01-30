@@ -79,9 +79,9 @@ It's recommended that you get familiar with using the config.xml. It improves th
 
 Once you have a config.xml you will need to include all the core APIs required by your application.
 
-To do so include a `<gap:plugin />` tag for each API, for example, if your app uses the accelerometer include the following.
+To do so include a `<gap:plugin />` tag for each API, for example, if your app requires the device api include the following.
 
-        <gap:plugin name="Accelerometer" value="org.apache.cordova.Accelerometer" />
+        <gap:plugin name="org.apache.cordova.device" />
 
 If you fail to include an API your application may crash, we're currently working on making the experince as smooth as possible.
 
