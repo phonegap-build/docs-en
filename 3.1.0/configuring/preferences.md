@@ -149,6 +149,15 @@ The
     </td>
   </tr>
 
+  <tr>
+    <td><code>deployment-target</code><br/>(ios only)</td>
+    <td>
+      This sets the <code>IPHONEOS_DEPLOYMENT_TARGET</code> in the build, which tranlsates to the <code>MinimumOSVersion</code> in the ipa Propertly List.
+      <br/><br/>Example:
+      <br/><code>&lt;preference name="deployment-target" value="7.0" /&gt;</code>
+    </td>
+  </tr>
+
 </table>
 
 ## Android Only
