@@ -49,6 +49,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
         <li>
+            <h2>[Config File Elements]</h2>
+            <span>
+              Customize your Android Manifest or iOS Property List.
+            </span>
+        </li>
+        <li>
             <h2>[Icons and Splash Screens]</h2>
             <span>
               Add icons and splash screens to your application.
