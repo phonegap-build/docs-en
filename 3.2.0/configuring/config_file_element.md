@@ -18,7 +18,7 @@ license: licensed to the apache software foundation (asf) under one
 
 ---
 
-# Config File Element
+# Config File Elements
 
 PhoneGap Build aims to take away the pains of configuring SDKs and compiling native applications so you can focus on writing great code. As part of this, we obfuscate management of the platform configuration files -- namely your [Android Manifest](http://developer.android.com/guide/topics/manifest/manifest-intro.html) and your [iOS Property List](https://developer.apple.com/library/iOS/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html). We configure these files based on the preferences you specify in your app's config.xml file. However, the specifications of these xml files are constantly changing, and it would be impossible for us to expose all of the possible configurations through the use of simple preferences. So for those cases that we haven't covered, you can contribute xml directly to your Android Manifest and iOS Propertly List files, via the `gap:config-file` element (beta feature).
 
