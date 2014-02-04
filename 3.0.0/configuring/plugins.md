@@ -136,14 +136,12 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
 <a id="importing-native"></a>
 ### Referencing the JavaScript code
 
-As with `phonegap.js`, the JavaScript code for a plugin is inserted into your project by PhoneGap Build at build time. Plugins will usually depend on PhoneGap being loaded already, so insert a script tag after the phonegap.js tag.
+If a plugin utilizes the ```js-module``` element to direct cordova to load the plugin javascripts, then no ```<script>``` references will be necessary to load a plugin. This is the case for the core cordova plugins, but 3rd party plugins will be implementation-dependent. Refer to the plugin's documentation to determine if you'll need to manually include the javascript.
 
-For example, if you're using the [Barcode Scanner plugin](https://build.phonegap.com/plugins/140) it would look like the following:
+If you do need to manually include the plugin javascript, it would look like the following:
 
-    <script src="phonegap.js"></script>
+    <script src="cordova.js"></script>
     <script src="barcodescanner.js"></script>
 
-Do not include the plugin javascript files or other plugin files in your app. These will be injected by PhoneGap Build, and including them may cause problems.
-
-Using the Barcode Sanner example above, you should omit uploading the `barcodescanner.js` file when uploading the project to PhoneGap Build. (Also  remember not to include the `phonegap.js`!)
+Whether the script tag is required or not, **do not include the actual plugin files in the zip or repository which you submit to PhoneGap Build**. These files will be injected by PhoneGap Build, and including them may cause problems.
 
