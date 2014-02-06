@@ -24,15 +24,15 @@ Adobe PhoneGap provides a way for users to create mobile applications using tech
 
 Applications created with PhoneGap can be distributed to various vendor app stores (ex: Apple App Store) and installed on a end-user's device like any other native application.
 
-Even though PhoneGap provides a intuitive and friendly way to create mobile applications, maintaing mobile development environment is still a hassle.
+Even though PhoneGap provides a intuitive and friendly way to create mobile applications, maintaining mobile development environment is still a hassle.
 
-Each vendor provides a different toolchain, and each PhoneGap release is compatable with a specific set of tools.
+Each vendor provides a different toolchain, and each PhoneGap release is compatible with a specific set of tools.
 
-This is where PhoneGap Build comes into help.
+This is where PhoneGap Build comes in to help.
 
 PhoneGap Build is a cloud service for compiling PhoneGap applications.
 
-Here are some of the benifits PhoneGap Build provides:
+Here are some of the benefits PhoneGap Build provides:
 
 ## Managed Compilation and Signing
 
@@ -49,7 +49,7 @@ Maximize your productivity while minimizing production time. Target iOS, Android
 
 ## Work With Your Team
 
-Add team members and create roles within your PhoneGap Build projects.
+Work collaboratively by adding team members and create roles within your PhoneGap Build projects.
 
 ## Quicker Development Cycle
 
