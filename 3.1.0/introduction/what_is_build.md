@@ -24,7 +24,7 @@ Adobe PhoneGap provides a way for users to create mobile applications using tech
 
 Applications created with PhoneGap can be distributed to various vendor app stores (ex: Apple App Store) and installed on a end-user's device like any other native application.
 
-Even though PhoneGap provides a intuitive and friendly way to create mobile applications, maintaining mobile development environment is still a hassle.
+Even though PhoneGap provides an intuitive and friendly way to create mobile applications, maintaining mobile development environment is still a hassle.
 
 Each vendor provides a different toolchain, and each PhoneGap release is compatible with a specific set of tools.
 
