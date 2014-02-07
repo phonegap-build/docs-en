@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# Upgrading from 2.9.0 to 3.1.0
+# Upgrading from 2.9 to 3.x
 
 This guide provides a gentle upgrade path for PhoneGap Build users who would like to upgrade from `2.9.0` to `3.1.0`.
 

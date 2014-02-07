@@ -1,0 +1,91 @@
+---
+license: licensed to the apache software foundation (asf) under one
+         or more contributor license agreements.  see the notice file
+         distributed with this work for additional information
+         regarding copyright ownership.  the asf licenses this file
+         to you under the apache license, version 2.0 (the
+         "license"); you may not use this file except in compliance
+         with the license.  you may obtain a copy of the license at
+
+           http://www.apache.org/licenses/license-2.0
+
+         unless required by applicable law or agreed to in writing,
+         software distributed under the license is distributed on an
+         "as is" basis, without warranties or conditions of any
+         kind, either express or implied.  see the license for the
+         specific language governing permissions and limitations
+         under the license.
+
+---
+
+# Getting Started with Build
+
+PhoneGap Build requires an application to be packaged in a specific
+manner that may not be intuitive at first.
+
+We use an open packaging model that follows the [W3C Widget
+Packaging specification](http://www.w3.org/TR/widgets/).
+
+The following is a guide to help package your application for PhoneGap Build.
+
+##Sections
+
+1. [What Do I Upload?](#what_do_i_upload)
+2. [How Do I Configure My Application?](#configure_application)
+3. [What's Next?](#whats_next)
+3. [Where can I Get Help?](#whats_next)
+
+
+<a id="#what_do_i_upload"></a>
+###What Do I Upload?
+
+####Preparing the Assets
+
+PhoneGap Build only requires the assets of your application. This is
+essentially your www directory which contains your html, css, images,
+js files, etc.
+
+PhoneGap Build will most likely fail to compile your application
+if native files are uploaded (.h, .m, .java, etc).
+
+####Removing Unnecessary Files
+
+Once you've included the necessary assets, remove the `phonegap.js`
+(cordova.js) as Build will automatically inject it during compile
+time.
+
+####Why must you delete the `phonegap.js`?
+
+PhoneGap requires a different JavaScript file for each platform and
+using an incompatible `phonegap.js` will result in errors when
+running your application.
+
+####Making Sure You can Still Access the PhoneGap API
+
+Once you've deleted the `phonegap.js` you'll need to make sure that your
+application can still access the PhoneGap API.
+
+To do so, simply ensure that the following reference is made in your `index.html`
+
+    <script src="phonegap.js"></script>
+
+Note that this is interchangeable with
+
+    <script src="cordova.js"></script>
+
+<a id="#configure_application"></a>
+###How Do I Configure My Application?
+
+PhoneGap Build supports a configuration XML file, `config.xml`.
+
+This configuration file allows you to modify things like the
+application's title, icons, splash screens, and other properties.
+
+[More information on our config.xml can be found here.](configuring_basics.md.html)
+
+<a id="help"></a>
+###Where can I get help?
+
+If you have any questions or you would like to
+provide some feedback to our team, don't hesitate to drop us a line
+on our [community support channel](http://community.phonegap.com).
