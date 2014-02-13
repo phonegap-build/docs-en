@@ -33,7 +33,7 @@ The `gap:config-file` spec is based on the [config-file element in PhoneGap's pl
 
 As an example on iOS, if you wish to restrict the orientation of an application, you can use the orientation preference in config.xml, where
 
-    <preference name="orienation" value="portrait" />
+    <preference name="orientation" value="portrait" />
 
 will translate to the following in your iOS Property List:
 
