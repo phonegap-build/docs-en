@@ -66,20 +66,20 @@ To check and debug the resulting Property List file, simply rename your .ipa fil
 
 For an Android example suppose you want to modify the screen sizes supported by your application, through the supports-screens element in the Android Manifest. Here is the default in a PhoneGap Build AndroidManifest.xml:
 
-   <supports-screens android:anyDensity="true" android:resizeable="true" 
-      android:smallScreens="true" 
-      android:normalScreens="true" 
-      android:largeScreens="true" 
-      android:xlargeScreens="true" />
+    <supports-screens android:anyDensity="true" android:resizeable="true" 
+        android:smallScreens="true" 
+        android:normalScreens="true" 
+        android:largeScreens="true" 
+        android:xlargeScreens="true" />
 
 To disable support for all but normalScreens, set them to false:
 
-   <gap:config-file platform="android" parent="/manifest">
-      <supports-screens 
+    <gap:config-file platform="android" parent="/manifest">
+        <supports-screens 
             android:xlargeScreens="false" 
             android:largeScreens="false" 
             android:smallScreens="false" />
-   </gap:config-file>
+    </gap:config-file>
 
 Your xml will be merged with the default manifest xml, and when conflicts occur, your specified values will take precedence. To check and debug the resulting Android Manifest, you can use the [Android apk-tool](https://code.google.com/p/android-apktool/) to unpack your compiled apk, and examine the AndroidManifest.xml.
 
