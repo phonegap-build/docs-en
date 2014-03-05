@@ -69,4 +69,4 @@ The access element provides your app with access to resources on other domains -
         <access origin="http://phonegap.com" subdomains="true" />
     </widget>
 
-<i class="glyphicon glyphicon-check"></i> The behaviour of the access element is heavily dependent on the platform you're deploying to - we have a [blog post](/blog/access-tags) with more information. It is also likely to vary between different releases of PhoneGap - we'll work to maintain sane defaults and configurability for PhoneGap Build users.
+<i class="glyphicon glyphicon-check"></i> The behaviour of the access element is heavily dependent on the platform you're deploying to - we have a [blog post](http://phonegap.com/blog/2012/03/20/access-tags/) with more information. It is also likely to vary between different releases of PhoneGap - we'll work to maintain sane defaults and configurability for PhoneGap Build users.
