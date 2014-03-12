@@ -28,6 +28,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
         <li>
+            <h2>[Getting Started with Build]</h2>
+            <span>
+            What files to include in your app.
+            </span>
+        </li>
+        <li>
             <h2>[Supported Platforms]</h2>
             <span>
             See the platforms we support for this version of PhoneGap.
@@ -51,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <li>
             <h2>[Config File Elements]</h2>
             <span>
-              Customize your Android Manifest or iOS Property List.
+              Customize your Android Manifest or iOS Property List beyond our provided preference tags.
             </span>
         </li>
         <li>
