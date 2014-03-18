@@ -70,12 +70,13 @@ We support classic, retina, iPad displays (and retina iPad displays in PhoneGap 
 
 ### Android
 
-We support ldpi, mdpi, hdpi, and xhdpi displays; the following will define icons for each specific screen type.
+We support ldpi, mdpi, hdpi, xhdpi and xxhdpi displays; the following will define icons for each specific screen type.
 
     <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
     <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
     <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
 
 ### BlackBerry
 
@@ -136,12 +137,13 @@ We support classic, retina, iPhone 5 and iPad displays; the following will defin
 
 ### Android
 
-We support ldpi, mdpi, hdpi and xhdpi displays; the following will define splash screens for each specific screen type.
+We support ldpi, mdpi, hdpi, xhdpi and xxhdpi displays; the following will define splash screens for each specific screen type.
 
     <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
     <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
     <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="splash/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
 
 ### BlackBerry 
 
