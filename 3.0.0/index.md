@@ -156,6 +156,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     <h1>Support</h1>
     <ul>
         <li>
+          <h2>[Failed Builds]</h2>
+        </li>
+        <li>
+          <h2>[FAQ]</h2>
+        </li>
+        <li>
           <h2>[Getting Help]</h2>
         </li>
     </ul>
