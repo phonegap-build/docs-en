@@ -39,6 +39,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             See the platforms we support for this version of PhoneGap.
             </span>
         </li>
+        <li>
+            <h2><a href="http://docs.phonegap.com/en/2.5.0/index.html">PhoneGap Documentation</a></h2>
+            <span>
+            How to write a PhoneGap app, API docs, and more on the inner workings.
+            </span>
+        </li>
     </ul>
     <h1>Configuring</h1>
     <ul>
