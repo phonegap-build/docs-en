@@ -20,14 +20,13 @@ license: licensed to the apache software foundation (asf) under one
 
 # Plugins
 
-To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins,
+To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
 
-The list of all supported plugins is located on our
-  <a href="https://build.phonegap.com/plugins" target="_blank">plugins repository.</a>
+The list of all supported plugins is located on our <a href="https://build.phonegap.com/plugins" target="_blank">plugins repository.</a>
 
-Plugins need to implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, be sure that the experience degrades gracefully for users who do not have the plugin available.
+Plugins need to be implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
-If you would like to contribute a plugin to PhoneGap Build, please see the relevant documentation.
+If you would like to contribute a plugin to PhoneGap Build, please see the [Contributing Plugins documentation](developer_contributing_plugins.md.html).
 
 ## Including a plugin in your project
 
@@ -40,6 +39,7 @@ There are two steps to including a plugin in your project:
 ### Importing the native code
 
 To import the native code into your PhoneGap Build project, you will need to add the correct `<gap:plugin>` tag to your config.xml file.
+<b>If you omit the version tag, your app will always be built with the latest version of the plugin. It will be updated automatically the next time you update your app code after a plugin is updated, which may cause unexpected behaviour.</b> For more info on plugin versioning, <a href="#plugin-versions">click here</a>.
 
 <table class="table">
   <tr>
@@ -47,14 +47,11 @@ To import the native code into your PhoneGap Build project, you will need to add
     <td>
         <p>
           <code>name</code>: Plugins should be referenced by the plugin ID which is
-          normally in a reverse domain format (ex: com.example.www).
+          normally in a reverse domain format (ex: com.phonegap.plugins.barcodescanner).
         </p>
         <hr>
         <p>
-          <code>version</code> (optional): You can specify an optional version of a
-          plugin to run with the version attribute. If no version is specified
-          then the latest available version of the plugin is used. <a href="#plugin-versions">Click here, for a detailed guide on
-          using versions.</a>
+          <code>version</code>: Optional, but we highly recommend locking your plugin version, as mentioned above.
         </p>
         <hr>
         <p>
@@ -136,7 +133,7 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
 <a id="importing-native"></a>
 ### Referencing the JavaScript code
 
-If a plugin utilizes the ```js-module``` element to direct cordova to load the plugin javascripts, then no ```<script>``` references will be necessary to load a plugin. This is the case for the core cordova plugins, but 3rd party plugins will be implementation-dependent. Refer to the plugin's documentation to determine if you'll need to manually include the javascript.
+If a plugin utilizes the <code>js-module</code> element to direct cordova to load the plugin javascripts, then no <code>&lt;script&gt;</code> references will be necessary to load a plugin. This is the case for the core cordova plugins, but 3rd party plugins will be implementation-dependent. Refer to the plugin's documentation to determine if you'll need to manually include the javascript.
 
 If you do need to manually include the plugin javascript, it would look like the following:
 
@@ -144,4 +141,5 @@ If you do need to manually include the plugin javascript, it would look like the
     <script src="barcodescanner.js"></script>
 
 Whether the script tag is required or not, **do not include the actual plugin files in the zip or repository which you submit to PhoneGap Build**. These files will be injected by PhoneGap Build, and including them may cause problems.
+
 
