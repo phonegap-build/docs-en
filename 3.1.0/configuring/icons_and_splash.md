@@ -59,31 +59,62 @@ The default icon must be named `icon.png` and must reside in the root of your ap
 
 ### iOS
 
-We support classic, retina, iPad displays (and retina iPad displays in PhoneGap 2.5.0+). The following will define icons for each specific screen type.
+We support classic, retina, iPhone 5 and iPad displays.
 
-    <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
-    <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+The names below reflect the names of the destination files when they are added to the application. During app submittal you may get feedback that has a reference to these filenames.
 
-    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
-    <icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+#### iOS 7.0+
+
+    <!-- iPhone / iPod Touch  -->
+    <icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+
+    <!-- iPad -->
+    <icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+
+    <!-- Settings Icon -->
+    <icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+
+    <!-- Spotlight Icon -->
+    <icon src="icon-40.png" gap:platform="ios" width="40" height="40" />
+    <icon src="icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+    
+#### iOS 6.1
+    
+    <!-- iPhone / iPod Touch -->
+    <icon src="icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icon@2x.png" gap:platform="ios" width="114" height="114" />
+
+    <!-- iPad -->
+    <icon src="icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+
+    <!-- iPhone Spotlight and Settings Icon -->
+    <icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+
+    <!-- iPad Spotlight and Settings Icon -->
+    <icon src="icon-50.png" gap:platform="ios" width="50" height="50" />
+    <icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />
 
 ### Android
 
 We support ldpi, mdpi, hdpi, xhdpi and xxhdpi displays; the following will define icons for each specific screen type.
 
-    <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    <icon src="ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <icon src="xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
 
 ### Windows Phone
 
 We support two icons for Windows Phone, a regular icon and a tile image.
 
-    <icon src="icons/winphone/icon.png" gap:platform="winphone" />
-    <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+    <icon src="icon.png" gap:platform="winphone" />
+    <icon src="tileicon.png" gap:platform="winphone" gap:role="background" />
 
 <a name="splashes"></a>
 ## Splash Screens
@@ -109,27 +140,36 @@ The default splash must be named `splash.png` and must reside in the root of you
 
 ### iOS
 
-We support classic, retina, iPhone 5 and iPad displays; the following will define splash screens for each of those. Standard iPads have two different splash screens, portrait, landscape. Retina iPads have two additional splash screens, retina  portrait and retina landscape (PhoneGap 2.5.0+ only).
+We support classic, retina, iPhone 5 and iPad displays; the following will define splash screens for each of those. Standard iPads have two different splash screens, portrait, landscape. Retina iPads have two additional splash screens, retina  portrait and retina landscape.
 
-    <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
-    <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
-    <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
-    <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
-    <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+The names below reflect the names of the destination files when they are added to the application. During app submittal you may get feedback that has a reference to these filenames.
 
-    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
-    <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
-    <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+    <!-- iPhone and iPod touch -->
+    <gap:splash src="Default.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="Default@2x.png" gap:platform="ios" width="640" height="960" />
+
+    <!-- iPhone 5 / iPod Touch (5th Generation) -->
+    <gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+
+    <!-- iPad -->
+    <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+
+    <!-- Retina iPad -->
+    <gap:splash src="Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
+    <gap:splash src="Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
 
 ### Android
 
 We support ldpi, mdpi, hdpi, xhdpi and xxhdpi displays; the following will define splash screens for each specific screen type.
 
-    <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    <gap:splash src="splash/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    <gap:splash src="ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+
+Patch-9 backgrounds are supported. All patch-9 files have to have a ".9.png" suffix.
 
 ### Windows Phone
 
