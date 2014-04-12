@@ -72,6 +72,21 @@ This configuration file allows you to modify things like the application's title
 
 [More information on our config.xml can be found here.](configuring_basics.md.html)
 
+<a id="#structure_application"></a>
+###How Do I Structure My Application?
+
+PhoneGap Build's only requirement for your application structure is that the `config.xml` and `index.html` is in the top level of your application.  Other than that
+you can structure your application as dictated by your workflows.
+
+As your application may contain files or directories not required in your application (unused splash screens, bower packages, grunt artifacts, un-compiled less files etc.) we support a
+special file called `.pgbomit`.
+
+`.pgbomit` is a file that you can create and add to a directory that signifies to PhoneGap Build that it SHOULD NOT
+include the contents of that directory as source for the native applciation. This folder, however, can be
+used to store any files needed during the PhoneGap Build process **up to the compile step**.
+
+A typical use case is for a directory containing the icons and splashcreens for an app. Place `.pgbomit` in that directory and none of those files/directories will be included in the binary app package, **except** those copied and used for icons and splashscreens for a specific platform.
+
 <a id="help"></a>
 ###Where can I get help?
 
