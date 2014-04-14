@@ -31,92 +31,92 @@ file uploads. API requests should have the content type
 
 The API's write interface includes the following:
 
-  <table class="table">
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Create a New App](#_post_https_build_phonegap_com_api_v1_apps)<br>
-        `https://build.phonegap.com/api/v1/apps`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-primary">PUT</span></td>
-      <td>
-        [Update an Existing App](#_put_https_build_phonegap_com_api_v1_apps_id)<br>
-        `https://build.phonegap.com/api/v1/apps/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Update an Existing App's Icon](#_post_https_build_phonegap_com_api_v1_apps_id_icon)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/icon`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Start a Build For a Specific App](#_post_https_build_phonegap_com_api_v1_apps_id_build)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/build`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Start a Build for a Specific App but only for a Specific Platform](#_post_https_build_phonegap_com_api_v1_apps_id_build_platform)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/build/:platform`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Add a Collaborator To an App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/collaborators`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-primary">PUT</span></td>
-      <td>
-        [Update a Collaborator On a App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-info">POST</span></td>
-      <td>
-        [Add a Singing Key for A Specific Platform](#_post_https_build_phonegap_com_api_v1_keys_platform)<br>
-        `https://build.phonegap.com/api/v1/keys/:platform`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-primary">PUT</span></td>
-      <td>
-        [Update/Unlock a Singing Key for a Specific Platform](#_put_https_build_phonegap_com_api_v1_keys_platform)<br>
-        `https://build.phonegap.com/api/v1/keys/:platform/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-danger">DELETE</span></td>
-      <td>
-        [Delete an App](#_delete_https_build_phonegap_com_api_v1_apps_id)<br>
-        `https://build.phonegap.com/api/v1/apps/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-danger">DELETE</span></td>
-      <td>
-        [Delete a Collaborator for an App](#_delete_https_build_phonegap_com_api_v1_apps_id_collaborators_id)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-danger">DELETE</span></td>
-      <td>
-        [Delete a Key](#_delete_https_build_phonegap_com_api_v1_keys_platform_id)<br>
-        `https://build.phonegap.com/api/v1/keys/:platform/:id`
-      </td>
-    </tr>
-  </table>
+<table class="table">
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Create a New App](#_post_https_build_phonegap_com_api_v1_apps)<br>
+      `https://build.phonegap.com/api/v1/apps`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-primary">PUT</span></td>
+    <td>
+      [Update an Existing App](#_put_https_build_phonegap_com_api_v1_apps_id)<br>
+      `https://build.phonegap.com/api/v1/apps/:id`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Update an Existing App's Icon](#_post_https_build_phonegap_com_api_v1_apps_id_icon)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/icon`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Start a Build For a Specific App](#_post_https_build_phonegap_com_api_v1_apps_id_build)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/build`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Start a Build for a Specific App but only for a Specific Platform](#_post_https_build_phonegap_com_api_v1_apps_id_build_platform)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/build/:platform`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Add a Collaborator To an App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/collaborators`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-primary">PUT</span></td>
+    <td>
+      [Update a Collaborator On a App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-info">POST</span></td>
+    <td>
+      [Add a Singing Key for A Specific Platform](#_post_https_build_phonegap_com_api_v1_keys_platform)<br>
+      `https://build.phonegap.com/api/v1/keys/:platform`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-primary">PUT</span></td>
+    <td>
+      [Update/Unlock a Singing Key for a Specific Platform](#_put_https_build_phonegap_com_api_v1_keys_platform)<br>
+      `https://build.phonegap.com/api/v1/keys/:platform/:id`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-danger">DELETE</span></td>
+    <td>
+      [Delete an App](#_delete_https_build_phonegap_com_api_v1_apps_id)<br>
+      `https://build.phonegap.com/api/v1/apps/:id`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-danger">DELETE</span></td>
+    <td>
+      [Delete a Collaborator for an App](#_delete_https_build_phonegap_com_api_v1_apps_id_collaborators_id)<br>
+      `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-danger">DELETE</span></td>
+    <td>
+      [Delete a Key](#_delete_https_build_phonegap_com_api_v1_keys_platform_id)<br>
+      `https://build.phonegap.com/api/v1/keys/:platform/:id`
+    </td>
+  </tr>
+</table>
 
 ## POST https://build.phonegap.com/api/v1/apps
 

@@ -29,66 +29,66 @@ legibility. Actual JSON responses will have no significant whitespace.
 
 The API's read interface includes the following:
 
-  <table class="table">
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get A User's Profile and Resources](#_get_https_build_phonegap_com_api_v1_me)<br>
-        `https://build.phonegap.com/api/v1/me`
-      </td>
-    </tr>
-    <tr>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get A User's Apps](#_get_https_build_phonegap_com_api_v1_apps)<br>
-        `https://build.phonegap.com/api/v1/apps`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get A User's App by Id](#_get_https_build_phonegap_com_api_v1_apps_id)<br>
-        `https://build.phonegap.com/api/v1/apps/:id`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get A User's App's main Icon](#_get_https_build_phonegap_com_api_v1_apps_id_icon)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/icon`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Download A User's App by Platform](#_get_https_build_phonegap_com_api_v1_apps_id_platform)<br>
-        `https://build.phonegap.com/api/v1/apps/:id/:platform`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get Meta-data About A User's Keys](#_get_https_build_phonegap_com_api_v1_keys)<br>
-        `https://build.phonegap.com/api/v1/keys`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get Meta-Data About A User's Platfom Keys](#_get_https_build_phonegap_com_api_v1_keys_platform)<br>
-        `https://build.phonegap.com/api/v1/keys/:platform`
-      </td>
-    </tr>
-    <tr>
-      <td><span class="label label-success">GET</span></td>
-      <td>
-        [Get Meta-Data About A Specific Key](#_get_https_build_phonegap_com_api_v1_keys_platform_id)<br>
-        `https://build.phonegap.com/api/v1/keys/:platform/:id`
-      </td>
-    </tr>
-  </table>
+<table class="table">
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get A User's Profile and Resources](#_get_https_build_phonegap_com_api_v1_me)<br>
+    `https://build.phonegap.com/api/v1/me`
+  </td>
+</tr>
+<tr>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get A User's Apps](#_get_https_build_phonegap_com_api_v1_apps)<br>
+    `https://build.phonegap.com/api/v1/apps`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get A User's App by Id](#_get_https_build_phonegap_com_api_v1_apps_id)<br>
+    `https://build.phonegap.com/api/v1/apps/:id`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get A User's App's main Icon](#_get_https_build_phonegap_com_api_v1_apps_id_icon)<br>
+    `https://build.phonegap.com/api/v1/apps/:id/icon`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Download A User's App by Platform](#_get_https_build_phonegap_com_api_v1_apps_id_platform)<br>
+    `https://build.phonegap.com/api/v1/apps/:id/:platform`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get Meta-data About A User's Keys](#_get_https_build_phonegap_com_api_v1_keys)<br>
+    `https://build.phonegap.com/api/v1/keys`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get Meta-Data About A User's Platfom Keys](#_get_https_build_phonegap_com_api_v1_keys_platform)<br>
+    `https://build.phonegap.com/api/v1/keys/:platform`
+  </td>
+</tr>
+<tr>
+  <td><span class="label label-success">GET</span></td>
+  <td>
+    [Get Meta-Data About A Specific Key](#_get_https_build_phonegap_com_api_v1_keys_platform_id)<br>
+    `https://build.phonegap.com/api/v1/keys/:platform/:id`
+  </td>
+</tr>
+</table>
 
 ## GET https://build.phonegap.com/api/v1/me
 
