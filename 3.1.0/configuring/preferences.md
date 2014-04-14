@@ -107,23 +107,6 @@ The
   </tr>
 
   <tr>
-    <td valign=top style="white-space:nowrap"><code>ios-statusbarstyle</code><br/>(ios only)</td>
-    <td>
-      Set the iOS status bar style with values <code>default, black-opaque or
-      black-translucent</code>. The default is a grey status bar, black-opaque
-      will appear black. Although <code>black-translucent</code> is supported, the PhoneGap
-      webview does not extend beneath the status bar, so it will appear identical
-      to black-opaque once your app is running.
-      <br/><br/>
-      Example:
-      <br/>
-      <code>
-        &lt;preference name="ios-statusbarstyle" value="black-opaque" /&gt;
-      </code>
-    </td>
-  </tr>
-
-  <tr>
     <td><code>detect-data-types</code><br/>(ios only)</td>
     <td>
       Controls whether certain data types (such as phone numbers and dates) are
