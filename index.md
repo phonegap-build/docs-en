@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
         <li>
-            <h2><a href="http://docs.phonegap.com/en/3.3.0/index.html">PhoneGap Documentation</a></h2>
+            <h2><a href="http://docs.phonegap.com">PhoneGap Documentation</a></h2>
             <span>
             How to write a PhoneGap app, API docs, and more on the inner workings.
             </span>

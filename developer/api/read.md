@@ -21,6 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # The PhoneGap Build Read API
 
 Back to:
+
 * [Authentication Methods](developer_api_authentication.md.html)
 * [The Write API](developer_api_write.md.html)
 
