@@ -20,6 +20,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # The PhoneGap Build Read API
 
+Back to:
+* [Authentication Methods](developer_api_authentication.md.html)
+* [The Write API](developer_api_write.md.html)
+
 This section details read methods for version 1 of the API. See The
 PhoneGap Build API for an overview, or The PhoneGap Build Write API
 for write methods.
@@ -33,8 +37,7 @@ The API's read interface includes the following:
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get A User's Profile and Resources](#_get_https_build_phonegap_com_api_v1_me)<br>
-    `https://build.phonegap.com/api/v1/me`
+    <a href="#_get_https_build_phonegap_com_api_v1_me"><code>/api/v1/me</code> Get A User's Profile and Resources</a>
   </td>
 </tr>
 <tr>
@@ -42,50 +45,43 @@ The API's read interface includes the following:
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get A User's Apps](#_get_https_build_phonegap_com_api_v1_apps)<br>
-    `https://build.phonegap.com/api/v1/apps`
+    <a href="#_get_https_build_phonegap_com_api_v1_apps"><code>/api/v1/apps</code> Get A User's Apps</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get A User's App by Id](#_get_https_build_phonegap_com_api_v1_apps_id)<br>
-    `https://build.phonegap.com/api/v1/apps/:id`
+    <a href="#_get_https_build_phonegap_com_api_v1_apps_id"><code>/api/v1/apps/:id</code> Get A User's App by Id</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get A User's App's main Icon](#_get_https_build_phonegap_com_api_v1_apps_id_icon)<br>
-    `https://build.phonegap.com/api/v1/apps/:id/icon`
+    <a href="#_get_https_build_phonegap_com_api_v1_apps_id_icon"><code>/api/v1/apps/:id/icon</code> Get A User's App's main Icon</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Download A User's App by Platform](#_get_https_build_phonegap_com_api_v1_apps_id_platform)<br>
-    `https://build.phonegap.com/api/v1/apps/:id/:platform`
+    <a href="#_get_https_build_phonegap_com_api_v1_apps_id_platform"><code>/api/v1/apps/:id/:platform</code> Download A User's App by Platform</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get Meta-data About A User's Keys](#_get_https_build_phonegap_com_api_v1_keys)<br>
-    `https://build.phonegap.com/api/v1/keys`
+    <a href="#_get_https_build_phonegap_com_api_v1_keys"><code>api/v1/keys</code> Get Meta-data About A User's Keys</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get Meta-Data About A User's Platfom Keys](#_get_https_build_phonegap_com_api_v1_keys_platform)<br>
-    `https://build.phonegap.com/api/v1/keys/:platform`
+    <a href="#_get_https_build_phonegap_com_api_v1_keys_platform"><code>/api/v1/keys/:platform</code> Get Meta-Data About A User's Platfom Keys</a>
   </td>
 </tr>
 <tr>
   <td><span class="label label-success">GET</span></td>
   <td>
-    [Get Meta-Data About A Specific Key](#_get_https_build_phonegap_com_api_v1_keys_platform_id)<br>
-    `https://build.phonegap.com/api/v1/keys/:platform/:id`
+    <a href="#_get_https_build_phonegap_com_api_v1_keys_platform_id"><code>/api/v1/keys/:platform/:id</code>Get Meta-Data About A Specific Key</a>
   </td>
 </tr>
 </table>

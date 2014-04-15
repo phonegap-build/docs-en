@@ -20,6 +20,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # The PhoneGap Build Write API
 
+Back to:
+* [Authentication Methods](developer_api_authentication.md.html)
+* [The Read API](developer_api_read.md.html)
+
 This section details write methods for version 1 of the API. See The
 PhoneGap Build API for an overview, or The PhoneGap Build Read API for
 read methods.
@@ -35,85 +39,73 @@ The API's write interface includes the following:
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Create a New App](#_post_https_build_phonegap_com_api_v1_apps)<br>
-      `https://build.phonegap.com/api/v1/apps`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps"><code>/api/v1/apps</code> Create a New App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-primary">PUT</span></td>
     <td>
-      [Update an Existing App](#_put_https_build_phonegap_com_api_v1_apps_id)<br>
-      `https://build.phonegap.com/api/v1/apps/:id`
+      <a href="#_put_https_build_phonegap_com_api_v1_apps_id"><code>/api/v1/apps/:id</code> Update an Existing App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Update an Existing App's Icon](#_post_https_build_phonegap_com_api_v1_apps_id_icon)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/icon`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps_id_icon"><code>/api/v1/apps/:id/icon</code> Update an Existing App's Icon</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Start a Build For a Specific App](#_post_https_build_phonegap_com_api_v1_apps_id_build)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/build`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps_id_build"><code>/api/v1/apps/:id/build</code> Start a Build For a Specific App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Start a Build for a Specific App but only for a Specific Platform](#_post_https_build_phonegap_com_api_v1_apps_id_build_platform)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/build/:platform`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps_id_build_platform"><code>/api/v1/apps/:id/build/:platform</code> Start a Build for a Specific App but only for a Specific Platform</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Add a Collaborator To an App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/collaborators`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps_id_collaborators"><code>/api/v1/apps/:id/collaborators</code> Add a Collaborator To an App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-primary">PUT</span></td>
     <td>
-      [Update a Collaborator On a App](#_post_https_build_phonegap_com_api_v1_apps_id_collaborators)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
+      <a href="#_post_https_build_phonegap_com_api_v1_apps_id_collaborators"><code>/api/v1/apps/:id/collaborators/:id</code> Update a Collaborator On a App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-info">POST</span></td>
     <td>
-      [Add a Singing Key for A Specific Platform](#_post_https_build_phonegap_com_api_v1_keys_platform)<br>
-      `https://build.phonegap.com/api/v1/keys/:platform`
+      <a href="#_post_https_build_phonegap_com_api_v1_keys_platform"><code>/api/v1/keys/:platform</code> Add a Signing Key for A Specific Platform</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-primary">PUT</span></td>
     <td>
-      [Update/Unlock a Singing Key for a Specific Platform](#_put_https_build_phonegap_com_api_v1_keys_platform)<br>
-      `https://build.phonegap.com/api/v1/keys/:platform/:id`
+      <a href="#_put_https_build_phonegap_com_api_v1_keys_platform"><code>/api/v1/keys/:platform/:id</code> Update/Unlock a Singing Key for a Specific Platform</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-danger">DELETE</span></td>
     <td>
-      [Delete an App](#_delete_https_build_phonegap_com_api_v1_apps_id)<br>
-      `https://build.phonegap.com/api/v1/apps/:id`
+      <a href="#_delete_https_build_phonegap_com_api_v1_apps_id"><code>/api/v1/apps/:id</code> Delete an App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-danger">DELETE</span></td>
     <td>
-      [Delete a Collaborator for an App](#_delete_https_build_phonegap_com_api_v1_apps_id_collaborators_id)<br>
-      `https://build.phonegap.com/api/v1/apps/:id/collaborators/:id`
+      <a href="#_delete_https_build_phonegap_com_api_v1_apps_id_collaborators_id"><code>/api/v1/apps/:id/collaborators/:id</code> Delete a Collaborator for an App</a>
     </td>
   </tr>
   <tr>
     <td><span class="label label-danger">DELETE</span></td>
     <td>
-      [Delete a Key](#_delete_https_build_phonegap_com_api_v1_keys_platform_id)<br>
-      `https://build.phonegap.com/api/v1/keys/:platform/:id`
+      <a href="#_delete_https_build_phonegap_com_api_v1_keys_platform_id"><code/api/v1/keys/:platform/:id></code> Delete a Key</a>
     </td>
   </tr>
 </table>
