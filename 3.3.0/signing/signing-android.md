@@ -20,24 +20,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Signing
 
-PhoneGap Build allows you to sign your Android builds, so they are suitable for submission to the
-  <a href="http://market.android.com/" target="_blank">Google Play Store</a>.
+[Generating a private key](#_generating_a_private_key)
+[Submitting your key to build](#_submitting_your_key_to_build)
+[Unlocking your key](#_unlocking_your_key)
 
-To get a release build ready, you first need to generate a signing keystore file. Full details are available in the
-  <a href="http://developer.android.com/guide/publishing/app-signing.html" target="_blank">Android documentation</a>. Please ensure that you record the **alias**, as well as the **keystore password** and **key password** that you set for your keystore.
+## Generating a private key
 
-The next step is to go to
-  <a href="https://build.phonegap.com/people/edit" target="_blank">edit your account</a>
-and add the key. Scroll down and you should see a new panel present, for signing keys and certificates.
+1. [Download and install Java](http://www.java.com/en/download/index.jsp).
 
-![Signing Keys Panel](img/phonegap-build/android-signing/signing-keys-panel.png)
+2. Set Java_Home directory (http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html).
 
-Hit add a key and fill in all of your details - ensure that the **alias, key password and keystore password** fields match those entered when you created your key. The **title** field can be anything you want - something to help you identify your key.
+3. Open the command prompt (cmd.exe) as an Administrator, then Run the following command: `$ keytool -genkey -v -keystore [keystore_name].keystore -alias [alias_name] -keyalg RSA -keysize 2048 -validity 10000`
 
-![Android Key Modal Form](img/phonegap-build/android-signing/android-key-modal.png)
+4. Keytool will ask for keystore password. Enter password and confirm:
+![Keystore Password](https://lh6.googleusercontent.com/-dTrBt9fr6XY/UQoYlRA-5AI/AAAAAAAAACA/HQfQ0dEeORE/s800/android_keystore_pass.png)
 
-Hit save and the list of keys at the bottom should be updated to include your new key. Make sure you set your new key to be the default.
+5. Next, keytool will ask for additional information. Supply appropriately:
+![Keystore Password 2](https://lh3.googleusercontent.com/-tHJyFTz4Jgg/UQoZcBfALpI/AAAAAAAAACM/RadHnubtmzQ/s800/additional_info.png)
 
-When a release build of an app is made with PhoneGap Build, we sign the binary with your keystore, and also align it using the `zipalign` tool.
+6. Next, keytool will ask password for Alias. Return if it's the same as keystore password. Othewise enter password and confirm:
+![Alias password](https://lh4.googleusercontent.com/-rDuGcZs9D1o/UQobXI9BeqI/AAAAAAAAACk/Hzq0MRVysV4/s800/alias_password.png)
 
-Now you're ready to go: all subsequent Android builds will use your default selected key, and be release ready.
+7. Your signing key is now ready to submit:
+![Submit signing key](https://lh3.googleusercontent.com/-HITXvrjJ_Ts/UQoefEAAnfI/AAAAAAAAADM/4uurmV0t1eM/s800/keystore_ready.png)
+
+## Submitting your key to Build
+
+Go to your Account > Edit Setting > Signing Key's tab. 
+![Edit signing keys](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+
+Click 'add a key...', ensuring you use the same alias used when you generated your key.
+![Add info](https://lh5.googleusercontent.com/-SlgtUAUu0yg/UQojGv88wyI/AAAAAAAAADs/feiaimA9TDA/s800/add_key.png)
+
+## Unlocking your key
+
+Go to your Account > Edit Setting > Signing Key's tab: 
+![Signing Keys](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+
+Click unlock button and supply the the certificate password (from step #6 above) and the keystore password (from step #4 above)
+![Unlocking](https://lh5.googleusercontent.com/-_0NDzwogI34/UQonEx9z8jI/AAAAAAAAAD8/S3AfFDrQHyA/s800/unlock_key.png)
+
+***
+
+[More info](http://developer.android.com/tools/publishing/app-signing.html#cert)

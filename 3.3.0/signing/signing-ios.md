@@ -20,42 +20,74 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS Signing
 
-We're now able to offer support for building to iOS devices through PhoneGap Build. The process for completing iOS builds is slightly different than for other platforms: all iOS builds need to be signed by a developer certificate and a provisioning profile, that is tied to your Apple developer account and the device you wish to test on. This document covers how to set this up.
+[Mac Users](#_mac_users)
+[Windows Users](#_windows_users)
 
-> Note: Since PhoneGap Build uses Apple's standard development process to build applications, you will need to sign up for their developer program to build iOS applications on PhoneGap Build. You will also need a Mac to configure your certificate and provisioning profile.
+***
 
-When you upload a new application to PhoneGap Build, if you don't have a default certificate-profile pair attached to your account, you will be alerted that the iOS build can not be completed:
+## Mac Users
 
-![iOS Key Required](img/phonegap-build/ios-builds/ios-key-required.png)
+### Convert the iPhone developer certificate to a P12 file on Mac OS
 
-Your key will actually consist of two files: a **certificate** and a **provisioning profile**. Apple has
-<a href="http://developer.apple.com" target="_blank">extensive documentation</a>
-for setting up your environment locally: the best approach is to ensure you can build an iOS application to your iOS device locally, to be sure that both your certificate and your provisioning profile are set up correctly for code signing.
+Once you have downloaded the Apple iPhone certificate from Apple, export it to the P12 keystore format. To do this on Mac® OS:
 
-Once you have these set up, you can export them for upload to PhoneGap Build. For the provisioning profile, you will need a file with the `mobileprovision` extension, which looks like this:
+1. Open the Keychain Access application (in the Applications/Utilities folder).
+2. If you have not already added the certificate to Keychain, select File > Import. Then navigate to the certificate file (the .cer file) you obtained from Apple.
+3. Select the Keys category in Keychain Access.
+4. Select the private key associated with your iPhone Development Certificate. The private key is identified by the iPhone Developer: <First Name> <Last Name> public certificate that is paired with it.
+5. Command-click the iPhone Developer certificate and select, Export "iPhone Developer: Name...".
+![Keychain export](https://build.phonegap.com/images/_docs/ios-builds/keychain-export.png)
+6. Save your keystore in the Personal Information Exchange (.p12) file format.
+7. You will be prompted to create a password that is used when you use the keystore to sign applications or transfer the key and certificate in this keystore to another keystore.
+![keychain password](https://build.phonegap.com/images/_docs/ios-builds/keychain-password.png)
 
-![Provisioning Profile in Finder](img/phonegap-build/ios-builds/team-provisioning-profile.png)
+***
 
-Ensure that this provisioning profile is correctly paired with the device(s) you wish to test on.
+## Windows Users
 
-Note that when you create your profile, you will specify the App IDs that are linked to the profile. This is important when using PhoneGap Build: the package name you specify for your app, in your `config.xml` (the `id` attribute of the `widget` element) or through the Edit App page, will have to match the ID for the provisioning profile. If they fail to match, your app will not be built correctly.
+### Convert an Apple developer certificate to a P12 file on Windows
 
-Apple appends a "Bundle Seed ID," or "App ID Prefix," to the provisioning profile when you generate it through the iOS Developer Center. Note that you do _not_ to include this App ID Prefix in your `config.xml` for PhoneGap Build to build successfully. You just need the reverse-domain style Bundle Identifier - `com.domainname.appname`. This will also be best compatible with building for other platforms.
+To develop apps via Build, you must use a P12 certificate file. You generate this certificate based on the Apple iPhone developer certificate file you receive from Apple.
 
-To prepare your certificate, you will need to open the **Keychain Access** utility on your Mac, and identify the certificate that you use for iOS development. Right click on that certificate and select *Export ...*
+1. Download and install [OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)
 
-![Export from Keychain Access](img/phonegap-build/ios-builds/keychain-export.png)
+2. Convert the developer certificate file you receive from Apple into a PEM certificate file. To do this, run the following command-line statement from the [OpenSSL](http://slproweb.com/products/Win32OpenSSL.html) bin directory: 
 
-Save the certificate in a location you can remember, and enter a password. Remember the password: you will need to give it to PhoneGap Build, otherwise we cannot use your certificate.
+`openssl x509 -in developer_identity.cer -inform DER -out developer_identity.pem -outform PEM`
 
-![Enter Certificate Password](img/phonegap-build/ios-builds/keychain-password.png)
+3. If you are using the private key from the keychain on a Mac computer, convert it into a PEM key: 
 
-Now back to the website. On the app detail page, simply select the "new key..." option from the signing key dropdown for the app in question, and then, from the list of platforms with signing available, hit *add a key* for iOS. Fill out the form: add your `p12` certificate file and your `mobileprovision` file, and enter the password associated with your certificate.
+`openssl pkcs12 -nocerts -in mykey.p12 -out mykey.pem`
 
-![Add Certificate to PhoneGap Build](img/phonegap-build/ios-builds/ios-key-form.png)
+4. You can now generate a valid P12 file, based on the key and the PEM version of the iPhone developer certificate: 
 
-Once your key is added, we'll attempt to rebuild the application for iOS. If all goes well, you should see a link for the built `ipa` file available.
+`openssl pkcs12 -export -inkey mykey.key -in developer_identity.pem -out iphone_dev.p12`
 
-You can then download the `ipa` file and use iTunes to install it directly on your provisioned iOS device.
+## Register devices
+1. Visit [Apple Developer Portal](https://developer.apple.com/ios/manage/provisioningprofiles/index.action).
+2. Go to Device section. Under Manage tab, provide Device Name and [Device ID](https://developer.apple.com/ios/manage/devices/howto.action) (40 hex characters)
 
-Happy building!
+## Create Provisioning Profile
+1. Visit [Apple Developer Portal](https://developer.apple.com/ios/manage/provisioningprofiles/index.action).
+2. Go to Provisioning section. Create new profile under Development tab.
+3. Fill the form with Profile Name, Certificates (as per .cer above), App ID and your development device. 
+
+## Submit to Build
+
+Go to your Account > Edit Setting > Signing Keys' tab:
+
+![Edit Account](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+
+Click 'add a key...' and supply your previously generated p12:
+
+![Add Key](https://lh3.googleusercontent.com/-0Va4o9-6Bvs/UaS4oBZyrcI/AAAAAAAAAIU/9D3jQxFUYfw/s800/iOS%2520add%2520key.png)
+    
+## <a id="unlock"> </a>Unlocking the key.
+
+Go to your Account > Edit Setting > Signing Keys' tab: 
+
+![Edit Account](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+
+Click 'lock' button and supply the certificate password you used to export your cert.
+
+![Unlock key](https://lh4.googleusercontent.com/-webq3UkyIQI/UbXzhTNFb_I/AAAAAAAAAIw/rQR_7mi-F7s/s800/iOS%2520unlock.png)
