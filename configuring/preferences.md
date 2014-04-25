@@ -70,6 +70,8 @@ The
       Example:
       <br/>
       <code>&lt;preference name="fullscreen" value="true" /&gt;</code>
+      Note: may not be supported by newer versions of iOS, but users can use
+      the <a href="http://phonegap.com/blog/2014/01/30/customizing-your-android-manifest-and-ios-property-list-on-phonegap-build/">config-file element on phonegap build</a>, and set UIViewControllerBasedStatusBarAppearance to false and UIStatusBarHidden to true.
   </tr>
 
 </table>
