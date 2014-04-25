@@ -60,6 +60,8 @@ Go to your Account > Edit Setting > Signing Key's tab:
 Click unlock button and supply the the certificate password (from step #6 above) and the keystore password (from step #4 above)
 ![Unlocking](https://lh5.googleusercontent.com/-_0NDzwogI34/UQonEx9z8jI/AAAAAAAAAD8/S3AfFDrQHyA/s800/unlock_key.png)
 
+Lastly, either set your key to be default using the checkbox in the keys list, or in your individual application's details, select the key you've uploaded and unlocked.
+
 ***
 
 [More info](http://developer.android.com/tools/publishing/app-signing.html#cert)
