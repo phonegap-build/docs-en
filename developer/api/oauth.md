@@ -46,7 +46,11 @@ Now that the user has allowed your application to access Build, you need to requ
 
     POST https://build.phonegap.com/authorize/token?client_id=abcdef&client_secret=123456&code=a1b2c3
 
-If all those params check out, we'll respond with a json object containing your access token:
+If those params fail to check out, you'll get an error with the following format:
+
+    { "error" : "invalid request" }
+
+If they do check out, we'll respond with a json object containing your access token:
 
     { "access_token": "xyz123" }
 
@@ -54,27 +58,7 @@ Save it.
 
 Now, you can make requests to PhoneGap Build on behalf of this user:
 
-    GET https://build.phonegap.com/api/v1/me?access_token=xyz123x
-
-## Non Web Application Flow
-
-Its possible that you're creating an application that doesn't include a web server that we can interact with. Don't fret, you can also use basic authentication to obtain authorization to access the API. Of course, you'll still need to register your application with Build as above.
-
-    POST https://build.phonegap.com/authorize?client_id=abcdef&client_secret=123456
-
-For example, via curl:
-	
-    curl -u steve@goat-simulator.com -X POST https://build.phonegap.com/authorize?client_id=abcdef&client_secret=123456
-
-If those params check out, we'll respond with a json object containing your access token:
-
-    { "access_token": "xyz123" }
-
-And make your requests on behalf of Steve.
-
-    GET https://build.phonegap.com/api/v1/me?access_token=xyz123x
-
-Head [back to the API Docs](developer_api_api.md.html) for the full API spec.
+    GET https://build.phonegap.com/api/v1/me?access_token=xyz123
 
 ## Non Web Application Flow
 
@@ -86,10 +70,14 @@ For example, via curl:
   
     curl -X POST https://build.phonegap.com/authorize?client_id=abcdef&client_secret=123456&auth_token=789hij
 
-If those params check out, we'll respond with a json object containing your access token:
+If those params fail to check out, you'll get an error with the following format:
+
+    { "error" : "Invalid authentication token." }
+
+If they do check out, we'll respond with a json object containing your access token:
 
     { "access_token": "xyz123" }
 
-And make your requests on behalf of the user.
+And now you can make your requests on behalf of the user.
 
-    GET https://build.phonegap.com/api/v1/me?access_token=xyz123x
+    GET https://build.phonegap.com/api/v1/me?access_token=xyz123
