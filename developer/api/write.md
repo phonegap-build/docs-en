@@ -224,13 +224,14 @@ in the multipart body of your post, using `file` as a parameter name:
 
 To create an app based on a remote repository, set the `create_method`
 parameter to `remote_repo`, and include a `repo` parameter with the
-repository's URL.
+repository's URL. Optionally include a `tag` parameter which indicates 
+the branch or tag to pull from.
 
 The URL has to be publicly accessible; PhoneGap Build does not
 authenticate against your repository. If you wish to keep your code
 private, use one of the other `create_method` options:
 
-        $ curl -u andrew.lunny@nitobi.com -d 'data={"title":"API V1 App","repo":"https://github.com/alunny/phonegap-start.git","create_method":"remote_repo"}' https://build.phonegap.com/api/v1/apps
+        $ curl -u andrew.lunny@nitobi.com -d 'data={"title":"API V1 App","repo":"https://github.com/alunny/phonegap-start.git", "tag":"master", "create_method":"remote_repo"}' https://build.phonegap.com/api/v1/apps
         {
             "keys":{
                 "ios":{
@@ -249,6 +250,7 @@ private, use one of the other `create_method` options:
             "download":{},
             "title":"alunnys Amazing App",
             "repo":"https://github.com/alunny/phonegap-start.git",
+            "tag":"master",
             "collaborators":[
                 {
                     "person":"andrew.lunny@nitobi.com",
@@ -286,6 +288,10 @@ in the body of the response:
         {
             "error":"Private repository URLs not supported - try removing &quot;alunny@&quot;"
         }
+
+If your PhoneGap Build account is linked to your Github account, you
+will be able to pull from your private Github repositories. Other 
+authenticated urls will fail as above.
 
 ### Signing keys
 
