@@ -24,7 +24,7 @@ The PhoneGap Build API allows applications to use the PhoneGap Build web service
 
 The core sections discussed in this documentation article are:
 
-* [Authentication Methods](developer_api_authentication.md.html)
+* [Authentication Methods](developer_api_oauth.md.html)
 * [The Read API](developer_api_read.md.html)
 * [The Write API](developer_api_write.md.html)
 

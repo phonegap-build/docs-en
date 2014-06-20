@@ -2,6 +2,8 @@
 
 The Oauth authorization protocol allows third party applications access user information from PhoneGap Build without ever seeing the user's login information. Client Applications are pre-registered with PhoneGap Build, and users can view and manage which applications are interacting with PhoneGap Build on their behalf.
 
+If you're looking for documentation on simple token authentication, [go here](developer_api_authentication.md.html). Note that we don't recommend this for integrating production applications with the PhoneGap Build Developer API.
+
 ## Client Application Registration
 
 As an application developer, you first need to [register your client application with Build](https://build.phonegap.com/people/edit):
