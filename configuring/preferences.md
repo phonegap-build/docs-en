@@ -154,7 +154,7 @@ The
     <td>
        Minimum Android SDK version. Corresponds to the <code>usesSdk</code> attributes in
        the <code>AndroidManifest.xml</code> file - more details are in
-       [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Defaults to 7 (Android 2.1).
+       <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html" target="_blank">the Android documentation</a>. Defaults to 7 (Android 2.1).
       <br/><br/>
       Example:
       <br/>
@@ -166,8 +166,7 @@ The
     <td><code>android-maxSdkVersion</code><br/>(android only)</td>
     <td>
        Maximum Android SDK version. Corresponds to the <code>usesSdk</code> attributes
-       in the <code>AndroidManifest.xml</code> file - more details are in
-       [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Unset by default.
+       in the <code>AndroidManifest.xml</code> file - more details are in <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html" target="_blank">the Android documentation</a>. Unset by default.
       <br/><br/>
       Example:
       <br/>
@@ -181,8 +180,7 @@ The
       Corresponds to the <code>usesSdk</code> attributes in the <code>AndroidManifest.xml</code>
       file -- an integer designating the API Level that the application
       targets. If not set, the default value equals that given to
-      minSdkVersion. More details are in
-      [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#target). Unset by default.
+      minSdkVersion. More details are in <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#target" target="_blank">the Android documentation</a>. Unset by default.
       <br/><br/>
       Example:
       <br/>
@@ -198,8 +196,7 @@ The
       Where an app can be installed - defaults to <code>internalOnly</code>
       (as the Android SDK). <code>auto</code> or <code>preferExternal</code>
       allow the app to be installed on an SD card - this can lead to unexpected
-      behavior. More details available in
-      [the Android documentation](http://developer.android.com/guide/appendix/install-location.html).
+      behavior. More details available in <a href="http://developer.android.com/guide/appendix/install-location.html" target="_blank">the Android documentation</a>.
       <br/><br/>
       Example:
       <br/>
@@ -214,7 +211,7 @@ The
     <td>
       How the main window of the activity interacts with the window containing
       the on-screen soft keyboard. More details, and possible values, available
-      in [the Android documentation](http://developer.android.com/guide/topics/manifest/activity-element.html#wsoft).
+      in <a href="http://developer.android.com/guide/topics/manifest/activity-element.html#wsoft" target="_blank">the Android documentation</a>.
       <br/><br/>
       Example:
       <br/>
