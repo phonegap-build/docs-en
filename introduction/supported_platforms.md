@@ -20,7 +20,7 @@ license: licensed to the apache software foundation (asf) under one
 
 # Supported Platforms
 
-PhoneGap Build Supports the following platforms, for version `3.1.0` of Cordova/PhoneGap. See all supported PhoneGap version [here](configuring_preferences.md.html#_multi_platform).
+PhoneGap Build Supports the following platforms, for version `3.1.0` of Cordova/PhoneGap. To see all supported PhoneGap version, click [here](configuring_preferences.md.html#_multi_platform).
 
 <table class="table">
   <tr>
