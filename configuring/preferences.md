@@ -34,15 +34,15 @@ The
     <td><code>phonegap-version</code></td>
     <td>  
       Currently supported versions are <b>2.5.0</b>, <b>2.7.0</b>, <b>2.9.0</b>,
-      and <b>3.1.0</b> (default) -- all versions prior to 2.5.0 have been
-      deprecated. If you don't specify a version in your config, it will be set
+      <b>3.1.0</b>, <b>3.3.0</b> (default) and <b>3.5.0</b>-- all versions prior to 2.5.0 
+      have been deprecated. If you don't specify a version in your config, it will be set
       to the current default version. Your app will not build if you specify
       an unsupported version number.
       <br/><br/>
       Example: 
       <br/>
       <code>
-          &lt;preference name="phonegap-version" value="3.1.0" /&gt;
+          &lt;preference name="phonegap-version" value="3.5.0" /&gt;
       </code>
     </td>
   </tr>
