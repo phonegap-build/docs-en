@@ -110,6 +110,13 @@ The BlackBerry WebWorks Packager processes your app configuration (your `config.
 
 If you'd like your app to build successfully for BlackBerry, please trunctate the description.
 
+## Windows Phone build has failed
+
+<a name="winphone-config-file"></a>
+### Error adding config-file element
+
+The build has failed as your config.xml may contain `config-file` elements that will produce a malformed or illegally formatted `WMAppManifest.xml` file. The `WMAppManifest.xml` for windows phone projects has a [strictly defined format](http://msdn.microsoft.com/library/windows/apps/ff769509.aspx). Make sure your `config-file` elements are valid. A common error is not defining a xmlns namespace for an element eg. `<tag xmlns=""></tag>`
+
 ## iOS build has failed
 
 <a name="libpng"></a>
