@@ -64,7 +64,7 @@ Now, you can make requests to PhoneGap Build on behalf of this user:
 
 ## Non Web Application Flow
 
-Its possible that you're creating an application that doesn't include a web server or browser to allow users to authorize your application to access the PhoneGap Build API. Don't fret, there is a solution. Users will obtain a simple auth token from Build (in their [account settings](https://build.phonegap.com/people/edit)), which they'll then pass to your application. If they give that token to your application, they have authorized it to access Build. You'll then exchange that simple auth token for an Oauth client access token. Of course, you'll still need to authorize your application with Build as above.
+Its possible that you're creating an application that doesn't include a web server or browser to allow users to authorize your application to access the PhoneGap Build API. Don't fret, there is a solution. Users will obtain a simple auth token from Build (in their [account settings](https://build.phonegap.com/people/edit)), which they'll then pass to your application. If they give that token to your application, they have authorized it to access Build. You'll then exchange that simple auth token for an Oauth client access token. Of course, you'll still need to register your application with Build as above.
 
     POST https://build.phonegap.com/authorize?client_id=abcdef&client_secret=123456&auth_token=789hij
 
