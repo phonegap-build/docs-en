@@ -146,8 +146,10 @@ Optional parameters:
   sign. (See below for details.)
 
 * __private__: Whether your app can be publicly downloaded. Defaults
-  to `true` during beta period, and `false` once the beta period is
-  complete.
+  to `true`. 
+
+* __share__: Whether your private app can be publicly shared and viewed. Defaults
+  to `false`.
 
 * __phonegap_version__: Which version of PhoneGap your app uses. See
   the Configuration Reference for details on which are supported,
@@ -208,6 +210,7 @@ in the multipart body of your post, using `file` as a parameter name:
             "description":null,
             "debug":false,
             "private":true,
+            "share":false,
             "link":"/api/v1/apps/26486",
             "status":{
                 "ios":"pending",
@@ -268,6 +271,7 @@ private, use one of the other `create_method` options:
             "description":null,
             "debug":false,
             "private":true,
+            "share":true,
             "link":"/api/v1/apps/26488,
             "status":{
                 "ios":"pending",
@@ -391,6 +395,8 @@ Updating the metadata involves sending a JSON object as the parameter
 
 * __private__: whether the app has restricted visibility.
 
+* __share__: whether the private app can be publicly viewed.
+
 * __phonegap_version__: which release of PhoneGap your app uses.
 
 Here is a simple example that update an app's version number:
@@ -421,6 +427,7 @@ Here is a simple example that update an app's version number:
             "link":"/api/v1/apps/8",
             "debug":false,
             "private":true,
+            "share":true,
             "description":null,
             "status":{
                 "winphone":"pending",

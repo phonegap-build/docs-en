@@ -197,6 +197,7 @@ collaborators:
                             PhoneGap development and build.phonegap.com",
                     "debug":false,
                     "private":true,
+                    "share":true,
                     "link":"/api/v1/apps/2",
                     "build_count":12,
                     "status": {
@@ -250,6 +251,7 @@ detail view includes:
                     PhoneGap development and build.phonegap.com",
             "debug":false,
             "private":true,
+            "share":false,
             "link":"/api/v1/apps/2",
             "build_count":12,
             "status": {
