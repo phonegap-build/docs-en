@@ -24,6 +24,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 [Submitting your key to build](#_submitting_your_key_to_build)
 [Unlocking your key](#_unlocking_your_key)
 
+**Note: it is Phonegap Build's policy not to send people back their uploaded keys, for legal reasons. Hold on to them.**
+
 ## Generating a private key
 
 1. [Download and install Java](http://www.java.com/en/download/index.jsp).

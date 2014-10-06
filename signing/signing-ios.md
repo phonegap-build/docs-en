@@ -23,6 +23,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 [Mac Users](#_mac_users)
 [Windows Users](#_windows_users)
 
+**Note: it is Phonegap Build's policy not to send people back their uploaded keys, for legal reasons. Hold on to them.**
+
 ***
 
 ## Mac Users
