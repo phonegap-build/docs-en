@@ -218,7 +218,7 @@ in the multipart body of your post, using `file` as a parameter name:
                 "winphone":"pending"
             },
             "error":{},
-            "phonegap_version":"2.9.0",
+            "phonegap_version":"3.5.0",
             "hydrates":false,
             "build_count":null
         }
@@ -279,7 +279,7 @@ private, use one of the other `create_method` options:
                 "winphone":"pending"
             },
             "error":{},
-            "phonegap_version":"2.9.0",
+            "phonegap_version":"3.5.0",
             "hydrates":false,
             "build_count":null
         }
@@ -367,7 +367,7 @@ Here is a sample post, using the first form:
                 "winphone":"pending"
             },
             "error":{},
-            "phonegap_version":"2.9.0",
+            "phonegap_version":"3.5.0",
             "hydrates":false,
             "build_count":null
         }
@@ -435,7 +435,7 @@ Here is a simple example that update an app's version number:
                 "android":"pending",
             },
             "error":{},
-            "phonegap_version":"2.9.0",
+            "phonegap_version":"3.5.0",
             "hydrates":false,
             "build_count":12
         }
@@ -495,7 +495,7 @@ This sample post selects a new Android key for an app, and unlocks it:
                 "winphone":"pending"
             },
             "error":{},
-            "phonegap_version":"2.9.0",
+            "phonegap_version":"3.5.0",
             "hydrates":false,
             "build_count":null
         }
@@ -646,7 +646,7 @@ so return a `400` status:
                   "android":"pending",
                   "winphone":"pending"
                 },
-                "phonegap_version":"2.9.0",
+                "phonegap_version":"3.5.0",
                 "hydrates":false,
                 "build_count":null,
                 "error":{}

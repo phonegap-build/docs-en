@@ -42,7 +42,7 @@ A PhoneGap Plugin consists of:
 Plugins developed for PhoneGap Build should always be developed and tested against the latest release of PhoneGap.
 
 Up to date information about plugin development is available at
-  <a href="http://docs.phonegap.com/en/2.9.0/guide_plugin-development_index.md.html" target="_blank">docs.phonegap.com</a>
+  <a href="http://docs.phonegap.com/en/3.5.0/guide_hybrid_plugins_index.md.html" target="_blank">docs.phonegap.com</a>
 
 ## Packaging the plugin
 

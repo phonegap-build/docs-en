@@ -169,7 +169,7 @@ collaborators:
                     "private":true,
                     "link":"/api/v1/apps/1",
                     "build_count":4,
-                    "phonegap_version":"2.9.0",
+                    "phonegap_version":"3.5.0",
                     "hydrates":false,
                     "status":{
                         "android":"complete",

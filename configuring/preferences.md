@@ -32,10 +32,10 @@ The
 
   <tr>
     <td><code>phonegap-version</code></td>
-    <td>  
-      Currently supported versions are <b>2.9.0</b>, <b>3.0.0</b>, <b>3.1.0</b>, 
-      <b>3.2.0</b>, <b>3.3.0</b>, <b>3.4.0</b>, <b>3.5.0</b> (default) -- all versions prior to 2.9.0 have been
-      deprecated. If you don't specify a version in your config, it will be set
+    <td>
+      Currently supported versions are <b>3.0.0</b>, <b>3.0.0</b>, <b>3.1.0</b>, <b>3.2.0</b>, <b>3.3.0</b>, <b>3.4.0</b>, <b>3.5.0</b> (default), and <b>3.6.3</b> -- all versions prior 
+      to 3.0.0 are deprecated as of October 15, 2014. If you don't 
+      specify a version in your config, it will be set
       to the current default version. Your app will not build if you specify
       an unsupported version number.
       <br/><br/>
