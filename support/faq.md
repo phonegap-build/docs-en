@@ -32,7 +32,7 @@ Public apps have their source code hosted in a publicly accessible GitHub reposi
 Private apps have their source code hosted in a private (non-publicly accessible) GitHub repository or are created when a developer uploads a ZIP file containing the source code and assets to the PhoneGap Build service.
 
 ## I've lost my signing key. Can Phonegap Build send it to me?
-No, it is Phonegap Build's policy not to send people back their uploaded keys, for legal reasons. Hold on to them.
+No, it is Phonegap Build's policy not to retrieve signing keys for users, for legal reasons. Hold on to them.
 
 ## Where do I go to find PhoneGap Build help?
 Ask a question on our [community forum](http://community.phonegap.com), or ask us on [Twitter](http://twitter.com/PhoneGapBuild).
