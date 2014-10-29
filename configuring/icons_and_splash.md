@@ -165,6 +165,11 @@ The names below reflect the names of the destination files when they are added t
     <!-- iPhone 5 / iPod Touch (5th Generation) -->
     <gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
 
+    <!-- iPhone 6 -->
+    <gap:splash src="Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
+    <gap:splash src="Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+    <gap:splash src="Default-Landscape-736h@3x.png" gap:platform="ios" width="2208" height="1242" />
+
     <!-- iPad -->
     <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
     <gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
