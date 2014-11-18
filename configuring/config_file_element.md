@@ -27,7 +27,7 @@ The `gap:config-file` spec is based on the [config-file element in PhoneGap's pl
 
 * **`platform`**: currently supported values are `ios` (Info.plist) and `android` (AndroidManifest.xml)
 * **`parent`**: on iOS this will be the plist key you wish to modify; on android this will be an xpath string resolving to the parent of the xml element inside of which your xml will be injected
-* **`overwrite`**: currently supported by iOS Property List arrays only, this indicates whether your array will overwrite the default array (`true`) or will be merged with the default array (`false`)
+* **`mode`**: `add`, `replace`, `merge`, or `delete` -- how to modify the parent element. `add` will append to the inner xml of the parent, `replace` will completely overwrite the parent's inner xml with your declaration, `merge` will attempt to find elments of the same name and merge their attributes, and `delete` will search for elements matching the specifed name and attributes and delete them.
 
 ##iOS##
 
@@ -45,7 +45,7 @@ will translate to the following in your iOS Property List:
 
 But suppose you don't want to allow PortraitUpsideDown? So specify your own xml for this property instead:
 
-    <gap:config-file platform="ios" parent="UISupportedInterfaceOrientations" overwrite="true">
+    <gap:config-file platform="ios" parent="UISupportedInterfaceOrientations" mode="replace">
         <array>
             <string>UIInterfaceOrientationLandscapeOmg</string>
         </array>
@@ -74,7 +74,7 @@ For an Android example suppose you want to modify the screen sizes supported by 
 
 To disable support for all but normalScreens, set them to false:
 
-    <gap:config-file platform="android" parent="/manifest">
+    <gap:config-file platform="android" parent="/manifest" mode="merge">
         <supports-screens 
             android:xlargeScreens="false" 
             android:largeScreens="false" 
