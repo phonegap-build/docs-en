@@ -42,7 +42,7 @@ You've registred your application and are ready to hook it into PhoneGap Build. 
     
     GET https://build.phonegap.com/authorize?client_id=abcdef
 
-If they deny, we'll redirect to your Main Application Url. If they allow, we'll redirect to the Callback Url that you indicated when you registered your application, along with a `code` parameter.
+If they allow, we'll redirect to the Callback Url that you indicated when you registered your application, along with a `code` parameter. If they deny, we'll redirect to your Callback Url with an error parameter (`error=authorization_refused`).
 
 Now that the user has allowed your application to access Build, you need to request an access token from us:
 
