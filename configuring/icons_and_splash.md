@@ -63,6 +63,10 @@ We support classic, retina, iPhone 5 and iPad displays.
 
 The names below reflect the names of the destination files when they are added to the application. During app submittal you may get feedback that has a reference to these filenames.
 
+#### iOS 8.0+
+	<!-- iPhone 6 Plus  -->
+	<icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+
 #### iOS 7.0+
 
     <!-- iPhone / iPod Touch  -->
@@ -164,6 +168,10 @@ The names below reflect the names of the destination files when they are added t
 
     <!-- iPhone 5 / iPod Touch (5th Generation) -->
     <gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+	
+	<!-- iPhone 6 Plus  -->
+	<splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+    <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
 
     <!-- iPad -->
     <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
