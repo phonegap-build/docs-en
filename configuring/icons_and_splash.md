@@ -65,6 +65,9 @@ The names below reflect the names of the destination files when they are added t
 
 #### iOS 7.0+
 
+    <!-- iPhone 6 / 6+ -->
+    <icon src="icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+
     <!-- iPhone / iPod Touch  -->
     <icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
     <icon src="icon-60@2x.png" gap:platform="ios" width="120" height="120" />
