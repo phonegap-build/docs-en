@@ -324,7 +324,7 @@ making a separate PUT request to
 
 Here is a sample post, using the first form:
 
-        $ curl -u andrew.lunny@nitobi.com -d 'data={"title":"Signing Keys","repo":"https://github.com/alunny/phonegap-start.git","create_method":"remote_repo","keys":{"ios":123,"android":567}}' https://build.phonegap.com/api/v1/apps
+        $ curl -u andrew.lunny@nitobi.com -d 'data={"title":"Signing Keys","repo":"https://github.com/alunny/phonegap-start.git","create_method":"remote_repo","keys":{"ios":123,"android":567,"winphone":72}}' https://build.phonegap.com/api/v1/apps
         {
             "keys":{
                 "ios":{
@@ -338,6 +338,12 @@ Here is a sample post, using the first form:
                     "default":false,
                     "id":567,
                     "link":"/api/v1/keys/android/567"
+                 },
+                 "winphone":{
+                     "id": 72,
+                     "title": "Windows Publisher Key",
+                     "link": "/api/v1/keys/winphone/72",
+                     "default": false
                  }
             },
             "download":{},
@@ -714,6 +720,27 @@ Here is a sample post:
             "alias":"release",
             "link":"/api/v1/keys/android/2",
             "locked":false
+        }
+
+If you omit one or both of the `key_pw` and `keystore_pw` parameters,
+your key is _locked_ after the upload. You won't be able to build with
+it until you unlock the key.
+
+### Windows Phone Keys
+
+The following are required for Windows Phone builds:
+
+* a title for your key
+* the publisher id from your Windows Phone store account.
+
+Here is a sample post:
+
+        $ curl -u andrew.lunny@nitobi.com -F 'data={"title":"Winphone Key","publisher_id":"04739CCE-16E5-4680-8644-0004225CBCF6"}' https://build.phonegap.com/api/v1/keys/winphone
+        {
+          "title":"Winphone Key",
+          "default":false,
+          "id":72,
+          "link":"/api/v1/keys/winphone/72",
         }
 
 If you omit one or both of the `key_pw` and `keystore_pw` parameters,

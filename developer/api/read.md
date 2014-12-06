@@ -141,6 +141,17 @@ PhoneGap Build API. It is aliased to
                     ],
                     "link":"/api/v1/keys/android"
                 },
+                "winphone": {
+                    "all": [
+                        {
+                            "id": 72,
+                            "title": "Windows Publisher Key",
+                            "link": "/api/v1/keys/winphone/72",
+                            "default": false
+                        }
+                    ],
+                    "link": "/api/v1/keys/winphone",
+                }
                 "link": "/api/v1/keys"
             },
             "link": "/api/v1/me"
@@ -253,6 +264,7 @@ detail view includes:
             "private":true,
             "share":false,
             "link":"/api/v1/apps/2",
+            "last_build":"2014-12-03 13:52:10 -0800",
             "build_count":12,
             "status": {
                 "android":"complete",
@@ -403,6 +415,17 @@ to the list you see when requesting `/api/v1/me`:
                         }
                     ],
                     "link":"/api/v1/keys/android"
+                },
+                "winphone":{
+                    "all":[
+                        {
+                            "id": 72,
+                            "title": "Windows Publisher Key",
+                            "link": "/api/v1/keys/winphone/72",
+                            "default": false
+                        }
+                    ],
+                    "link": "/api/v1/keys/winphone",
                 }
             },
             "link":"/api/v1/keys"
@@ -446,6 +469,19 @@ account, for a specific platform. That platform can be either `ios` or
             "link":"/api/v1/keys/android"
         }
 
+        $ curl -u andrew.lunny@nitobi.com https://build.phonegap.com/api/v1/keys/winphone
+        {
+            "keys":[
+                {
+                    "id": 72,
+                    "title": "Windows Publisher Key",
+                    "link": "/api/v1/keys/winphone/72",
+                    "default": false
+                }
+            ],
+            "link":"/api/v1/keys/winphone"
+        }
+
 ## GET https://build.phonegap.com/api/v1/keys/:platform/:id
 
 Get a JSON-encoded representation of a single signing key:
@@ -470,6 +506,14 @@ Get a JSON-encoded representation of a single signing key:
             "alias":"releasing",
             "link":"/api/v1/keys/android/1",
             "locked":true
+        }
+
+        $ curl -u andrew.lunny@nitobi.com https://build.phonegap.com/api/v1/keys/winphone/72
+        {
+            "id": 72,
+            "title": "Windows Publisher Key",
+            "link": "/api/v1/keys/winphone/72",
+            "default": false
         }
 
 If the requested key is not available, then a `404` status returns,
