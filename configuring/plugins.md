@@ -22,15 +22,15 @@ license: licensed to the apache software foundation (asf) under one
 
 To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
 
-The list of all supported plugins is located on our <a href="https://build.phonegap.com/plugins" target="_blank">plugins repository.</a>
+Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
 
 Plugins need to be implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
-If you would like to contribute a plugin to PhoneGap Build, please see the [Contributing Plugins documentation](developer_contributing_plugins.md.html).
+If you would like to contribute a plugin to the PhoneGap Build repository, please see the [Contributing Plugins ](developer_contributing_plugins.md.html) documentation. To submit a plugin to <a href="http://plugins.cordova.io">plugins.cordova.io</a> please view their <a href="http://cordova.apache.org/docs/en/edge/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">documentation</a>.
 
 ## Including a plugin in your project
 
-There are two steps to including a plugin in your project: 
+There are two steps to including a plugin in your project:
 
   - <a href="#importing-config">Importing the native code using the config.xml</a>
   - <a href="#importing-native">Referencing the JavaScript code for the plugin</a>
@@ -55,12 +55,32 @@ To import the native code into your PhoneGap Build project, you will need to add
         </p>
         <hr>
         <p>
+        <code>source</code>: Optional, can either be "pgb" or "plugins.cordova.io".  Defaults to "pgb".
+        </p>
+        <hr>
+        <p>
           <code>params</code>: Plugins may require parameters for configuration
           properties. <a href="#plugin-params">Here is a detailed explanation.</a>
         </p>
     </td>
   </tr>
 </table>
+
+<a id="plugin-sources"></a>
+#### Plugin Source
+
+Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, or from the Official Cordova Plugins repository, located at <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
+
+The default value for this attribute is `pgb` so for instance the plugin lines below both reference the same plugin in our repository.
+
+    <gap:plugin name="com.phonegap.plugins.example" />
+    <gap:plugin name="com.phonegap.plugins.example" source="pgb" />
+
+To include a plugin from <a href="http://plugins.cordova.io">plugins.cordova.io</a> specify `plugins.cordova.io` in the source attribute.
+
+    <gap:plugin name="com.phonegap.plugins.example" source="plugins.cordova.io" />
+
+The version attribute and param fragments are handled identically regardless of the source of the plugin.
 
 <a id="plugin-versions"></a>
 #### Plugin Versions
@@ -111,7 +131,7 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
         <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.example"
-        versionCode = "10" 
+        versionCode = "10"
         version     = "1.0.0" >
 
         <!-- versionCode is optional and Android only -->
@@ -119,11 +139,11 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
         <name>PhoneGap Example</name>
 
         <description>
-          An example for phonegap build docs. 
+          An example for phonegap build docs.
         </description>
 
         <author href="https://build.phonegap.com" email="support@phonegap.com">
-          Hardeep Shoker 
+          Hardeep Shoker
         </author>
 
         <!-- We'll include the Barcode plugin as an example -->
@@ -141,5 +161,3 @@ If you do need to manually include the plugin javascript, it would look like the
     <script src="barcodescanner.js"></script>
 
 Whether the script tag is required or not, **do not include the actual plugin files in the zip or repository which you submit to PhoneGap Build**. These files will be injected by PhoneGap Build, and including them may cause problems.
-
-
