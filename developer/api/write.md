@@ -146,7 +146,10 @@ Optional parameters:
   sign. (See below for details.)
 
 * __private__: Whether your app can be publicly downloaded. Defaults
-  to `true`. 
+  to `true`.
+
+* __tag__: Which tag or branch to clone. Defaults
+  to `master`.
 
 * __share__: Whether your private app can be publicly shared and viewed. Defaults
   to `false`.
@@ -227,7 +230,7 @@ in the multipart body of your post, using `file` as a parameter name:
 
 To create an app based on a remote repository, set the `create_method`
 parameter to `remote_repo`, and include a `repo` parameter with the
-repository's URL. Optionally include a `tag` parameter which indicates 
+repository's URL. Optionally include a `tag` parameter which indicates
 the branch or tag to pull from.
 
 The URL has to be publicly accessible; PhoneGap Build does not
@@ -294,7 +297,7 @@ in the body of the response:
         }
 
 If your PhoneGap Build account is linked to your Github account, you
-will be able to pull from your private Github repositories. Other 
+will be able to pull from your private Github repositories. Other
 authenticated urls will fail as above.
 
 ### Signing keys
@@ -402,6 +405,8 @@ Updating the metadata involves sending a JSON object as the parameter
 * __private__: whether the app has restricted visibility.
 
 * __share__: whether the private app can be publicly viewed.
+
+* __tag__: which branch or tag to clone from the git repository.
 
 * __phonegap_version__: which release of PhoneGap your app uses.
 
@@ -812,4 +817,3 @@ Delete a signing key from PhoneGap Build, returning either a `202`
         {
             "success":"android key 8 deleted"
         }
-
