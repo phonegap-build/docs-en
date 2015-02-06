@@ -20,11 +20,13 @@ license: licensed to the apache software foundation (asf) under one
 
 # Preferences
 
-The following is a list of custom preferences supported by PhoneGap Build.
+PhoneGap utilizes the `<preference>` tag to customize your application configuration. All `<preference>` tags in your config.xml are copied to the platform-specific configuration files, which means that any preferences [supported by the PhoneGap framework](http://docs.phonegap.com/en/edge/config_ref_index.md.html#The%20config.xml%20File), or by any plugins you are using, will work on PhoneGap Build.
 
-You can have zero or more `<preference>` elements in your `config.xml`. If you specify none, default properties maybe applied. Supported attributes are `name` (required) and `value` (required).
+**Note**: make sure you select your PhoneGap version when looking at the PhoneGap docs page.
 
-The 
+In addition, PhoneGap Build supports some of its own custom preferences, used for things like selecting the PhoneGap version, platform sdk version targeting, and others. These custom preferences are listed below.
+
+If you want to see more detail about what exactly these custom preferences are doing, most of them are translated using the [open-source confetti library](http://github.com/phonegap-build/confetti). Check out the templates directory if you want to dig in.
 
 ## Multi-Platform
 
