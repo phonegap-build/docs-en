@@ -229,13 +229,7 @@ If you want to see more detail about what exactly these custom preferences are d
   <tr>
     <td><code>splash-screen-duration</code><br/>(android only)</td>
     <td>
-      Duration that the splash screen remains visible; defaults to 5000 (ms). For auto-hide behaviour call navigator.splashscreen.hide() in the deviceready callback.
-      <br/><br/>
-      Example:
-      <br/>
-      <code>
-        &lt;preference name="splash-screen-duration" value="10000"/&gt;
-      </code>
+      Deprecated -- use <a href="http://docs.phonegap.com/en/3.6.0/guide_platforms_android_config.md.html">SplashScreenDelay</a> instead.
     </td>
   </tr>
 
