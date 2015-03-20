@@ -182,11 +182,16 @@ The Android filesystem, unlike many desktop operating systems, is case-insensiti
 
 Delete one of the files, and your app should build successfully.
 
-## webOS build has failed
+<a name="invalid_package_identifier"></a>
+## Invalid application identifier
 
-The webOS packager&#151;an executable called `palm-package`&#151;is particularly sensitive about the version number and package name of your application. Your version number should be of the form `1.1.1`&#151;it must have a major, minor, and patch version. A version like `1.0` will fail with `palm-package`.
+Cordova requires a valid application identifier for your application. This identifier should be in the reverse-domain name style and for maximum compatibility should contain only letters, digits and underscores.
 
-Similarly, the package name must be of the form `com.yourcompany.app1`&#151; reverse domain style, all lowercase, and all alphanumerics. If your build has failed on webOS, it is likely that one of these is the root issue.
+The identifier should be unique. The identifier may contain uppercase or lowercase letters ('A' through 'Z'), numbers, and underscores ('_'). However, individual package name parts may only start with letters.
+
+The identifier also cannot contain any Java reserved keywords eg. class, default etc. They are listed (here)[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html].
+
+Complete information can be found under `package` in the [android documentation](http://developer.android.com/guide/topics/manifest/manifest-element.html#package).
 
 <a name="plugin-error"></a>
 ## Plugin error
