@@ -22,11 +22,11 @@ license: licensed to the apache software foundation (asf) under one
 
 To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
 
-Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
+Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="https://www.npmjs.com/">npm</a> and <a href="http://plugins.cordova.io">plugins.cordova.io</a>.  <a href="http://plugins.cordova.io">plugins.cordova.io</a> is now deprecated and will be removed from Phonegap Build on October 15th, 2015, so we don't recommend using plugins from this repository.
 
 Plugins need to be implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
-If you would like to contribute a plugin to the PhoneGap Build repository, please see the [Contributing Plugins ](developer_contributing_plugins.md.html) documentation. To submit a plugin to <a href="http://plugins.cordova.io">plugins.cordova.io</a> please view their <a href="http://cordova.apache.org/docs/en/edge/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">documentation</a>.
+If you would like to contribute a plugin to the PhoneGap Build repository, please see the [Contributing Plugins ](developer_contributing_plugins.md.html) documentation. To submit a plugin to <a href="https://www.npmjs.com/">npm</a> please view their <a href="https://docs.npmjs.com/getting-started/publishing-npm-packages">documentation</a>.
 
 ## Including a plugin in your project
 
@@ -55,7 +55,7 @@ To import the native code into your PhoneGap Build project, you will need to add
         </p>
         <hr>
         <p>
-        <code>source</code>: Optional, can either be "pgb" or "plugins.cordova.io".  Defaults to "pgb".
+        <code>source</code>: Optional, can either be "pgb", "npm" or "plugins.cordova.io".  Defaults to "pgb".
         </p>
         <hr>
         <p>
@@ -69,14 +69,18 @@ To import the native code into your PhoneGap Build project, you will need to add
 <a id="plugin-sources"></a>
 #### Plugin Source
 
-Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, or from the Official Cordova Plugins repository, located at <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
+Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, <a href="https://www.npmjs.com/">npm</a> or the old Cordova Plugins repository, located at <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
 
 The default value for this attribute is `pgb` so for instance the plugin lines below both reference the same plugin in our repository.
 
     <gap:plugin name="com.phonegap.plugins.example" />
     <gap:plugin name="com.phonegap.plugins.example" source="pgb" />
 
-To include a plugin from <a href="http://plugins.cordova.io">plugins.cordova.io</a> specify `plugins.cordova.io` in the source attribute.
+To include a plugin from <a href="https://www.npmjs.com/">npm</a> specify `npm` in the source attribute.
+
+    <gap:plugin name="example-plugin" source="npm" />
+
+To include a plugin from the deprecated <a href="http://plugins.cordova.io">plugins.cordova.io</a> specify `plugins.cordova.io` in the source attribute. This repository is at end of life and will be removed on October 15th, 2015 so we do not recommend using plugins from this repository. When the repository is removed this source will be removed.
 
     <gap:plugin name="com.phonegap.plugins.example" source="plugins.cordova.io" />
 
