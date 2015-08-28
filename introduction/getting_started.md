@@ -87,6 +87,8 @@ used to store any files needed during the PhoneGap Build process **up to the com
 
 A typical use case is for a directory containing the icons and splashcreens for an app. Place `.pgbomit` in that directory and none of those files/directories will be included in the binary app package, **except** those copied and used for icons and splashscreens for a specific platform.
 
+Please note that the `.pgbomit` file is a placeholder file only, it is not read and its only function is to highlight a directory.  It is *not* like .gitignore or other file types that can contain patterns.
+
 <a id="help"></a>
 ###Where can I get help?
 
