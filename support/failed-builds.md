@@ -182,6 +182,13 @@ The Android filesystem, unlike many desktop operating systems, is case-insensiti
 
 Delete one of the files, and your app should build successfully.
 
+<a name="gz_asset_error"></a>
+## Compressed File Error
+
+The Android tool chain for compiling your app includes a step that compresses all your files inside your application.  This step will fail if your app contains a compressed file (.gz) file.
+
+Delete all compressed files from your application.
+
 <a name="invalid_package_identifier"></a>
 ## Invalid application identifier
 
