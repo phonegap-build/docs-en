@@ -117,6 +117,11 @@ If you'd like your app to build successfully for BlackBerry, please trunctate th
 
 The build has failed as your config.xml may contain `config-file` elements that will produce a malformed or illegally formatted `WMAppManifest.xml` file. The `WMAppManifest.xml` for windows phone projects has a [strictly defined format](http://msdn.microsoft.com/library/windows/apps/ff769509.aspx). Make sure your `config-file` elements are valid. A common error is not defining a xmlns namespace for an element eg. `<tag xmlns=""></tag>`
 
+<a name="path_too_long"></a>
+### Path too long
+
+The MSBuild build tools enforce a maximum path size of 260 characters. If a file in your app has a path longer than 260 you will get this error. To fix this error please move/rename the any file that may be longer than this limit. N.B. although 260 characters is the MSBuild maximum PhoneGap Build does use around 25 characters in the app root path on the file system. So an operational maximum shouldbe around 220.
+
 ## iOS build has failed
 
 <a name="libpng"></a>
