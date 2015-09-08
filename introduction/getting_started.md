@@ -63,6 +63,8 @@ Note that this is interchangeable with
 
     <script src="cordova.js"></script>
 
+For maximum sizes of zip uploads, see the <a href="https://build.phonegap.com/plans">plans page</a>.
+
 <a id="#configure_application"></a>
 ###How Do I Configure My Application?
 
