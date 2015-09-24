@@ -181,21 +181,21 @@ If the alias is not recognized, the `alias` field you provided was not found on 
 In each of these cases, check that you have the correct keystore files, and the correct password and alias details for your keystore. You may need to reupload your Android keys for your signed build to succeed.
 
 <a name="identical_filenames"></a>
-## Identical filenames
+### Identical filenames
 
 The Android filesystem, unlike many desktop operating systems, is case-insensitive -- you cannot have a file called `index.html` and a file called `index.html` in the same Android app package.
 
 Delete one of the files, and your app should build successfully.
 
 <a name="gz_asset_error"></a>
-## Compressed File Error
+### Compressed File Error
 
 The Android tool chain for compiling your app includes a step that compresses all your files inside your application.  This step will fail if your app contains a compressed file (.gz) file.
 
 Delete all compressed files from your application.
 
 <a name="invalid_package_identifier"></a>
-## Invalid application identifier
+### Invalid application identifier
 
 Cordova requires a valid application identifier for your application. This identifier should be in the reverse-domain name style and for maximum compatibility should contain only letters, digits and underscores.
 
@@ -204,6 +204,28 @@ The identifier should be unique. The identifier may contain uppercase or lowerca
 The identifier also cannot contain any Java reserved keywords eg. class, default etc. They are listed (here)[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html].
 
 Complete information can be found under `package` in the [android documentation](http://developer.android.com/guide/topics/manifest/manifest-element.html#package).
+
+<a name="malformed_9_patch"></a>
+### Malformed 9 Patch image
+
+9-Patch drawables (eg. splashcreen.9.png) must be valid 9-patch images with all required transparent borders present. Android documentation regarding 9-patch images can be found [here](http://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch).
+
+To ensure a valid image there is an Android 9-patch drawing tool. This can be downloaded as part of the [Android SDK](http://developer.android.com/sdk). Documentation for this tool can be found [here](http://developer.android.com/tools/help/draw9patch.html). For most errors simply loading and re-saving the image with this tool will correct the image.
+
+<a name="invalid_minsdkversion"></a>
+### Invalid minSdkVersion
+
+As PhoneGap 4.x moves to Gradle builds minSdkVersion will now be enforced. This means the minSdkVersion of your application, as set in your   [config.xml](http://docs.build.phonegap.com/en_US/configuring_preferences.md.html#Preferences) or the default (14 for phonegap 4.x) must be greater than any Libraries included in the application. Typically these libraries will be part of a plugin. To find out the minSdkVersion for a particular plugin it is typically in the AndroidManifest.xml file.  The value can also be seen in the error message contained in the build log file of the failed build.
+
+To fix this error add a preference `<preference name="android-minSdkVersion" value="14" />` being sure the value is equal to or higher than the minSdkVersion specified in any included plugins.
+
+To override this enforcement (advanced users only) you can overwrite the entire `uses-sdk` AndroidManifest.xml fragment.
+
+    <gap:config-file platform="android" parent="/manifest">
+        <uses-sdk tools:overrideLibrary="org.apache.cordova,com.library.plugin" />
+    </gap:config-file>
+
+For the brave the documentation is [here](http://tools.android.com/tech-docs/new-build-system/user-guide/manifest-merger#TOC-tools:overrideLibrary-marker).
 
 <a name="plugin-error"></a>
 ## Plugin error
