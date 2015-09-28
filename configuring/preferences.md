@@ -227,6 +227,19 @@ If you want to see more detail about what exactly these custom preferences are d
   </tr>
 
   <tr>
+    <td><code>android-build-tool</code><br/>(android only)</td>
+    <td>
+      Specifies which build tool to compile the application. Valid build tools are 'gradle' and 'ant'. The default is 'gradle'.
+      <br/><br/>
+      Example:
+      <br/>
+      <code>
+        &lt;preference name="android-build-tool" value="ant|gradle" /&gt;
+      </code>
+    </td>
+  </tr>
+
+  <tr>
     <td><code>splash-screen-duration</code><br/>(android only)</td>
     <td>
       Deprecated -- use <a href="http://docs.phonegap.com/en/3.6.0/guide_platforms_android_config.md.html">SplashScreenDelay</a> instead.
