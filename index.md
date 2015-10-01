@@ -97,7 +97,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             </span>
         </li>
         <li>
-            <h2>[Access Elements]</h2>
+            <h2>[Whitelisting]</h2>
             <span>
               Enable/Disable network connections in your application.
             </span>
