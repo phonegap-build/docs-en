@@ -35,16 +35,15 @@ If you want to see more detail about what exactly these custom preferences are d
   <tr>
     <td><code>phonegap-version</code></td>
     <td>
-      Currently supported versions are <b>3.0.0</b>, <b>3.0.0</b>, <b>3.1.0</b>, <b>3.2.0</b>, <b>3.3.0</b>, <b>3.4.0</b>, <b>3.5.0</b>, <b>3.6.3</b> (default), and <b>3.7.0</b> -- all versions prior 
-      to 3.0.0 are deprecated as of October 15, 2014. If you don't 
-      specify a version in your config, it will be set
+      Currently supported versions are <b>3.0.0</b>, <b>3.0.0</b>, <b>3.1.0</b>, <b>3.2.0</b>, <b>3.3.0</b>, <b>3.4.0</b>, <b>3.5.0</b>, <b>3.6.3</b>, <b>3.7.0</b>, <b>cli-5.1.1</b>, and <b>cli-5.2.0</b>  (default) 
+      If you don't specify a version in your config, it will be set
       to the current default version. Your app will not build if you specify
       an unsupported version number.
       <br/><br/>
       Example: 
       <br/>
       <code>
-          &lt;preference name="phonegap-version" value="3.5.0" /&gt;
+          &lt;preference name="phonegap-version" value="cli-5.2.0" /&gt;
       </code>
     </td>
   </tr>
@@ -229,7 +228,7 @@ If you want to see more detail about what exactly these custom preferences are d
   <tr>
     <td><code>android-build-tool</code><br/>(android only)</td>
     <td>
-      Specifies which build tool to compile the application. Valid build tools are 'gradle' and 'ant'. The default is 'gradle'.
+      Specifies which build tool to compile the application. Valid build tools are 'gradle' and 'ant'. The default is 'ant'.
       <br/><br/>
       Example:
       <br/>
