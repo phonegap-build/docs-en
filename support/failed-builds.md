@@ -148,12 +148,12 @@ Our servers were unable to sign your app using the profile and certificate that 
 
 Try generating a new provisioning profile that matches your certificate, and uploading that to PhoneGap Build.
 
-<a name="profile_expired"></a>
-### Provisioning Profile expired
+<a name="cert_or_profile_expired"></a>
+### Provisioning Profile or Signing Certificate has expired
 
-Our servers were unable to sign your app using the profile and certificate that you uploaded, because the provisioning profile itself has expired.
+Our servers were unable to sign your app using the profile and certificate that you uploaded, because the either the provisioning profile or signing certificate has expired.
 
-You will need to generate a new provisioning profile from the Apple Developer Portal and upload that to PhoneGap Build before your app can build successfully.
+You will need to generate a new provisioning profile or signing certificate from the Apple Developer Portal and upload that to PhoneGap Build before your app can build successfully.
 
 <a name="unreadable_profile"></a>
 ### Unable to read provisioning profile
