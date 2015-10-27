@@ -22,7 +22,7 @@ license: licensed to the apache software foundation (asf) under one
 
 To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
 
-Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="https://www.npmjs.com/">npm</a> and <a href="http://plugins.cordova.io">plugins.cordova.io</a>.  <a href="http://plugins.cordova.io">plugins.cordova.io</a> is now deprecated and will be removed from Phonegap Build on October 15th, 2015, so we don't recommend using plugins from this repository.
+Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="https://www.npmjs.com/">npm</a>.
 
 Plugins need to be implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
@@ -55,7 +55,7 @@ To import the native code into your PhoneGap Build project, you will need to add
         </p>
         <hr>
         <p>
-        <code>source</code>: Optional, can either be "pgb", "npm" or "plugins.cordova.io".  Defaults to "pgb".
+        <code>source</code>: Optional, can either be "pgb" or "npm".  Defaults to "pgb".
         </p>
         <hr>
         <p>
@@ -69,7 +69,7 @@ To import the native code into your PhoneGap Build project, you will need to add
 <a id="plugin-sources"></a>
 #### Plugin Source
 
-Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, <a href="https://www.npmjs.com/">npm</a> or the old Cordova Plugins repository, located at <a href="http://plugins.cordova.io">plugins.cordova.io</a>.
+Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, or at <a href="https://www.npmjs.com/">npm</a>.
 
 The default value for this attribute is `pgb` so for instance the plugin lines below both reference the same plugin in our repository.
 
@@ -79,10 +79,6 @@ The default value for this attribute is `pgb` so for instance the plugin lines b
 To include a plugin from <a href="https://www.npmjs.com/">npm</a> specify `npm` in the source attribute.
 
     <gap:plugin name="example-plugin" source="npm" />
-
-To include a plugin from the deprecated <a href="http://plugins.cordova.io">plugins.cordova.io</a> specify `plugins.cordova.io` in the source attribute. This repository is at end of life and will be removed on October 15th, 2015 so we do not recommend using plugins from this repository. When the repository is removed this source will be removed.
-
-    <gap:plugin name="com.phonegap.plugins.example" source="plugins.cordova.io" />
 
 The version attribute and param fragments are handled identically regardless of the source of the plugin.
 
