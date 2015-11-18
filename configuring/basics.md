@@ -74,7 +74,7 @@ We're continually adding features to our `config.xml` support to give PhoneGap B
 </table>
 
 ### Example Config.xml
-    
+
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns   = "http://www.w3.org/ns/widgets"
             xmlns:gap   = "http://phonegap.com/ns/1.0"
@@ -99,11 +99,11 @@ We're continually adding features to our `config.xml` support to give PhoneGap B
 <a name="platform"></a>
 ## Platform Build Selection
 
-By default PhoneGap Build builds your application for every platform. If you only want to build for certain platforms you can specify these platforms with the `gap:platform` tag.  
+By default PhoneGap Build builds your application for every platform. If you only want to build for certain platforms you can specify these platforms with the `platform` tag. You can also use `gap:platform` instead of `platform`.
 
 <table class="table">
   <tr>
-    <td><code>&lt;gap:platform&gt;</code></td>
+    <td><code>&lt;platform&gt;</code></td>
     <td>
       <p>
       You can have zero or more of these elements present in your
@@ -118,7 +118,7 @@ By default PhoneGap Build builds your application for every platform. If you onl
 
 ### Example Usage
     
-    <gap:platform name="ios" />
-    <gap:platform name="android" />
-    <gap:platform name="winphone" />
+    <platform name="ios" />
+    <platform name="android" />
+    <platform name="winphone" />
 

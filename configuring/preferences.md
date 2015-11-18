@@ -28,6 +28,18 @@ In addition, PhoneGap Build supports some of its own custom preferences, used fo
 
 If you want to see more detail about what exactly these custom preferences are doing, most of them are translated using the [open-source confetti library](http://github.com/phonegap-build/confetti). Check out the templates directory if you want to dig in.
 
+By default, preferences are for all platforms. To specify a preference to be for a single platform you can place any preference inside a platform tag.
+
+    <platform name="ios" >
+      <preference name="orientation" value="landscape" />
+    </platform>
+
+    <platform name="android" >
+      <preference name="orientation" value="portrait" />
+    </platform>
+
+This fragment will make the iOS app be available in landscape orientation while the android app will be in portrait mode.
+
 ## Multi-Platform
 
 <table class="table">

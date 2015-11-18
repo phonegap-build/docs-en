@@ -20,9 +20,22 @@ license: licensed to the apache software foundation (asf) under one
 
 # Icons and Splash Screens
 
-## Usage and Additional Information
+## Specifying platform
 
-The following is a list of the currently supported icon and splash screens supported for this release of Cordova/Phonegap on PhoneGap Build.
+Icons and splashes are usually platform specific.  There are two ways to specify an icon or splash is for a particular platform.  The first way is by specifying a `platform` attribute:
+
+    <icon src="icon-60@3x.png" platform="ios" width="180" height="180" />
+
+The second way (recommended) is by putting the icon or splash inside a platform tag:
+
+    <platform name="ios">
+        <icon src="icon-60@3x.png" width="180" height="180" />
+    </platform>
+
+Both these fragments will result in the icon being used for iOS.
+
+<a name="splashes"></a>
+## Icons
 
 Unless otherwise specified in a config.xml, each platform will try to use the default `icon.png` during compilation. To define platform specific icons please use the guide provided below.
 
@@ -66,63 +79,63 @@ The names below reflect the names of the destination files when they are added t
 #### iOS 7.0+
 
     <!-- iPhone 6 / 6+ -->
-    <icon src="icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+    <icon src="icon-60@3x.png" platform="ios" width="180" height="180" />
 
     <!-- iPhone / iPod Touch  -->
-    <icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
-    <icon src="icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+    <icon src="icon-60.png" platform="ios" width="60" height="60" />
+    <icon src="icon-60@2x.png" platform="ios" width="120" height="120" />
 
     <!-- iPad -->
-    <icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
-    <icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="icon-76.png" platform="ios" width="76" height="76" />
+    <icon src="icon-76@2x.png" platform="ios" width="152" height="152" />
 
     <!-- Settings Icon -->
-    <icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
-    <icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="icon-small.png" platform="ios" width="29" height="29" />
+    <icon src="icon-small@2x.png" platform="ios" width="58" height="58" />
 
     <!-- Spotlight Icon -->
-    <icon src="icon-40.png" gap:platform="ios" width="40" height="40" />
-    <icon src="icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+    <icon src="icon-40.png" platform="ios" width="40" height="40" />
+    <icon src="icon-40@2x.png" platform="ios" width="80" height="80" />
     
 #### iOS 6.1
     
     <!-- iPhone / iPod Touch -->
-    <icon src="icon.png" gap:platform="ios" width="57" height="57" />
-    <icon src="icon@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="icon.png" platform="ios" width="57" height="57" />
+    <icon src="icon@2x.png" platform="ios" width="114" height="114" />
 
     <!-- iPad -->
-    <icon src="icon-72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="icon-72.png" platform="ios" width="72" height="72" />
+    <icon src="icon-72@2x.png" platform="ios" width="144" height="144" />
 
     <!-- iPhone Spotlight and Settings Icon -->
-    <icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
-    <icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="icon-small.png" platform="ios" width="29" height="29" />
+    <icon src="icon-small@2x.png" platform="ios" width="58" height="58" />
 
     <!-- iPad Spotlight and Settings Icon -->
-    <icon src="icon-50.png" gap:platform="ios" width="50" height="50" />
-    <icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+    <icon src="icon-50.png" platform="ios" width="50" height="50" />
+    <icon src="icon-50@2x.png" platform="ios" width="100" height="100" />
 
 ### Android
 
 We support all Android resource qualifiers. Commonly used qualifiers refer to device density and language.
 
-    <icon src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-    <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-    <icon src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-    <icon src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
-    <icon src="xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
-    <icon src="fr-xxhdpi.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
+    <icon src="ldpi.png" platform="android" gap:qualifier="ldpi" />
+    <icon src="mdpi.png" platform="android" gap:qualifier="mdpi" />
+    <icon src="hdpi.png" platform="android" gap:qualifier="hdpi" />
+    <icon src="xhdpi.png" platform="android" gap:qualifier="xhdpi" />
+    <icon src="xxhdpi.png" platform="android" gap:qualifier="xxhdpi" />
+    <icon src="fr-xxhdpi.png" platform="android" gap:qualifier="fr-xxhdpi" />
 
 A list of these qualifiers can be viewed on Table-2 [here](http://developer.android.com/guide/topics/resources/providing-resources.html). Note that compound qualifiers (eg. "port-xhdpi") have to
 be in the same order as viewed on this table.
 
 We also support the deprecated `gap:density` attribute that will only support the following densities:
 
-    <icon src="ldpi.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    <icon src="xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    <icon src="ldpi.png" platform="android" gap:density="ldpi" />
+    <icon src="mdpi.png" platform="android" gap:density="mdpi" />
+    <icon src="hdpi.png" platform="android" gap:density="hdpi" />
+    <icon src="xhdpi.png" platform="android" gap:density="xhdpi" />
+    <icon src="xxhdpi.png" platform="android" gap:density="xxhdpi" />
 
 **We do not recommend using this attribute as the above `gap:qualifer` attribute offers more flexibility and more importantly, future support of new screen sizes etc.**
 
@@ -130,15 +143,15 @@ We also support the deprecated `gap:density` attribute that will only support th
 
 We support two icons for Windows Phone, a regular icon and a tile image.
 
-    <icon src="icon.png" gap:platform="winphone" />
-    <icon src="tileicon.png" gap:platform="winphone" gap:role="background" />
+    <icon src="icon.png" platform="winphone" />
+    <icon src="tileicon.png" platform="winphone" gap:role="background" />
 
 <a name="splashes"></a>
 ## Splash Screens
 
-You can have zero or more of these elements present in your `config.xml`. This element can have `src`, `gap:platform`, `width` and `height` attributes, just like the `<icon>` element above. Like icon files, your splash screens should be saved as `png` files.
+You can have zero or more of these elements present in your `config.xml`. This element can have `src`, `platform`, `width` and `height` attributes, just like the `<icon>` element above. Like icon files, your splash screens should be saved as `png` files.
 
-    <gap:splash src="splash/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />
+    <splash src="splash/ios/Default-568h@2x~iphone.png" platform="ios" width="320" height="480" />
 
 ### Usage and Additional Information:
 
@@ -147,13 +160,15 @@ Unless otherwise specified in a config.xml, each platform will try to use the de
 Splash files should be the file formats specified in the examples below. Any other file type is not guaranteed to work across platforms.
 
 ### Warning:
-If you do not supply the `gap:platform` attribute, the referenced image will be copied to ALL platforms, increasing the size of their application packages.
+If you do not supply the `platform` attribute, the referenced image will be copied to ALL platforms, increasing the size of their application packages.
 
 ### Default
 
 The default splash must be named `splash.png` and must reside in the root of your application folder.
 
-    <gap:splash src="splash.png" />
+    <splash src="splash.png" />
+
+Please note that in the past splash screens were specified with the `gap:splash` element and the platform specified with `gap:platform`.  This is still supported but we recommend moving to `splash` and `platform`.
 
 ### iOS
 
@@ -162,36 +177,36 @@ We support classic, retina, iPhone 5 and iPad displays; the following will defin
 The names below reflect the names of the destination files when they are added to the application. During app submittal you may get feedback that has a reference to these filenames.
 
     <!-- iPhone and iPod touch -->
-    <gap:splash src="Default.png" gap:platform="ios" width="320" height="480" />
-    <gap:splash src="Default@2x.png" gap:platform="ios" width="640" height="960" />
+    <splash src="Default.png" platform="ios" width="320" height="480" />
+    <splash src="Default@2x.png" platform="ios" width="640" height="960" />
 
     <!-- iPhone 5 / iPod Touch (5th Generation) -->
-    <gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+    <splash src="Default-568h@2x.png" platform="ios" width="640" height="1136" />
 
     <!-- iPhone 6 -->
-    <gap:splash src="Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
-    <gap:splash src="Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
-    <gap:splash src="Default-Landscape-736h@3x.png" gap:platform="ios" width="2208" height="1242" />
+    <splash src="Default-667h@2x.png" platform="ios" width="750" height="1334" />
+    <splash src="Default-Portrait-736h@3x.png" platform="ios" width="1242" height="2208" />
+    <splash src="Default-Landscape-736h@3x.png" platform="ios" width="2208" height="1242" />
 
     <!-- iPad -->
-    <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
-    <gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+    <splash src="Default-Portrait.png" platform="ios" width="768" height="1024" />
+    <splash src="Default-Landscape.png" platform="ios" width="1024" height="768" />
 
     <!-- Retina iPad -->
-    <gap:splash src="Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
-    <gap:splash src="Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
+    <splash src="Default-Portrait@2x.png" platform="ios" width="1536" height="2048" />
+    <splash src="Default-Landscape@2x.png" platform="ios" width="2048" height="1536" />
 
 ### Android
 
 We support all Android resource qualifiers. Commonly used qualifiers refer to device orientation, language and density.
 
-    <gap:splash src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-    <gap:splash src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-    <gap:splash src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
-    <gap:splash src="fr-xhdpi.png" gap:platform="android" gap:qualifier="fr-xhdpi" />
-    <gap:splash src="portrait-xxhdpi.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
-    <gap:splash src="landscape-xxhdpi.png" gap:platform="android" gap:qualifier="land-xxhdpi" />
+    <splash src="ldpi.png" platform="android" gap:qualifier="ldpi" />
+    <splash src="mdpi.png" platform="android" gap:qualifier="mdpi" />
+    <splash src="hdpi.png" platform="android" gap:qualifier="hdpi" />
+    <splash src="xhdpi.png" platform="android" gap:qualifier="xhdpi" />
+    <splash src="fr-xhdpi.png" platform="android" gap:qualifier="fr-xhdpi" />
+    <splash src="portrait-xxhdpi.png" platform="android" gap:qualifier="port-xxhdpi" />
+    <splash src="landscape-xxhdpi.png" platform="android" gap:qualifier="land-xxhdpi" />
 
 A list of these qualifiers can be viewed on Table-2 [here](http://developer.android.com/guide/topics/resources/providing-resources.html). Note that compound qualifiers (eg. "port-xhdpi") have to
 be in the same order as viewed on this table.
@@ -200,11 +215,11 @@ Patch-9 backgrounds are supported. All patch-9 files have to have a ".9.png" suf
 
 We also support the deprecated `gap:density` attribute that will only support the following densities:
 
-    <gap:splash src="ldpi.png" gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    <gap:splash src="xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    <splash src="ldpi.png" platform="android" gap:density="ldpi" />
+    <splash src="mdpi.png" platform="android" gap:density="mdpi" />
+    <splash src="hdpi.png" platform="android" gap:density="hdpi" />
+    <splash src="xhdpi.png" platform="android" gap:density="xhdpi" />
+    <splash src="xxhdpi.png" platform="android" gap:density="xxhdpi" />
 
 **We do not recommend using this attribute as the above `gap:qualifer` offers more flexibility and more importantly, future support of new screen sizes etc.**
 
@@ -212,4 +227,4 @@ We also support the deprecated `gap:density` attribute that will only support th
 
   Windows Phone supports a single splash image and can be defined as below. Unlike the other supported platforms, Windows Phone splash screen should be in `jpg` format
 
-    <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
+    <splash src="splash/winphone/splash.jpg" platform="winphone" />
