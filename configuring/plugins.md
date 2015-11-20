@@ -38,12 +38,38 @@ There are two steps to including a plugin in your project:
 <a id="importing-config"></a>
 ### Importing the native code
 
-To import the native code into your PhoneGap Build project, you will need to add the correct `<gap:plugin>` tag to your config.xml file.
-<b>If you omit the version tag, your app will always be built with the latest version of the plugin. It will be updated automatically the next time you update your app code after a plugin is updated, which may cause unexpected behaviour.</b> For more info on plugin versioning, <a href="#plugin-versions">click here</a>.
+To import the native code into your PhoneGap Build project, you will need to add the correct `<plugin>` or deprecated `<gap:plugin>` tag to your config.xml file.
+<b>If you omit the spec (version) tag, your app will always be built with the latest version of the plugin. It will be updated automatically the next time you update your app code after a plugin is updated, which may cause unexpected behaviour.</b> For more info on plugin versioning, <a href="#plugin-versions">click here</a>.
+
 
 <table class="table">
   <tr>
-    <td><code>&lt;gap:plugin&gt;</code></td>
+    <td><code>&lt;plugin&gt;</code></td>
+    <td>
+        <p>
+          <code>name</code>: Plugins should be referenced by the plugin ID which is
+          normally in a reverse domain format (ex: com.phonegap.plugins.barcodescanner).
+        </p>
+        <hr>
+        <p>
+          <code>spec</code>: Optional, but we highly recommend locking your plugin version, as mentioned above.
+        </p>
+        <hr>
+        <p>
+        <code>source</code>: Optional, can either be "pgb" or "npm".  Defaults to "npm".
+        </p>
+        <hr>
+        <p>
+          <code>params</code>: Plugins may require parameters for configuration
+          properties. <a href="#plugin-params">Here is a detailed explanation.</a>
+        </p>
+    </td>
+  </tr>
+</table>
+
+<table class="table">
+  <tr>
+    <td><code>&lt;gap:plugin&gt;</code> (deprecated)</td>
     <td>
         <p>
           <code>name</code>: Plugins should be referenced by the plugin ID which is
@@ -71,23 +97,33 @@ To import the native code into your PhoneGap Build project, you will need to add
 
 Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, or at <a href="https://www.npmjs.com/">npm</a>.
 
-The default value for this attribute is `pgb` so for instance the plugin lines below both reference the same plugin in our repository.
+The default value for this attribute is `npm` so for instance the plugin lines below all reference the same plugin in the <a href="https://www.npmjs.com/">npm</a> repository.
 
-    <gap:plugin name="com.phonegap.plugins.example" />
-    <gap:plugin name="com.phonegap.plugins.example" source="pgb" />
+    <plugin name="com.phonegap.plugins.example" spec="~1" />
+    <plugin name="com.phonegap.plugins.example" spec="~1" source="npm" />
 
-To include a plugin from <a href="https://www.npmjs.com/">npm</a> specify `npm` in the source attribute.
+    // deprecated
+    <gap:plugin name="com.phonegap.plugins.example" version="~1" source="npm" />
 
-    <gap:plugin name="example-plugin" source="npm" />
+To include a plugin from the PhoneGap Build <a href="https://build.phonegap.com/plugins">repository</a> specify `pgb` in the source attribute.
+
+    <plugin name="example-plugin" source="pgb" spec="~1"  />
+
+    // deprecated
+    <gap:plugin name="com.phonegap.plugins.example" version="~1" />
+    <gap:plugin name="com.phonegap.plugins.example" version="~1" source="pgb" />
 
 The version attribute and param fragments are handled identically regardless of the source of the plugin.
 
 <a id="plugin-versions"></a>
 #### Plugin Versions
 
-Here is the most simplistic way of using a versioned plugin.
+Here is the most simplistic way of using a versioned plugin. The `spec` attribute is the recommended way to specify the version.  In the past we used the `version` attribute, but this is being deprecated in favour of the `spec` attribute as used by the Cordova cli.
 
-    <gap:plugin name="com.phonegap.plugins.example" version="2.2.1" />
+    <plugin name="cordova-plugin-example" spec="2.2.1" />
+
+    // deprecated
+    <gap:plugin name="cordova-plugin-example" version="2.2.1" />
 
 PhoneGap Build also supports `fuzzy versions`.
 
@@ -95,31 +131,31 @@ You can use the tilde `~` operator to specify fuzzy versions, this will ensure t
 
 For example, you could replace the tag above with:
 
-    <gap:plugin name="com.phonegap.plugins.example" version="~2" />
+    <plugin name="cordova-plugin-example" spec="~2" />
 
 which would load the latest 2.x version, but not anything with a different major/initial version number.
 
 The following version tag:
 
-    <gap:plugin name="com.phonegap.plugins.example" version="~2.2" />
+    <plugin name="com.phonegap.plugins.example" spec="~2.2" />
 
 would load the latest 2.x version so long as x is greater or equal to 2.
 
 And finally, this version tag:
 
-    <gap:plugin name="com.phonegap.plugins.example" version="~2.2.3" />
+    <plugin name="com.phonegap.plugins.example" spec="~2.2.3" />
 
 would load the latest 2.2.x version so long as x is greater or equal to 3.
 
 <a id="plugin-params"></a>
 #### Plugin Parameters
 
-Plugins may require configuration information to be present; this can be done with adding <param> children to the <gap:plugin> tag:
+Plugins may require configuration information to be present; this can be done with adding <param> children to the <plugin> tag:
 
-    <gap:plugin name="com.phonegap.plugins.example">
+    <plugin name="com.phonegap.plugins.example">
       <param name="APIKey" value="12345678" />
       <param name="APISecret" value="12345678" />
-    </gap:plugin>
+    </plugin>
 
 <i class="glyphicon glyphicon-check"></i> Make sure to check the documentation of the plugin to see if parameters are necessary.
 
@@ -129,7 +165,6 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
 
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns   = "http://www.w3.org/ns/widgets"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.example"
         versionCode = "10"
         version     = "1.0.0" >
@@ -147,7 +182,7 @@ Here is a config.xml that includes the Barcode Scanner plugins as an example:
         </author>
 
         <!-- We'll include the Barcode plugin as an example -->
-        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+        <plugin name="phonegap-plugin-barcodescanner" />
     </widget>
 
 <a id="importing-native"></a>

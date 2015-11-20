@@ -119,32 +119,22 @@ The names below reflect the names of the destination files when they are added t
 
 We support all Android resource qualifiers. Commonly used qualifiers refer to device density and language.
 
-    <icon src="ldpi.png" platform="android" gap:qualifier="ldpi" />
-    <icon src="mdpi.png" platform="android" gap:qualifier="mdpi" />
-    <icon src="hdpi.png" platform="android" gap:qualifier="hdpi" />
-    <icon src="xhdpi.png" platform="android" gap:qualifier="xhdpi" />
-    <icon src="xxhdpi.png" platform="android" gap:qualifier="xxhdpi" />
-    <icon src="fr-xxhdpi.png" platform="android" gap:qualifier="fr-xxhdpi" />
+    <icon src="ldpi.png" platform="android" qualifier="ldpi" />
+    <icon src="mdpi.png" platform="android" qualifier="mdpi" />
+    <icon src="hdpi.png" platform="android" qualifier="hdpi" />
+    <icon src="xhdpi.png" platform="android" qualifier="xhdpi" />
+    <icon src="xxhdpi.png" platform="android" qualifier="xxhdpi" />
+    <icon src="fr-xxhdpi.png" platform="android" qualifier="fr-xxhdpi" />
 
 A list of these qualifiers can be viewed on Table-2 [here](http://developer.android.com/guide/topics/resources/providing-resources.html). Note that compound qualifiers (eg. "port-xhdpi") have to
 be in the same order as viewed on this table.
-
-We also support the deprecated `gap:density` attribute that will only support the following densities:
-
-    <icon src="ldpi.png" platform="android" gap:density="ldpi" />
-    <icon src="mdpi.png" platform="android" gap:density="mdpi" />
-    <icon src="hdpi.png" platform="android" gap:density="hdpi" />
-    <icon src="xhdpi.png" platform="android" gap:density="xhdpi" />
-    <icon src="xxhdpi.png" platform="android" gap:density="xxhdpi" />
-
-**We do not recommend using this attribute as the above `gap:qualifer` attribute offers more flexibility and more importantly, future support of new screen sizes etc.**
 
 ### Windows Phone
 
 We support two icons for Windows Phone, a regular icon and a tile image.
 
     <icon src="icon.png" platform="winphone" />
-    <icon src="tileicon.png" platform="winphone" gap:role="background" />
+    <icon src="tileicon.png" platform="winphone" role="background" />
 
 <a name="splashes"></a>
 ## Splash Screens
@@ -200,28 +190,18 @@ The names below reflect the names of the destination files when they are added t
 
 We support all Android resource qualifiers. Commonly used qualifiers refer to device orientation, language and density.
 
-    <splash src="ldpi.png" platform="android" gap:qualifier="ldpi" />
-    <splash src="mdpi.png" platform="android" gap:qualifier="mdpi" />
-    <splash src="hdpi.png" platform="android" gap:qualifier="hdpi" />
-    <splash src="xhdpi.png" platform="android" gap:qualifier="xhdpi" />
-    <splash src="fr-xhdpi.png" platform="android" gap:qualifier="fr-xhdpi" />
-    <splash src="portrait-xxhdpi.png" platform="android" gap:qualifier="port-xxhdpi" />
-    <splash src="landscape-xxhdpi.png" platform="android" gap:qualifier="land-xxhdpi" />
+    <splash src="ldpi.png" platform="android" qualifier="ldpi" />
+    <splash src="mdpi.png" platform="android" qualifier="mdpi" />
+    <splash src="hdpi.png" platform="android" qualifier="hdpi" />
+    <splash src="xhdpi.png" platform="android" qualifier="xhdpi" />
+    <splash src="fr-xhdpi.png" platform="android" qualifier="fr-xhdpi" />
+    <splash src="portrait-xxhdpi.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="landscape-xxhdpi.png" platform="android" qualifier="land-xxhdpi" />
 
 A list of these qualifiers can be viewed on Table-2 [here](http://developer.android.com/guide/topics/resources/providing-resources.html). Note that compound qualifiers (eg. "port-xhdpi") have to
 be in the same order as viewed on this table.
 
 Patch-9 backgrounds are supported. All patch-9 files have to have a ".9.png" suffix.
-
-We also support the deprecated `gap:density` attribute that will only support the following densities:
-
-    <splash src="ldpi.png" platform="android" gap:density="ldpi" />
-    <splash src="mdpi.png" platform="android" gap:density="mdpi" />
-    <splash src="hdpi.png" platform="android" gap:density="hdpi" />
-    <splash src="xhdpi.png" platform="android" gap:density="xhdpi" />
-    <splash src="xxhdpi.png" platform="android" gap:density="xxhdpi" />
-
-**We do not recommend using this attribute as the above `gap:qualifer` offers more flexibility and more importantly, future support of new screen sizes etc.**
 
 ### Windows Phone
 

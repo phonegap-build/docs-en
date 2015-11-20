@@ -25,7 +25,7 @@ iOS allows registration of
 
 <table class="table">
   <tr>
-    <td><code>&lt;gap:url-scheme&gt;</code></td>
+    <td><code>&lt;url-scheme&gt;</code></td>
     <td>
       <p>
         Your app can have many <code>url-scheme</code> elements present.
@@ -65,8 +65,8 @@ iOS allows registration of
             Hardeep Shoker 
         </author>
 
-        <gap:url-scheme name="com.acme.myscheme" role="None">
+        <url-scheme name="com.acme.myscheme" role="None">
           <scheme>pgbr</scheme>
           <scheme>pgbw</scheme>
-        </gap:url-scheme>
+        </url-scheme>
     </widget>

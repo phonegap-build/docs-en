@@ -221,9 +221,9 @@ To fix this error add a preference `<preference name="android-minSdkVersion" val
 
 To override this enforcement (advanced users only) you can overwrite the entire `uses-sdk` AndroidManifest.xml fragment.
 
-    <gap:config-file platform="android" parent="/manifest">
+    <config-file platform="android" parent="/manifest">
         <uses-sdk tools:overrideLibrary="org.apache.cordova,com.library.plugin" />
-    </gap:config-file>
+    </config-file>
 
 For the brave the documentation is [here](http://tools.android.com/tech-docs/new-build-system/user-guide/manifest-merger#TOC-tools:overrideLibrary-marker).
 

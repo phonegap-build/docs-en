@@ -32,7 +32,7 @@ User's will now need to include features they would like to incorporate into the
 
 For example, if a user's app relies on the contacts api they will need to include the following in their `config.xml`.
 
-        <gap:plugin name="Contacts" value="org.apache.cordova.ContactManager" />
+        <plugin name="Contacts" spec="org.apache.cordova.ContactManager" source="pgb" />
 
 ## How to Upgrade Your App
 
@@ -79,12 +79,12 @@ It's recommended that you get familiar with using the config.xml. It improves th
 
 Once you have a config.xml you will need to include all the core APIs required by your application.
 
-To do so include a `<gap:plugin />` tag for each API, for example, if your app requires the device api include the following.
+To do so include a `<plugin />` tag for each API, for example, if your app requires the device api include the following.
 
-        <gap:plugin name="org.apache.cordova.device" />
+        <plugin name="cordova-plugin-device" />
 
 If you fail to include an API your application may crash, we're currently working on making the experince as smooth as possible.
 
 ### Non-Core APIs
 
-Like core apis, non-core plugins need to be added via a config.xml. For information related to non-core plugins please visit the <a href="https://build.phonegap.com/plugins" target="_blank">PhoneGap Build Plugins repo</a>.
+Like core apis, non-core plugins need to be added via a config.xml. For information related to non-core plugins please visit the <a href="https://build.phonegap.com/plugins" target="_blank">PhoneGap Build Plugins repo</a> or <a href="http://cordova.apache.org/plugins/">npm</a>.
