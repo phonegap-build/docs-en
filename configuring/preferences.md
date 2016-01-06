@@ -167,7 +167,7 @@ This fragment will make the iOS app be available in landscape orientation while 
     <td>
        Minimum Android SDK version. Corresponds to the <code>usesSdk</code> attributes in
        the <code>AndroidManifest.xml</code> file - more details are in
-       [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Defaults to 7 (Android 2.1).
+       [the Android documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html). Defaults to 14 (Android 4.0, 4.0.1, 4.0.2).
       <br/><br/>
       Example:
       <br/>
