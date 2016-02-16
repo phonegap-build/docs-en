@@ -20,9 +20,9 @@ license: licensed to the apache software foundation (asf) under one
 
 # Plugins
 
-To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports a white-listed selection of PhoneGap Plugins.
+To extend the native functionality exposed by the PhoneGap native-app container, PhoneGap Build supports most PhoneGap or Cordova plugins.
 
-Plugins can either be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a> or from <a href="https://www.npmjs.com/">npm</a>.
+Plugins can be from <a href="https://build.phonegap.com/plugins" target="_blank">our repostiory</a>, <a href="https://www.npmjs.com/">npm</a> or from a public git repository.
 
 Plugins need to be implemented differently for each platform, and may not be supported across all PhoneGap platforms. If you're deploying across multiple platforms, ensure that the experience degrades gracefully for users who do not have the plugin available.
 
@@ -39,8 +39,8 @@ There are two steps to including a plugin in your project:
 ### Importing the native code
 
 To import the native code into your PhoneGap Build project, you will need to add the correct `<plugin>` or deprecated `<gap:plugin>` tag to your config.xml file.
-<b>If you omit the spec (version) tag, your app will always be built with the latest version of the plugin. It will be updated automatically the next time you update your app code after a plugin is updated, which may cause unexpected behaviour.</b> For more info on plugin versioning, <a href="#plugin-versions">click here</a>.
 
+<b>If you omit the `spec` (or `version`) tag of a npm or PhoneGap Build plugin, your app will always be built with the latest version of the plugin. It will be updated automatically the next time you update your application code after a plugin is updated, which may cause unexpected behaviour.</b> For more info on plugin versioning, <a href="#plugin-versions">click here</a>.
 
 <table class="table">
   <tr>
@@ -48,15 +48,15 @@ To import the native code into your PhoneGap Build project, you will need to add
     <td>
         <p>
           <code>name</code>: Plugins should be referenced by the plugin ID which is
-          normally in a reverse domain format (ex: com.phonegap.plugins.barcodescanner).
+          normally in a reverse domain format (ex: com.phonegap.plugins.barcodescanner). Optional if the plugin is git-backed.
         </p>
         <hr>
         <p>
-          <code>spec</code>: Optional, but we highly recommend locking your plugin version, as mentioned above.
+          <code>spec</code>: Optional, but we highly recommend locking your plugin version, as mentioned above. For git-backed plugins this will specify the git repository. If the attribute contains a full URL then it is assumed it is a git plugin.
         </p>
         <hr>
         <p>
-        <code>source</code>: Optional, can either be "pgb" or "npm".  Defaults to "npm".
+        <code>source</code>: Optional, can either be "pgb", "npm" or "git".  Defaults to "npm" (or "git" if a git URL is detected).
         </p>
         <hr>
         <p>
@@ -77,11 +77,11 @@ To import the native code into your PhoneGap Build project, you will need to add
         </p>
         <hr>
         <p>
-          <code>version</code>: Optional, but we highly recommend locking your plugin version, as mentioned above.
+          <code>version</code>: Optional, but we highly recommend locking your plugin version, as mentioned above. For git-backed plugins this will specify the git repository. If the attribute contains a full URL then it is assumed it is a git plugin.
         </p>
         <hr>
         <p>
-        <code>source</code>: Optional, can either be "pgb" or "npm".  Defaults to "pgb".
+        <code>source</code>: Optional, can either be "pgb", "npm" or "git".  Defaults to "pgb" (or "git" if a git URL is detected).
         </p>
         <hr>
         <p>
@@ -95,35 +95,30 @@ To import the native code into your PhoneGap Build project, you will need to add
 <a id="plugin-sources"></a>
 #### Plugin Source
 
-Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, or at <a href="https://www.npmjs.com/">npm</a>.
+Plugins can be included from either our repository, located <a href="https://build.phonegap.com/plugins">here</a>, at <a href="https://www.npmjs.com/">npm</a> or from a public git repository.
 
-The default value for this attribute is `npm` so for instance the plugin lines below all reference the same plugin in the <a href="https://www.npmjs.com/">npm</a> repository.
+If source is not present then the default value for this attribute is `npm` or `git` depending if it can auto-detect a git backed repo format. For instance the plugin lines below all reference the same plugin in the <a href="https://www.npmjs.com/">npm</a> repository.
 
     <plugin name="com.phonegap.plugins.example" spec="~1" />
     <plugin name="com.phonegap.plugins.example" spec="~1" source="npm" />
 
-    // deprecated
-    <gap:plugin name="com.phonegap.plugins.example" version="~1" source="npm" />
+If the `spec` attribute is a git location then the source is defaulted to "git". The lines below will reference the same plugin.
+
+    <plugin spec="https://github.com/apache/cordova-plugin-file.git#4.1.0" />
+    <plugin spec="https://github.com/apache/cordova-plugin-file.git#4.1.0" source="git" />
 
 To include a plugin from the PhoneGap Build <a href="https://build.phonegap.com/plugins">repository</a> specify `pgb` in the source attribute.
 
     <plugin name="example-plugin" source="pgb" spec="~1"  />
 
-    // deprecated
-    <gap:plugin name="com.phonegap.plugins.example" version="~1" />
-    <gap:plugin name="com.phonegap.plugins.example" version="~1" source="pgb" />
-
-The version attribute and param fragments are handled identically regardless of the source of the plugin.
+The param fragments are handled identically regardless of the source of the plugin.
 
 <a id="plugin-versions"></a>
-#### Plugin Versions
+#### Plugin Version / Location
 
-Here is the most simplistic way of using a versioned plugin. The `spec` attribute is the recommended way to specify the version.  In the past we used the `version` attribute, but this is being deprecated in favour of the `spec` attribute as used by the Cordova cli.
+Here is the most simplistic way of using a versioned plugin. The `spec` attribute is the recommended way to specify the version. `spec` is used so as to be compatibile with the Cordova CLI, which uses a `spec` attribute to describe the version or location of the plugin.
 
     <plugin name="cordova-plugin-example" spec="2.2.1" />
-
-    // deprecated
-    <gap:plugin name="cordova-plugin-example" version="2.2.1" />
 
 PhoneGap Build also supports `fuzzy versions`.
 
@@ -161,7 +156,7 @@ Plugins may require configuration information to be present; this can be done wi
 
 #### Usage Example
 
-Here is a config.xml that includes the Barcode Scanner plugins as an example:
+Here is a config.xml that includes the Barcode Scanner plugin from npm as an example:
 
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns   = "http://www.w3.org/ns/widgets"
