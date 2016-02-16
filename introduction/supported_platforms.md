@@ -80,7 +80,7 @@ PhoneGap Build Supports the following platforms, for version `3.0.0` and above o
     </td>
   </tr>
   <tr>
-    <td>Windows Phone 8</td>
+    <td>Windows Phone</td>
     <td>
       <p>
         <a href="http://developer.windowsphone.com/en-us/develop" target="_blank">
@@ -91,13 +91,8 @@ PhoneGap Build Supports the following platforms, for version `3.0.0` and above o
       <strong>Additional Resources</strong>
       </p>
       <p>
-        <a href="http://msdn.microsoft.com/library/windowsphone/help/jj206724%28v=vs.105%29.aspx" target="_blank">
+        <a href="https://dev.windows.com/en-us/publish" target="_blank">
           Windows Phone Submission Guide
-        </a>
-      </p>
-      <p>
-        <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184843%28v=vs.105%29.aspx" target="_blank">
-          App Certification (Signing)
         </a>
       </p>
     </td>

@@ -129,12 +129,27 @@ We support all Android resource qualifiers. Commonly used qualifiers refer to de
 A list of these qualifiers can be viewed on Table-2 [here](http://developer.android.com/guide/topics/resources/providing-resources.html). Note that compound qualifiers (eg. "port-xhdpi") have to
 be in the same order as viewed on this table.
 
-### Windows Phone
+### Windows Phone 8 (cordova-wp8)
 
 We support two icons for Windows Phone, a regular icon and a tile image.
 
     <icon src="icon.png" platform="winphone" />
     <icon src="tileicon.png" platform="winphone" role="background" />
+
+### Windows Phone 8.1+ (cordova-windows)
+
+As of PhoneGap Release cli-6.0.0, the Windows Phone 8.1 package is built using cordova-windows. Here are the supported icons:
+
+    <icon gap:platform="windows" width="44" height="44" src="res/Square44x44Logo.scale-100.png" />
+    <icon gap:platform="windows" width="106" height="106" src="res/Square44x44Logo.scale-240.png" />
+    <icon gap:platform="windows" width="150" height="150" src="res/Square150x150Logo.scale-100.png" />
+    <icon gap:platform="windows" width="360" height="360" src="res/Square150x150Logo.scale-240.png" />
+    <icon gap:platform="windows" width="71" height="71" src="res/Square71x71Logo.scale-100.png" />
+    <icon gap:platform="windows" width="170" height="170" src="res/Square71x71Logo.scale-240.png" />
+    <icon gap:platform="windows" width="310" height="150" src="res/Wide310x150Logo.scale-100.png" />
+    <icon gap:platform="windows" width="744" height="360" src="res/Wide310x150Logo.scale-240.png" />
+
+Note the use of `gap:platform="windows"` instead of `winphone` -- this is critical for the new versions.
 
 <a name="splashes"></a>
 ## Splash Screens
@@ -203,8 +218,16 @@ be in the same order as viewed on this table.
 
 Patch-9 backgrounds are supported. All patch-9 files have to have a ".9.png" suffix.
 
-### Windows Phone
+### Windows Phone 8 (cordova-wp8)
 
   Windows Phone supports a single splash image and can be defined as below. Unlike the other supported platforms, Windows Phone splash screen should be in `jpg` format
 
     <splash src="splash/winphone/splash.jpg" platform="winphone" />
+
+### Windows Phone 8.1 (cordova-windows)
+
+  Windows Phone 8.1 supports a single png splash as defined here
+
+    <gap:splash gap:platform="windows" width="1152" height="1920" src="www/res/SplashScreenPhone.scale-240.png" />
+
+
