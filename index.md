@@ -45,12 +45,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             How to write a PhoneGap app, API docs, and more on the inner workings.
             </span>
         </li>
-        <li>
-            <h2>[Upgrading from 2.9 to 3.x]</h2>
-            <span>
-            Information related to updating your app from 2.9.0 to 3.0.0 and above.
-            </span>
-        </li>
     </ul>
     <h1>Configuring</h1>
     <ul>
