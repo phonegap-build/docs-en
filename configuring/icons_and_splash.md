@@ -140,14 +140,14 @@ We support two icons for Windows Phone, a regular icon and a tile image.
 
 As of PhoneGap Release cli-6.0.0, the Windows Phone 8.1 package is built using cordova-windows. Here are the supported icons:
 
-    <icon gap:platform="winphone" width="44" height="44" src="res/Square44x44Logo.scale-100.png" />
-    <icon gap:platform="winphone" width="106" height="106" src="res/Square44x44Logo.scale-240.png" />
-    <icon gap:platform="winphone" width="150" height="150" src="res/Square150x150Logo.scale-100.png" />
-    <icon gap:platform="winphone" width="360" height="360" src="res/Square150x150Logo.scale-240.png" />
-    <icon gap:platform="winphone" width="71" height="71" src="res/Square71x71Logo.scale-100.png" />
-    <icon gap:platform="winphone" width="170" height="170" src="res/Square71x71Logo.scale-240.png" />
-    <icon gap:platform="winphone" width="310" height="150" src="res/Wide310x150Logo.scale-100.png" />
-    <icon gap:platform="winphone" width="744" height="360" src="res/Wide310x150Logo.scale-240.png" />
+    <icon platform="winphone" width="44" height="44" src="res/Square44x44Logo.scale-100.png" />
+    <icon platform="winphone" width="106" height="106" src="res/Square44x44Logo.scale-240.png" />
+    <icon platform="winphone" width="150" height="150" src="res/Square150x150Logo.scale-100.png" />
+    <icon platform="winphone" width="360" height="360" src="res/Square150x150Logo.scale-240.png" />
+    <icon platform="winphone" width="71" height="71" src="res/Square71x71Logo.scale-100.png" />
+    <icon platform="winphone" width="170" height="170" src="res/Square71x71Logo.scale-240.png" />
+    <icon platform="winphone" width="310" height="150" src="res/Wide310x150Logo.scale-100.png" />
+    <icon platform="winphone" width="744" height="360" src="res/Wide310x150Logo.scale-240.png" />
 
 <a name="splashes"></a>
 ## Splash Screens
@@ -226,6 +226,6 @@ Patch-9 backgrounds are supported. All patch-9 files have to have a ".9.png" suf
 
   Windows Phone 8.1 supports a single png splash as defined here
 
-    <gap:splash gap:platform="winphone" width="1152" height="1920" src="www/res/SplashScreenPhone.scale-240.png" />
+    <splash platform="winphone" width="1152" height="1920" src="www/res/SplashScreenPhone.scale-240.png" />
 
 
