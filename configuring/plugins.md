@@ -104,8 +104,10 @@ If source is not present then the default value for this attribute is `npm` or `
 
 If the `spec` attribute is a git location then the source is defaulted to "git". The lines below will reference the same plugin.
 
-    <plugin spec="https://github.com/apache/cordova-plugin-file.git#4.1.0" />
-    <plugin spec="https://github.com/apache/cordova-plugin-file.git#4.1.0" source="git" />
+<pre>
+&lt;plugin spec="https://github.com/apache/cordova-plugin-file.git&#35;4.1.0" /&gt;
+&lt;plugin spec="https://github.com/apache/cordova-plugin-file.git&#35;4.1.0" source="git" /&gt;
+</pre>
 
 To include a plugin from the PhoneGap Build <a href="https://build.phonegap.com/plugins">repository</a> specify `pgb` in the source attribute.
 
