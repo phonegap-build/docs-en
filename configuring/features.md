@@ -20,33 +20,18 @@ license: licensed to the apache software foundation (asf) under one
 
 # Features
 
-<a name="debug"></a>
-## Custom Debug Server
+_The feature tag has been deprecated._
 
-The `debug-server` feature allows you to use a custom Weinre instance for your application. By default PhoneGap Build uses `http://debug.build.phonegap.com` however this can be changed by adding the following to your `config.xml`.
+If you were using a feature tag to declare a custom debug server, you should now include the debug script directly in your application html file(s). A debug-server declaration like this:
 
     <feature name="debug-server" required="true">
        <param name="domain" value="http://debug.custom.com"/>
        <param name="key" value="some_unique_key"/>
     </feature>
 
-Aside from the debug-server feature, the feature tag is essentially deprecated on PhoneGap Build since PhoneGap APIs were pluginized. Permissions are now generally managed by individual plugins, and application manifests and permissions can be modified directly using the [config-file element](http://docs.build.phonegap.com/en_US/configuring_config_file_element.md.html). However for backwards-compatibility, they are still supported and map to device permissions on Android and Windows Phone 8:
+would now be included in your application's index.html page (and / or any other pages you wish to debug) like this:
 
-The `<feature>` element can be used to specify which features your application is using. If you specify features of the PhoneGap API, those will be expanded to the appropriate permissions for you application. 
+    <script type="text/javascript" src=http://debug.custom.com/target/target-script-min.js#some_unique_key"></script>
 
-    <feature name="http://api.phonegap.com/1.0/network" />
-
-Feature tags are mapped to features and permissions in the manifest files in each platform. PhoneGap Build uses an open-source tool called [confetti](https://github.com/phonegap-build/confetti) to map each feature. Here is a full list of supported feature tags:
-
-    <feature name="http://api.phonegap.com/1.0/network" />
-    <feature name="http://api.phonegap.com/1.0/camera" />
-    <feature name="http://api.phonegap.com/1.0/notification" />
-    <feature name="http://api.phonegap.com/1.0/geolocation" />
-    <feature name="http://api.phonegap.com/1.0/media" />
-    <feature name="http://api.phonegap.com/1.0/contacts" />
-    <feature name="http://api.phonegap.com/1.0/file" />
-    <feature name="http://api.phonegap.com/1.0/battery" />
-    <feature name="http://api.phonegap.com/1.0/device" />
-
-To see how each feature maps to device permissions, have a look at the confetti source code for [Android](https://github.com/phonegap-build/confetti/blob/master/lib/confetti/templates/android_manifest.rb#L8) and [Windows Phone 8](https://github.com/phonegap-build/confetti/blob/master/lib/confetti/templates/windows_phone8_manifest.rb).
+Permissions and features previously injected with the feature tag should now be added through [plugins](http://docs.build.phonegap.com/en_US/configuring_plugins.md.html). In addition application manifests can be modified directly using the [config-file element](http://docs.build.phonegap.com/en_US/configuring_config_file_element.md.html).
 

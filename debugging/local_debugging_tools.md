@@ -55,14 +55,11 @@ Weinre is now up and running! If you are running this behind a router that uses 
 
 Obtain the ip address of your machine running Weinre. This can be done on Windows by running `ipconfig` or on OSX/Linux by running `ifconfig`.
 
-Now you're ready to use your local server with Build. Using the <a href="https://build.phonegap.com/docs/config-xml" target="_blank">config.xml</a> specify the following. Change the domain param value to the ip address you found earlier, and the key param value to a unique identifier.
+Now include a reference to the Weinre debug script on your debug server, like so:
 
-      <feature name="debug-server" required="true">
-        <param name="domain" value="http://localhost:8080"/>
-        <param name="key" value="[ a unique id for your app ]"/>
-      </feature>
+    <script type="text/javascript" src=http://my.server.ip/target/target-script-min.js#some_unique_key"></script>
 
-That's it! You can now upload this to Build, install it on your device, and debug using your local Wienre server.
+**Make sure your remove this before publishing your app!**
 
 ## Common Issues
 
