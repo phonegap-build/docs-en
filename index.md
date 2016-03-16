@@ -135,6 +135,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
               Try hydration for a faster application development cycle.
             </span>
         </li>
+        <li>
+            <h2>[Collaboration and Sharing]</h2>
+            <span>
+              Share your application with other developers or testers.
+            </span>
+        </li>
     </ul>
     <h1>Developer Resources</h1>
     <ul>
