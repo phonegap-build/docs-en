@@ -47,7 +47,7 @@ This fragment will make the iOS app be available in landscape orientation while 
   <tr>
     <td><code>phonegap-version</code></td>
     <td>
-      Currently supported versions are <b>3.0.0</b>, <b>3.0.0</b>, <b>3.1.0</b>, <b>3.2.0</b>, <b>3.3.0</b>, <b>3.4.0</b>, <b>3.5.0</b>, <b>3.6.3</b>, <b>3.7.0</b>, <b>cli-5.1.1</b>, and <b>cli-5.2.0</b>  (default) 
+      You can find [currently supported versions here](https://build.phonegap.com/current-support).
       If you don't specify a version in your config, it will be set
       to the current default version. Your app will not build if you specify
       an unsupported version number.
@@ -254,6 +254,35 @@ This fragment will make the iOS app be available in landscape orientation while 
     <td><code>splash-screen-duration</code><br/>(android only)</td>
     <td>
       Deprecated -- use <a href="http://docs.phonegap.com/en/3.6.0/guide_platforms_android_config.md.html">SplashScreenDelay</a> instead.
+    </td>
+  </tr>
+
+</table>
+
+
+## Windows 10 Only
+
+<table class="table">
+
+  <tr>
+    <td><code>windows-arch</code><br/>(windows only)</td>
+    <td>
+       Select the architecture that your build targets. Valid values are `anycpu`, `arm`, `x86`, and `x64`
+      <br/><br/>
+      Example:
+      <br/>
+      <code>&lt;preference name="windows-arch" value="x86" /&gt;</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td><code>windows-identity-name</code><br/>(windows only)</td>
+    <td>
+       Set the App Idenity Name in your App Manifest, necessary for publishing to the App Store. This preference must match the App Identity Name from your *Windows Dev Center Account -> App Management -> App Identity*.
+      <br/><br/>
+      Example:
+      <br/>
+      <code>&lt;preference name="windows-identity-name" value="PhonegapBuild.PhoneGapBuild" /&gt;</code>
     </td>
   </tr>
 

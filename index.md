@@ -111,6 +111,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
               Learn how to sign your Android application on Build.
             </span>
         </li>
+        <li>
+            <h2>[Windows Signing]</h2>
+            <span>
+              Learn how to sign your Windows 10 and Windows Phone application on Build.
+            </span>
+        </li>
     </ul>
     <h1>Debugging</h1>
     <ul>
