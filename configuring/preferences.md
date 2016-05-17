@@ -286,4 +286,15 @@ This fragment will make the iOS app be available in landscape orientation while 
     </td>
   </tr>
 
+  <tr>
+    <td><code>windows-appx-target</code><br/>(windows only, cli-6.1.0 and above only)</td>
+    <td>
+       Which of the supported Windows platforms you wish to target. Supported values are `uap` (Windows 10 Mobile / Universal), `8.1-phone`, `8.1-win`.
+      <br/><br/>
+      Example:
+      <br/>
+      <code>&lt;preference name="windows-appx-target" value="8.1-phone" /&gt;</code>
+    </td>
+  </tr>
+
 </table>
